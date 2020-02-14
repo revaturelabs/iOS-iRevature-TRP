@@ -39,6 +39,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840DD1C223F639C600D090CA /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		840DD1C323F639F800D090CA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		840DD1C423F63A2000D090CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		840DD1C523F63A2800D090CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		840DD1C623F63A5100D090CA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		840DD1C723F63A5700D090CA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		840DD1C823F63A9600D090CA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		840DD1C923F63AC200D090CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		846D08F223F35226007A3BF2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +155,10 @@
 		846D091523F352FC007A3BF2 /* Global-Common */ = {
 			isa = PBXGroup;
 			children = (
+				840DD1C523F63A2800D090CA /* Utilities */,
+				840DD1C423F63A2000D090CA /* Extensions */,
+				840DD1C323F639F800D090CA /* Constants */,
+				840DD1C223F639C600D090CA /* UI Elements */,
 			);
 			path = "Global-Common";
 			sourceTree = "<group>";
@@ -106,6 +166,8 @@
 		846D091623F35306007A3BF2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				840DD1C723F63A5700D090CA /* Networking */,
+				840DD1C623F63A5100D090CA /* API */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -127,6 +189,7 @@
 		846D091923F3531D007A3BF2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				840DD1C823F63A9600D090CA /* Protocols */,
 				846D092023F354EF007A3BF2 /* Configuration */,
 				846D091F23F354D1007A3BF2 /* Delegate */,
 				846D091D23F354A7007A3BF2 /* Modules */,
@@ -151,6 +214,7 @@
 		846D091D23F354A7007A3BF2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				840DD1C923F63AC200D090CA /* Views */,
 				846D091E23F354AF007A3BF2 /* View Controllers */,
 			);
 			path = Modules;
