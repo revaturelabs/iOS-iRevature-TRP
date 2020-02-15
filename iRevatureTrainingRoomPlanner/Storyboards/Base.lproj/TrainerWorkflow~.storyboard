@@ -146,7 +146,7 @@
         <!--View Controller-->
         <scene sceneID="UiN-Lh-tpJ">
             <objects>
-                <viewController storyboardIdentifier="LandingPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3s0-MD-dTv" customClass="ViewController" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3s0-MD-dTv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w0S-oI-EnR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,9 +171,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="person" catalog="system"/>
-                                <connections>
-                                    <action selector="buttonTrainerSegue:" destination="3s0-MD-dTv" eventType="touchDown" id="xfF-7O-hoD"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWD-gE-KrF">
                                 <rect key="frame" x="232" y="465.5" width="100" height="100"/>
@@ -201,12 +198,28 @@
                     </view>
                     <navigationItem key="navigationItem" id="Whi-SM-EXq"/>
                     <connections>
-                        <segue destination="h4e-vd-28z" kind="presentation" identifier="MainTrainerSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Dew-3m-RBG"/>
+                        <segue destination="07e-53-1By" kind="show" id="Dew-3m-RBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPg-u0-5m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5207.2463768115949" y="842.41071428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ij5-AC-HKC">
+            <objects>
+                <viewController id="07e-53-1By" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tHD-1T-XBv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RIh-ec-yGj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hlb-SV-ovw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpp-0M-dN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6103" y="842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pkU-6b-mek">
@@ -318,16 +331,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fs1-Z2-geN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6028.985507246377" y="168.75"/>
-        </scene>
-        <!--TrainerWorkflow-->
-        <scene sceneID="Nz6-0T-7Kb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TrainerWorkflow" id="h4e-vd-28z" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ZcS-o8-21X"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="42f-HY-kFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6103" y="842"/>
         </scene>
     </scenes>
     <resources>

@@ -14,6 +14,7 @@
 		846D090623F35226007A3BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090423F35226007A3BF2 /* Main.storyboard */; };
 		846D090823F35228007A3BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846D090723F35228007A3BF2 /* Assets.xcassets */; };
 		846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090923F35228007A3BF2 /* LaunchScreen.storyboard */; };
+		A44A5A8F23F889820074D4C0 /* TrainerWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		846D090723F35228007A3BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846D090A23F35228007A3BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846D090C23F35228007A3BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A44A5A8E23F889820074D4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iRevatureTrainingRoomPlanner/Storyboards/Base.lproj/TrainerWorkflow.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		846D091423F352EA007A3BF2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */,
 				846D090423F35226007A3BF2 /* Main.storyboard */,
 				846D090923F35228007A3BF2 /* LaunchScreen.storyboard */,
 			);
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */,
+				A44A5A8F23F889820074D4C0 /* TrainerWorkflow.storyboard in Resources */,
 				846D090823F35228007A3BF2 /* Assets.xcassets in Resources */,
 				846D090623F35226007A3BF2 /* Main.storyboard in Resources */,
 			);
@@ -341,6 +345,14 @@
 				846D090A23F35228007A3BF2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44A5A8E23F889820074D4C0 /* Base */,
+			);
+			name = TrainerWorkflow.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
