@@ -200,9 +200,6 @@
                         <viewLayoutGuide key="safeArea" id="hgI-F2-V9S"/>
                     </view>
                     <navigationItem key="navigationItem" id="Whi-SM-EXq"/>
-                    <connections>
-                        <segue destination="h4e-vd-28z" kind="presentation" identifier="MainTrainerSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Dew-3m-RBG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPg-u0-5m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,16 +315,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fs1-Z2-geN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6028.985507246377" y="168.75"/>
-        </scene>
-        <!--TrainerWorkflow-->
-        <scene sceneID="Nz6-0T-7Kb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TrainerWorkflow" id="h4e-vd-28z" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ZcS-o8-21X"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="42f-HY-kFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6103" y="842"/>
         </scene>
     </scenes>
     <resources>
