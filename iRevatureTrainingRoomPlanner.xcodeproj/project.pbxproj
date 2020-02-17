@@ -14,7 +14,24 @@
 		846D090623F35226007A3BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090423F35226007A3BF2 /* Main.storyboard */; };
 		846D090823F35228007A3BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846D090723F35228007A3BF2 /* Assets.xcassets */; };
 		846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090923F35228007A3BF2 /* LaunchScreen.storyboard */; };
+		84CA4CDC23FA5E6000E03F5C /* LoggerUtitlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDB23FA5E6000E03F5C /* LoggerUtitlity.swift */; };
+		84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */; };
+		84CA4CE023FA5ED100E03F5C /* TrainerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */; };
+		84CA4CE223FA5EF200E03F5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE123FA5EF200E03F5C /* User.swift */; };
+		84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */; };
+		84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */; };
+		84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */; };
+		84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */; };
+		84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CEB23FA612D00E03F5C /* RevatureCalendar.swift */; };
+		84CA4CEE23FA61DB00E03F5C /* RevatureSkillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CED23FA61DB00E03F5C /* RevatureSkillButton.swift */; };
+		84CA4CF023FA624500E03F5C /* RevatureProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CEF23FA624500E03F5C /* RevatureProfileImage.swift */; };
+		84CA4CF423FA630100E03F5C /* RevatureTetBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF323FA630100E03F5C /* RevatureTetBoxes.swift */; };
+		84CA4CF623FA631A00E03F5C /* RevatureActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF523FA631A00E03F5C /* RevatureActivityIndicator.swift */; };
+		84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */; };
+		84CA4CFA23FA63A100E03F5C /* RevatureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */; };
+		84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */; };
 		A44A5A8F23F889820074D4C0 /* TrainerWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +44,22 @@
 		846D090723F35228007A3BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846D090A23F35228007A3BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846D090C23F35228007A3BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CA4CDB23FA5E6000E03F5C /* LoggerUtitlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerUtitlity.swift; sourceTree = "<group>"; };
+		84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchAPI.swift; sourceTree = "<group>"; };
+		84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerAPI.swift; sourceTree = "<group>"; };
+		84CA4CE123FA5EF200E03F5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteUtility.swift; sourceTree = "<group>"; };
+		84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureButton.swift; sourceTree = "<group>"; };
+		84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLandingPageButton.swift; sourceTree = "<group>"; };
+		84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureIconButton.swift; sourceTree = "<group>"; };
+		84CA4CEB23FA612D00E03F5C /* RevatureCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCalendar.swift; sourceTree = "<group>"; };
+		84CA4CED23FA61DB00E03F5C /* RevatureSkillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillButton.swift; sourceTree = "<group>"; };
+		84CA4CEF23FA624500E03F5C /* RevatureProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureProfileImage.swift; sourceTree = "<group>"; };
+		84CA4CF323FA630100E03F5C /* RevatureTetBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTetBoxes.swift; sourceTree = "<group>"; };
+		84CA4CF523FA631A00E03F5C /* RevatureActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureActivityIndicator.swift; sourceTree = "<group>"; };
+		84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillLabel.swift; sourceTree = "<group>"; };
+		84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableView.swift; sourceTree = "<group>"; };
+		84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaturePageControl.swift; sourceTree = "<group>"; };
 		A44A5A8E23F889820074D4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iRevatureTrainingRoomPlanner/Storyboards/Base.lproj/TrainerWorkflow.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +77,17 @@
 		840DD1C223F639C600D090CA /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */,
+				84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */,
+				84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */,
+				84CA4CEB23FA612D00E03F5C /* RevatureCalendar.swift */,
+				84CA4CED23FA61DB00E03F5C /* RevatureSkillButton.swift */,
+				84CA4CEF23FA624500E03F5C /* RevatureProfileImage.swift */,
+				84CA4CF323FA630100E03F5C /* RevatureTetBoxes.swift */,
+				84CA4CF523FA631A00E03F5C /* RevatureActivityIndicator.swift */,
+				84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */,
+				84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */,
+				84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -65,6 +109,8 @@
 		840DD1C523F63A2800D090CA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				84CA4CDB23FA5E6000E03F5C /* LoggerUtitlity.swift */,
+				84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -72,6 +118,9 @@
 		840DD1C623F63A5100D090CA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */,
+				84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */,
+				84CA4CE123FA5EF200E03F5C /* User.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -322,9 +371,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */,
+				84CA4CF623FA631A00E03F5C /* RevatureActivityIndicator.swift in Sources */,
+				84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */,
+				84CA4CFA23FA63A100E03F5C /* RevatureTableView.swift in Sources */,
+				84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */,
+				84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */,
+				84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */,
+				84CA4CF423FA630100E03F5C /* RevatureTetBoxes.swift in Sources */,
+				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
+				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
+				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
 				846D090323F35226007A3BF2 /* ViewController.swift in Sources */,
 				846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */,
+				84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */,
+				84CA4CE223FA5EF200E03F5C /* User.swift in Sources */,
 				846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */,
+				84CA4CE023FA5ED100E03F5C /* TrainerAPI.swift in Sources */,
+				84CA4CDC23FA5E6000E03F5C /* LoggerUtitlity.swift in Sources */,
+				84CA4CEE23FA61DB00E03F5C /* RevatureSkillButton.swift in Sources */,
+				84CA4CF023FA624500E03F5C /* RevatureProfileImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
