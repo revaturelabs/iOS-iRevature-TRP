@@ -30,6 +30,8 @@
 		84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */; };
 		84CA4CFA23FA63A100E03F5C /* RevatureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */; };
 		84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */; };
+		A44A5A8F23F889820074D4C0 /* TrainerWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,7 @@
 		84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillLabel.swift; sourceTree = "<group>"; };
 		84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableView.swift; sourceTree = "<group>"; };
 		84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaturePageControl.swift; sourceTree = "<group>"; };
+		A44A5A8E23F889820074D4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iRevatureTrainingRoomPlanner/Storyboards/Base.lproj/TrainerWorkflow.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,7 @@
 		846D091423F352EA007A3BF2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */,
 				846D090423F35226007A3BF2 /* Main.storyboard */,
 				846D090923F35228007A3BF2 /* LaunchScreen.storyboard */,
 			);
@@ -353,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */,
+				A44A5A8F23F889820074D4C0 /* TrainerWorkflow.storyboard in Resources */,
 				846D090823F35228007A3BF2 /* Assets.xcassets in Resources */,
 				846D090623F35226007A3BF2 /* Main.storyboard in Resources */,
 			);
@@ -405,6 +410,14 @@
 				846D090A23F35228007A3BF2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44A5A8E23F889820074D4C0 /* Base */,
+			);
+			name = TrainerWorkflow.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
