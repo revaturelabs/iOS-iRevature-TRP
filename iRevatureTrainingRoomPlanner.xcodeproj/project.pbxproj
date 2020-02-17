@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
+		846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D08FE23F35226007A3BF2 /* AppDelegate.swift */; };
+		846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D090023F35226007A3BF2 /* SceneDelegate.swift */; };
+		846D090323F35226007A3BF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D090223F35226007A3BF2 /* ViewController.swift */; };
+		846D090623F35226007A3BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090423F35226007A3BF2 /* Main.storyboard */; };
+		846D090823F35228007A3BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846D090723F35228007A3BF2 /* Assets.xcassets */; };
+		846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090923F35228007A3BF2 /* LaunchScreen.storyboard */; };
+		84CA4CDC23FA5E6000E03F5C /* LoggerUtitlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDB23FA5E6000E03F5C /* LoggerUtitlity.swift */; };
+		84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */; };
+		84CA4CE023FA5ED100E03F5C /* TrainerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */; };
+		84CA4CE223FA5EF200E03F5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE123FA5EF200E03F5C /* User.swift */; };
+		84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */; };
+		84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */; };
+		84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */; };
+		84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */; };
+		84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CEB23FA612D00E03F5C /* RevatureCalendar.swift */; };
+		84CA4CEE23FA61DB00E03F5C /* RevatureSkillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CED23FA61DB00E03F5C /* RevatureSkillButton.swift */; };
+		84CA4CF023FA624500E03F5C /* RevatureProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CEF23FA624500E03F5C /* RevatureProfileImage.swift */; };
+		84CA4CF423FA630100E03F5C /* RevatureTetBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF323FA630100E03F5C /* RevatureTetBoxes.swift */; };
+		84CA4CF623FA631A00E03F5C /* RevatureActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF523FA631A00E03F5C /* RevatureActivityIndicator.swift */; };
+		84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */; };
+		84CA4CFA23FA63A100E03F5C /* RevatureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */; };
+		84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		846D08FE23F35226007A3BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		846D090023F35226007A3BF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		846D090223F35226007A3BF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		846D090523F35226007A3BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		846D090723F35228007A3BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		846D090A23F35228007A3BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		846D090C23F35228007A3BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CA4CDB23FA5E6000E03F5C /* LoggerUtitlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerUtitlity.swift; sourceTree = "<group>"; };
+		84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchAPI.swift; sourceTree = "<group>"; };
+		84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerAPI.swift; sourceTree = "<group>"; };
+		84CA4CE123FA5EF200E03F5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteUtility.swift; sourceTree = "<group>"; };
+		84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureButton.swift; sourceTree = "<group>"; };
+		84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLandingPageButton.swift; sourceTree = "<group>"; };
+		84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureIconButton.swift; sourceTree = "<group>"; };
+		84CA4CEB23FA612D00E03F5C /* RevatureCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCalendar.swift; sourceTree = "<group>"; };
+		84CA4CED23FA61DB00E03F5C /* RevatureSkillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillButton.swift; sourceTree = "<group>"; };
+		84CA4CEF23FA624500E03F5C /* RevatureProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureProfileImage.swift; sourceTree = "<group>"; };
+		84CA4CF323FA630100E03F5C /* RevatureTetBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTetBoxes.swift; sourceTree = "<group>"; };
+		84CA4CF523FA631A00E03F5C /* RevatureActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureActivityIndicator.swift; sourceTree = "<group>"; };
+		84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillLabel.swift; sourceTree = "<group>"; };
+		84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableView.swift; sourceTree = "<group>"; };
+		84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaturePageControl.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		846D08F823F35226007A3BF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		840DD1C223F639C600D090CA /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */,
+				84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */,
+				84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */,
+				84CA4CEB23FA612D00E03F5C /* RevatureCalendar.swift */,
+				84CA4CED23FA61DB00E03F5C /* RevatureSkillButton.swift */,
+				84CA4CEF23FA624500E03F5C /* RevatureProfileImage.swift */,
+				84CA4CF323FA630100E03F5C /* RevatureTetBoxes.swift */,
+				84CA4CF523FA631A00E03F5C /* RevatureActivityIndicator.swift */,
+				84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */,
+				84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */,
+				84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		840DD1C323F639F800D090CA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		840DD1C423F63A2000D090CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		840DD1C523F63A2800D090CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				84CA4CDB23FA5E6000E03F5C /* LoggerUtitlity.swift */,
+				84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		840DD1C623F63A5100D090CA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */,
+				84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */,
+				84CA4CE123FA5EF200E03F5C /* User.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		840DD1C723F63A5700D090CA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		840DD1C823F63A9600D090CA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		840DD1C923F63AC200D090CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		846D08F223F35226007A3BF2 = {
+			isa = PBXGroup;
+			children = (
+				846D08FD23F35226007A3BF2 /* iRevatureTrainingRoomPlanner */,
+				846D091B23F35429007A3BF2 /* iRevatureTrainingRoomPlannerTest */,
+				846D091C23F3543E007A3BF2 /* iRevatureTrainingRoomPlannerUITest */,
+				846D08FC23F35226007A3BF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		846D08FC23F35226007A3BF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		846D08FD23F35226007A3BF2 /* iRevatureTrainingRoomPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				846D091923F3531D007A3BF2 /* Application */,
+				846D091823F35317007A3BF2 /* Business */,
+				846D091723F3530C007A3BF2 /* Persistence */,
+				846D091623F35306007A3BF2 /* Services */,
+				846D091523F352FC007A3BF2 /* Global-Common */,
+				846D091423F352EA007A3BF2 /* Storyboards */,
+				846D091323F352E1007A3BF2 /* Resources */,
+				846D091223F352CE007A3BF2 /* Account */,
+			);
+			path = iRevatureTrainingRoomPlanner;
+			sourceTree = "<group>";
+		};
+		846D091223F352CE007A3BF2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		846D091323F352E1007A3BF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				846D090723F35228007A3BF2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		846D091423F352EA007A3BF2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				846D090423F35226007A3BF2 /* Main.storyboard */,
+				846D090923F35228007A3BF2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		846D091523F352FC007A3BF2 /* Global-Common */ = {
+			isa = PBXGroup;
+			children = (
+				840DD1C523F63A2800D090CA /* Utilities */,
+				840DD1C423F63A2000D090CA /* Extensions */,
+				840DD1C323F639F800D090CA /* Constants */,
+				840DD1C223F639C600D090CA /* UI Elements */,
+			);
+			path = "Global-Common";
+			sourceTree = "<group>";
+		};
+		846D091623F35306007A3BF2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				840DD1C723F63A5700D090CA /* Networking */,
+				840DD1C623F63A5100D090CA /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		846D091723F3530C007A3BF2 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		846D091823F35317007A3BF2 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		846D091923F3531D007A3BF2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				840DD1C823F63A9600D090CA /* Protocols */,
+				846D092023F354EF007A3BF2 /* Configuration */,
+				846D091F23F354D1007A3BF2 /* Delegate */,
+				846D091D23F354A7007A3BF2 /* Modules */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		846D091B23F35429007A3BF2 /* iRevatureTrainingRoomPlannerTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iRevatureTrainingRoomPlannerTest;
+			sourceTree = "<group>";
+		};
+		846D091C23F3543E007A3BF2 /* iRevatureTrainingRoomPlannerUITest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iRevatureTrainingRoomPlannerUITest;
+			sourceTree = "<group>";
+		};
+		846D091D23F354A7007A3BF2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				840DD1C923F63AC200D090CA /* Views */,
+				846D091E23F354AF007A3BF2 /* View Controllers */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		846D091E23F354AF007A3BF2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				846D090223F35226007A3BF2 /* ViewController.swift */,
+				840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		846D091F23F354D1007A3BF2 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				846D08FE23F35226007A3BF2 /* AppDelegate.swift */,
+				846D090023F35226007A3BF2 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		846D092023F354EF007A3BF2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				846D090C23F35228007A3BF2 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		846D08FA23F35226007A3BF2 /* iRevatureTrainingRoomPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846D090F23F35228007A3BF2 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomPlanner" */;
+			buildPhases = (
+				846D08F723F35226007A3BF2 /* Sources */,
+				846D08F823F35226007A3BF2 /* Frameworks */,
+				846D08F923F35226007A3BF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRevatureTrainingRoomPlanner;
+			productName = iRevatureTrainingRoomPlanner;
+			productReference = 846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		846D08F323F35226007A3BF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = admin;
+				TargetAttributes = {
+					846D08FA23F35226007A3BF2 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 846D08F623F35226007A3BF2 /* Build configuration list for PBXProject "iRevatureTrainingRoomPlanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 846D08F223F35226007A3BF2;
+			productRefGroup = 846D08FC23F35226007A3BF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				846D08FA23F35226007A3BF2 /* iRevatureTrainingRoomPlanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		846D08F923F35226007A3BF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */,
+				846D090823F35228007A3BF2 /* Assets.xcassets in Resources */,
+				846D090623F35226007A3BF2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		846D08F723F35226007A3BF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */,
+				84CA4CF623FA631A00E03F5C /* RevatureActivityIndicator.swift in Sources */,
+				84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */,
+				84CA4CFA23FA63A100E03F5C /* RevatureTableView.swift in Sources */,
+				84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */,
+				84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */,
+				84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */,
+				84CA4CF423FA630100E03F5C /* RevatureTetBoxes.swift in Sources */,
+				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
+				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
+				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
+				846D090323F35226007A3BF2 /* ViewController.swift in Sources */,
+				846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */,
+				84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */,
+				84CA4CE223FA5EF200E03F5C /* User.swift in Sources */,
+				846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */,
+				84CA4CE023FA5ED100E03F5C /* TrainerAPI.swift in Sources */,
+				84CA4CDC23FA5E6000E03F5C /* LoggerUtitlity.swift in Sources */,
+				84CA4CEE23FA61DB00E03F5C /* RevatureSkillButton.swift in Sources */,
+				84CA4CF023FA624500E03F5C /* RevatureProfileImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		846D090423F35226007A3BF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846D090523F35226007A3BF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		846D090923F35228007A3BF2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846D090A23F35228007A3BF2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		846D090D23F35228007A3BF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		846D090E23F35228007A3BF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		846D091023F35228007A3BF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iRevatureTrainingRoomPlanner/Application/Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		846D091123F35228007A3BF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iRevatureTrainingRoomPlanner/Application/Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		846D08F623F35226007A3BF2 /* Build configuration list for PBXProject "iRevatureTrainingRoomPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846D090D23F35228007A3BF2 /* Debug */,
+				846D090E23F35228007A3BF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846D090F23F35228007A3BF2 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846D091023F35228007A3BF2 /* Debug */,
+				846D091123F35228007A3BF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 846D08F323F35226007A3BF2 /* Project object */;
+}
