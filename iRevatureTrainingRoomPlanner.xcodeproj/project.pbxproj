@@ -34,6 +34,8 @@
 		84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */; };
 		84CA4CFA23FA63A100E03F5C /* RevatureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */; };
 		84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */; };
+		84CF80A323FC4CDE00AF0578 /* UserInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF80A223FC4CDE00AF0578 /* UserInfoProtocol.swift */; };
+		84CF80A623FC4D2600AF0578 /* UserInfoBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF80A523FC4D2600AF0578 /* UserInfoBusinessService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillLabel.swift; sourceTree = "<group>"; };
 		84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableView.swift; sourceTree = "<group>"; };
 		84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaturePageControl.swift; sourceTree = "<group>"; };
+		84CF80A223FC4CDE00AF0578 /* UserInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInfoProtocol.swift; path = "iRevatureTrainingRoomPlanner/Global-Common/Utilities/UserInfoProtocol.swift"; sourceTree = SOURCE_ROOT; };
+		84CF80A523FC4D2600AF0578 /* UserInfoBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBusinessService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		840DD1C823F63A9600D090CA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				84CF80A223FC4CDE00AF0578 /* UserInfoProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 		846D091823F35317007A3BF2 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				84CF80A423FC4D0A00AF0578 /* BusinessServices */,
 				2939849223FC45F800DAF922 /* Structs */,
 			);
 			path = Business;
@@ -312,6 +318,14 @@
 				846D090C23F35228007A3BF2 /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		84CF80A423FC4D0A00AF0578 /* BusinessServices */ = {
+			isa = PBXGroup;
+			children = (
+				84CF80A523FC4D2600AF0578 /* UserInfoBusinessService.swift */,
+			);
+			path = BusinessServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +406,8 @@
 				84CA4CFA23FA63A100E03F5C /* RevatureTableView.swift in Sources */,
 				84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */,
 				84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */,
+				84CF80A623FC4D2600AF0578 /* UserInfoBusinessService.swift in Sources */,
+				84CF80A323FC4CDE00AF0578 /* UserInfoProtocol.swift in Sources */,
 				84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */,
 				2939849623FC4AB400DAF922 /* RevatureTextBoxes.swift in Sources */,
 				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
