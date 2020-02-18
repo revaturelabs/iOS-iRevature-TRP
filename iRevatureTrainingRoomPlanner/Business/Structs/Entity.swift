@@ -16,7 +16,7 @@ struct Batch
     var location : Location
 }
 
-struct User
+struct User : Codable
 {
     var firstName : String
     var lastName : String
