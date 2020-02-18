@@ -6,4 +6,10 @@
 //  Copyright © 2020 admin. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class RevatureCampusTableView : UITableView
+{
+    @IBOutlet weak var campusLabel: UILabel!
+    
+}

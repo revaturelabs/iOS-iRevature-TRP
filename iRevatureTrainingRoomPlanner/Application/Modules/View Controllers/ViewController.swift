@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTrainerSegue(_ sender: Any) {
         
-        performSegue(withIdentifier: "MainTrainerSegue", sender: self)
+        
 
     }
     

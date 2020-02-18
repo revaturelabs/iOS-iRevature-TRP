@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2939849423FC460C00DAF922 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849323FC460C00DAF922 /* Entity.swift */; };
+		296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */; };
+		296B9A3E23FB5BE7006448B7 /* Trainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296B9A3C23FB5BE7006448B7 /* Trainer.storyboard */; };
+		296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
 		846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D08FE23F35226007A3BF2 /* AppDelegate.swift */; };
 		846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D090023F35226007A3BF2 /* SceneDelegate.swift */; };
@@ -33,6 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2939849323FC460C00DAF922 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerWorkflowViewController.swift; sourceTree = "<group>"; };
+		296B9A3D23FB5BE7006448B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trainer.storyboard; sourceTree = "<group>"; };
+		296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusTableViewController.swift; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846D08FE23F35226007A3BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +66,6 @@
 		84CA4CF723FA636800E03F5C /* RevatureSkillLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillLabel.swift; sourceTree = "<group>"; };
 		84CA4CF923FA63A100E03F5C /* RevatureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableView.swift; sourceTree = "<group>"; };
 		84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaturePageControl.swift; sourceTree = "<group>"; };
-		A44A5A8E23F889820074D4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iRevatureTrainingRoomPlanner/Storyboards/Base.lproj/TrainerWorkflow.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +79,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2939849223FC45F800DAF922 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				2939849323FC460C00DAF922 /* Entity.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		840DD1C223F639C600D090CA /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */,
 				84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */,
 				84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */,
 				84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */,
@@ -195,9 +211,9 @@
 		846D091423F352EA007A3BF2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */,
 				846D090423F35226007A3BF2 /* Main.storyboard */,
 				846D090923F35228007A3BF2 /* LaunchScreen.storyboard */,
+				296B9A3C23FB5BE7006448B7 /* Trainer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -232,6 +248,7 @@
 		846D091823F35317007A3BF2 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				2939849223FC45F800DAF922 /* Structs */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -273,6 +290,7 @@
 		846D091E23F354AF007A3BF2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */,
 				846D090223F35226007A3BF2 /* ViewController.swift */,
 				840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */,
 			);
@@ -356,6 +374,7 @@
 			files = (
 				846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */,
 				846D090823F35228007A3BF2 /* Assets.xcassets in Resources */,
+				296B9A3E23FB5BE7006448B7 /* Trainer.storyboard in Resources */,
 				846D090623F35226007A3BF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,15 +396,18 @@
 				84CA4CF423FA630100E03F5C /* RevatureTetBoxes.swift in Sources */,
 				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
 				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
+				2939849423FC460C00DAF922 /* Entity.swift in Sources */,
 				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
 				846D090323F35226007A3BF2 /* ViewController.swift in Sources */,
 				846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */,
+				296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */,
 				84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */,
 				84CA4CE223FA5EF200E03F5C /* User.swift in Sources */,
 				846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */,
 				84CA4CE023FA5ED100E03F5C /* TrainerAPI.swift in Sources */,
 				84CA4CDC23FA5E6000E03F5C /* LoggerUtitlity.swift in Sources */,
 				84CA4CEE23FA61DB00E03F5C /* RevatureSkillButton.swift in Sources */,
+				296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */,
 				84CA4CF023FA624500E03F5C /* RevatureProfileImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +415,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		296B9A3C23FB5BE7006448B7 /* Trainer.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				296B9A3D23FB5BE7006448B7 /* Base */,
+			);
+			name = Trainer.storyboard;
+			sourceTree = "<group>";
+		};
 		846D090423F35226007A3BF2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -407,14 +437,6 @@
 				846D090A23F35228007A3BF2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A44A5A8D23F889820074D4C0 /* TrainerWorkflow.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A44A5A8E23F889820074D4C0 /* Base */,
-			);
-			name = TrainerWorkflow.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
