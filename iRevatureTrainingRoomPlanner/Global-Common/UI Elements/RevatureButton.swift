@@ -12,18 +12,32 @@ import UIKit
 class RevatureButton: UIButton{
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupButton()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupButton()
     }
     
     func setupButton(){
-        setRevatureColor()
+        applyContentStyles()
+        applyLayoutStyles()
     }
     
-    func setRevatureColor(){
+    func applyContentStyles(){
         setTitleColor(.orange, for: .normal)
+        
+    }
+    
+    func applyLayoutStyles(){
+        layer.cornerRadius = 5.0
+        layer.borderWidth = 2.0
+        layer.borderColor = UIColor.orange.cgColor
+        
+    }
+    
+    func applyAnimations(){
+        
     }
 }
