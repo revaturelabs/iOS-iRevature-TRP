@@ -21,10 +21,11 @@ struct User : Codable
     var firstName : String
     var lastName : String
     var email : String
-    var password : String
     var token : String
     var keepLoggedIn : Bool
-    var role : Role
+    #warning("We need to reconsider using an enum, enums are not Codable")
+    //var role : Role
+   
 }
 
 struct Trainer
