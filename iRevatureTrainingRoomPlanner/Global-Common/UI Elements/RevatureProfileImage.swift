@@ -6,9 +6,33 @@
 //  Copyright © 2020 admin. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class RevatureProfileImage: UIImageView{
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupButton()
+    }
+    
+    func setupButton(){
+        applyContentStyles()
+        applyLayoutStyles()
+    }
+    
+    func applyContentStyles(){
+     tintColor = .orange
+        
+    }
+    
+    func applyLayoutStyles(){
+    }
+    
+    func applyAnimations(){
+        
+    }
 }

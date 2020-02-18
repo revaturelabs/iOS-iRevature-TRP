@@ -1,14 +1,14 @@
 //
-//  RevatureButton.swift
+//  RevatureHeaderLabel.swift
 //  iRevatureTrainingRoomPlanner
 //
-//  Created by admin on 2/17/20.
+//  Created by admin on 2/18/20.
 //  Copyright © 2020 admin. All rights reserved.
 //
 
 import UIKit
 
-class RevatureButton: UIButton{
+class RevatureHeaderLabel: UILabel{
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -25,14 +25,11 @@ class RevatureButton: UIButton{
     }
     
     func applyContentStyles(){
-        setTitleColor(.orange, for: .normal)
-        
+        textColor = .gray
+        font = font.withSize(25)
     }
     
     func applyLayoutStyles(){
-        layer.cornerRadius = 5.0
-        layer.borderWidth = 2.0
-        layer.borderColor = UIColor.orange.cgColor
         
     }
     

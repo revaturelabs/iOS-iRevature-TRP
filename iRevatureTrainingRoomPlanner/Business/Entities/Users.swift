@@ -6,4 +6,7 @@
 //  Copyright © 2020 admin. All rights reserved.
 //
 
-import Foundation
+struct User{
+    var username: String
+    var password: String
+}
