@@ -181,6 +181,7 @@
                                 <state key="normal" backgroundImage="person" catalog="system"/>
                                 <connections>
                                     <action selector="buttonTrainerSegue:" destination="3s0-MD-dTv" eventType="touchDown" id="xfF-7O-hoD"/>
+                                    <segue destination="QBE-fd-KMV" kind="presentation" modalPresentationStyle="fullScreen" id="vsJ-zi-HEI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWD-gE-KrF">
@@ -211,7 +212,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPg-u0-5m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5207.2463768115949" y="842.41071428571422"/>
+            <point key="canvasLocation" x="5246" y="842"/>
+        </scene>
+        <!--Trainer-->
+        <scene sceneID="SjD-qE-bZv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Trainer" id="QBE-fd-KMV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8g-dr-3P3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6045" y="856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pkU-6b-mek">
