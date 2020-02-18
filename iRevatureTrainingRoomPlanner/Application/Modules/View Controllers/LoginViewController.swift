@@ -19,11 +19,21 @@ class LoginViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(switchKeepMeSignedIn.isOn)
+        
         if let currentUserInfo: User = userInfoBusinessService.getUserInfo(){
-            let email = currentUserInfo.email
-            print(email)
-            textFieldEmail.text = email
+            
+            switchKeepMeSignedIn.isOn = currentUserInfo.keepLoggedIn
+            
+            if currentUserInfo.keepLoggedIn == true{
+        
+                let email = currentUserInfo.email
+                
+                textFieldEmail.text = email
+            } else {
+                
+                textFieldEmail.text = ""
+                
+            }
         }
         
     }
@@ -33,25 +43,25 @@ class LoginViewController: UIViewController{
         #warning("Currently using dummy data from user defaults, change this logic once API implemented")
         
         let username:String = textFieldEmail.text!
+        
         let password:String = textFieldPassword.text!
         
         authenticateUser(username: username, password: password)
         
-//        navigateToLanding(username: textFieldEmail.text ?? "", password: textFieldPassword.text ?? "")
     }
     
     private func authenticateUser(username: String, password: String){
         
-        #warning("uncomment this line to perform the check on user wants to be remebered or not")
-        let userKeepMeSignedIn = switchKeepMeSignedIn
+        var userKeepMeSignedIn = switchKeepMeSignedIn!.isOn
         
+        //MARK: Hardcoded values need to be replaced with IP call to authenticate user
         if(username == "test@revature.com" && password == "test1"){
             
-            let userInfoData: User = User(firstName: "test", lastName: "", email: username, token: "", keepLoggedIn: true)
+            let userInfoData: User = User(firstName: "test", lastName: "", email: username, token: "", keepLoggedIn: userKeepMeSignedIn)
             
             userInfoBusinessService.setUserInfo(userObject: userInfoData)
             
-            //Swgues to the next story board
+            //Mark: Performs segue
             let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             
             guard let mainNavigationVC = mainStoryboard.instantiateViewController(withIdentifier: "LandingPage") as? UIViewController else {
