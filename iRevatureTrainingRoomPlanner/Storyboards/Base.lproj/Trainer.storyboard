@@ -67,7 +67,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOg-hp-Drd" userLabel="Revature Location Table View" customClass="RevatureLocationTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOg-hp-Drd" userLabel="Revature Location Table View" customClass="RevatureLocationTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="306" width="414" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -107,7 +107,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jwJ-y9-1eb" userLabel="Revature Skill Table View" customClass="RevatureSkillsTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jwJ-y9-1eb" userLabel="Revature Skill Table View" customClass="RevatureSkillsTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="471" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -147,7 +147,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-Qw-4L1" userLabel="Revature Trainer Table View" customClass="RevatureTrainerTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" tag="3" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-Qw-4L1" userLabel="Revature Trainer Table View" customClass="RevatureTrainerTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="616" width="414" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -181,6 +181,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExQ-01-trO">
+                                <rect key="frame" x="356" y="58" width="30" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="⟲"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -214,6 +220,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QBT-km-rXE"/>
                     </view>
+                    <connections>
+                        <outlet property="campusTableView" destination="7AD-nX-63Z" id="zmu-UK-pQ8"/>
+                        <outlet property="locationTableView" destination="YOg-hp-Drd" id="YLk-u4-4AM"/>
+                        <outlet property="skillsTableView" destination="jwJ-y9-1eb" id="nw7-iX-Z7E"/>
+                        <outlet property="trainerTableView" destination="EJl-Qw-4L1" id="A4J-Tn-kTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGC-P1-XFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

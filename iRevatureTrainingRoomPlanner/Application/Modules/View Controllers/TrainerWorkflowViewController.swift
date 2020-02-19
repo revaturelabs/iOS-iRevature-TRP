@@ -10,21 +10,95 @@ import UIKit
 
 class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    // MARK: ignore these two calls, they should never be called in this class
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print("should not be calling basic style")
-        
-        return 0
+        switch(tableView.tag)
+        {
+        case 0:
+            return campusList.count
+        case 1:
+            return locationList.count
+        case 2:
+            return skillList.count
+        case 3:
+            return trainerList.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        print("should not be calling basic style")
-        
-        return UITableViewCell()
+         
+        switch(tableView.tag)
+        {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCampusCell", for: indexPath) as! RevatureCampusCell
+            
+            cell.prototypeLabel!.text = campusList[indexPath.row]
+            
+            return cell
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeLocationCell", for: indexPath) as! RevatureLocationCell
+            
+            cell.prototypeLabel!.text = locationList[indexPath.row]
+            
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeSkillCell", for: indexPath) as! RevatureSkillCell
+            
+            cell.prototypeLabel!.text = skillList[indexPath.row]
+            
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeTrainerCell", for: indexPath) as! RevatureTrainerCell
+            
+            cell.prototypeLabel!.text = trainerList[indexPath.row]
+            
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
+    
+    
+    @IBOutlet weak var campusTableView: RevatureCampusTableView!
+    @IBOutlet weak var locationTableView: RevatureLocationTableView!
+    @IBOutlet weak var skillsTableView: RevatureSkillsTableView!
+    @IBOutlet weak var trainerTableView: RevatureTrainerTableView!
+    
+    
+    
+    
+    // MARK: ignore these two calls, they should never be called in this class
+    
+    private func tableView(_ tableView: RevatureCampusTableView, cellForRowAt indexPath: IndexPath) -> RevatureCampusCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCampusCell", for: indexPath) as! RevatureCampusCell
+        
+        cell.prototypeLabel!.text = campusList[indexPath.row]
+        
+        print("Called revature campus table view")
+        
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//        print("should not be calling basic style - number of rows")
+//
+//
+//        return 0
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        print("should not be calling basic style - cells")
+//
+//        return UITableViewCell()
+//    }
+    
+
     
 
     //MARK: Placeholder containers for data that will be pulled from the API/DB
@@ -39,6 +113,21 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        campusTableView.delegate = self
+        trainerTableView.delegate = self
+        locationTableView.delegate = self
+        skillsTableView.delegate = self
+        
+        campusTableView.dataSource = self
+        trainerTableView.dataSource = self
+        locationTableView.dataSource = self
+        skillsTableView.dataSource = self
+        
+        campusTableView.separatorColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
+        trainerTableView.separatorColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
+        locationTableView.separatorColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
+        skillsTableView.separatorColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
         
         print("loaded trainer controller view")
     }
@@ -70,7 +159,7 @@ extension TrainerWorkflowViewController {
     
     /// These are meant to instantiate the type of Revature Table View Cells that match for the Table View type they are meant to show as each cell in each tale view type will be populated by a different collection.
     
-    func tableView(_ tableView: RevatureCampusTableView, cellForRowAt indexPath: IndexPath) -> RevatureCampusCell {
+    func campusTableView(_ tableView: RevatureCampusTableView, cellForRowAt indexPath: IndexPath) -> RevatureCampusCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCampusCell", for: indexPath) as! RevatureCampusCell
         
@@ -111,12 +200,12 @@ extension TrainerWorkflowViewController {
     // MARK: number of rows per section functions
     /// Methods will each return the number of objects within their array list for setting the number of rows for their respective sections.
     
-    func tableView(_ tableView: RevatureCampusTableView, numberOfRowsInSection section: Int) -> Int {
-        
-        print("count: \(campusList.count)")
-        
-        return campusList.count
-    }
+//    func tableView(_ tableView: RevatureCampusTableView, numberOfRowsInSection section: Int) -> Int {
+//
+//        print("count: \(campusList.count)")
+//
+//        return campusList.count
+//    }
 
     func tableView(_ tableView: RevatureLocationTableView, numberOfRowsInSection section: Int) -> Int {
         
