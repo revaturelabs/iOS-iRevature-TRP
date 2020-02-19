@@ -13,7 +13,7 @@ class UserInfoBusinessService : UserInfoProtocol{
         
         let currentUserDefault = UserDefaults.standard
         
-        if let decodedUserInfo = (currentUserDefault.value(forKey: "UserShaedInfo")){
+        if let decodedUserInfo = (currentUserDefault.value(forKey: "UserSharedInfo")){
             
             let decodedUser = try? PropertyListDecoder().decode(User.self, from: decodedUserInfo as! Data)
         

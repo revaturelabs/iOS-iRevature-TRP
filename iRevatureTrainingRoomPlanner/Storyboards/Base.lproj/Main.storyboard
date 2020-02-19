@@ -143,6 +143,7 @@
                     <navigationItem key="navigationItem" id="wQj-s1-AxJ"/>
                     <connections>
                         <outlet property="labelInvalidUsernamePassword" destination="HHE-zy-BOU" id="pXF-pf-ozD"/>
+                        <outlet property="switchKeepMeSignedIn" destination="cdo-EC-9b0" id="WVe-SI-g7m"/>
                         <outlet property="textFieldEmail" destination="idi-Ed-aMs" id="aA5-RY-Yty"/>
                         <outlet property="textFieldPassword" destination="SWM-pD-I9V" id="lUH-lP-yKC"/>
                     </connections>
