@@ -37,67 +37,6 @@ extension LoginViewController{
     }
 
     //SELECT * USERS
-    func selectUsers() -> User?{
-        
-        let querySql = "SELECT * FROM user;"
-        
-        guard let queryStatement = try? prepareStatement(sql: querySql) else {
-            
-            return nil
-            
-        }
-        
-        defer {
-            sqlite3_finalize(queryStatement)
-        }
-        
-        //set the id to the parameter
-//        guard sqlite3_bind_text(queryStatement, 1, trainerName, Int32(trainerName.count), nil) == SQLITE_OK else {
-//            return nil
-//        }
-        
-        guard sqlite3_step(queryStatement) == SQLITE_ROW else {
-            return nil
-        }
-        
-        
-//        self.recordCount = 1
-        
-        //get the id column
-        let id = sqlite3_column_int(queryStatement, 0)
-        
-        guard let queryResultCol1 =
-            sqlite3_column_text(queryStatement, 1) else {
-            
-            debugPrint("Query result is nil.")
-            
-            return nil
-        }
-        
-        //get the name column
-        let name = String(cString: queryResultCol1) as NSString
-        
-        guard let queryResultCol2 =
-            sqlite3_column_text(queryStatement, 2) else {
-            
-            print("Query result is nil.")
-          
-            return nil
-        }
-        
-        //get the trainer column
-        let trainer = String(cString: queryResultCol2) as NSString
-        
-        guard let queryResultCol3 =
-            
-            sqlite3_column_text(queryStatement, 3) else {
-            
-            return nil
-        }
-        
-        //get the location column
-        let location = String(cString: queryResultCol3) as NSString
-        
-        return User(firstName: "", lastName: "", email: "", token: "", keepLoggedIn: false)
+    func selectUsers(){
     }
 }
