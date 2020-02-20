@@ -181,8 +181,7 @@
                                 <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="person" catalog="system"/>
                                 <connections>
-                                    <action selector="buttonTrainerSegue:" destination="3s0-MD-dTv" eventType="touchDown" id="xfF-7O-hoD"/>
-                                    <segue destination="QBE-fd-KMV" kind="presentation" modalPresentationStyle="fullScreen" id="vsJ-zi-HEI"/>
+                                    <segue destination="AjO-ky-TrW" kind="show" id="faP-ZV-r8w"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWD-gE-KrF">
@@ -214,14 +213,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPg-u0-5m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5246" y="842"/>
-        </scene>
-        <!--Trainer-->
-        <scene sceneID="SjD-qE-bZv">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Trainer" id="QBE-fd-KMV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K8g-dr-3P3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6045" y="856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pkU-6b-mek">
@@ -333,6 +324,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fs1-Z2-geN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6028.985507246377" y="168.75"/>
+        </scene>
+        <!--Trainer-->
+        <scene sceneID="5CP-QP-2Ob">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Trainer" id="AjO-ky-TrW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2rV-RD-R5j"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6w-Sh-kyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6030" y="842"/>
         </scene>
     </scenes>
     <resources>

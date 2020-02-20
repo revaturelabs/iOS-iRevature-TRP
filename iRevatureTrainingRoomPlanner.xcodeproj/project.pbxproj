@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290262FD23FDCA79009539D6 /* Trainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290262FB23FDCA79009539D6 /* Trainer.storyboard */; };
 		2939849423FC460C00DAF922 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849323FC460C00DAF922 /* Entity.swift */; };
 		2939849623FC4AB400DAF922 /* RevatureTextBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849523FC4AB400DAF922 /* RevatureTextBoxes.swift */; };
 		2939849823FC502D00DAF922 /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849723FC502D00DAF922 /* RevatureTableViewCell.swift */; };
@@ -20,7 +21,6 @@
 		293984AA23FC5D9500DAF922 /* RevatureSkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A923FC5D9500DAF922 /* RevatureSkillCell.swift */; };
 		293984AC23FC5DD300DAF922 /* RevatureLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984AB23FC5DD300DAF922 /* RevatureLocationCell.swift */; };
 		296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */; };
-		296B9A3E23FB5BE7006448B7 /* Trainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296B9A3C23FB5BE7006448B7 /* Trainer.storyboard */; };
 		296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
 		8450167E23FDBE8700589EDE /* RestAlamodeFireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450167D23FDBE8700589EDE /* RestAlamodeFireManager.swift */; };
@@ -64,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290262FC23FDCA79009539D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trainer.storyboard; sourceTree = "<group>"; };
 		2939849323FC460C00DAF922 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		2939849523FC4AB400DAF922 /* RevatureTextBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevatureTextBoxes.swift; sourceTree = "<group>"; };
 		2939849723FC502D00DAF922 /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		293984A923FC5D9500DAF922 /* RevatureSkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillCell.swift; sourceTree = "<group>"; };
 		293984AB23FC5DD300DAF922 /* RevatureLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLocationCell.swift; sourceTree = "<group>"; };
 		296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerWorkflowViewController.swift; sourceTree = "<group>"; };
-		296B9A3D23FB5BE7006448B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trainer.storyboard; sourceTree = "<group>"; };
 		296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusTableViewController.swift; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8450167D23FDBE8700589EDE /* RestAlamodeFireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAlamodeFireManager.swift; sourceTree = "<group>"; };
@@ -343,9 +343,9 @@
 		846D091423F352EA007A3BF2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				290262FB23FDCA79009539D6 /* Trainer.storyboard */,
 				846D090423F35226007A3BF2 /* Main.storyboard */,
 				846D090923F35228007A3BF2 /* LaunchScreen.storyboard */,
-				296B9A3C23FB5BE7006448B7 /* Trainer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -520,7 +520,7 @@
 			files = (
 				846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */,
 				846D090823F35228007A3BF2 /* Assets.xcassets in Resources */,
-				296B9A3E23FB5BE7006448B7 /* Trainer.storyboard in Resources */,
+				290262FD23FDCA79009539D6 /* Trainer.storyboard in Resources */,
 				846D090623F35226007A3BF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,10 +588,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		296B9A3C23FB5BE7006448B7 /* Trainer.storyboard */ = {
+		290262FB23FDCA79009539D6 /* Trainer.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				296B9A3D23FB5BE7006448B7 /* Base */,
+				290262FC23FDCA79009539D6 /* Base */,
 			);
 			name = Trainer.storyboard;
 			sourceTree = "<group>";
