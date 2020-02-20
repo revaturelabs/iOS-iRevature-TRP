@@ -20,6 +20,8 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DatabaseOperations.init().createDatabse()
+        
         if let currentUserInfo: User = userInfoBusinessService.getUserInfo(){
             
             switchKeepMeSignedIn.isOn = currentUserInfo.keepLoggedIn
