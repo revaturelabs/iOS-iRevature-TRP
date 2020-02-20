@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		290262FD23FDCA79009539D6 /* Trainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290262FB23FDCA79009539D6 /* Trainer.storyboard */; };
+		290262FF23FE459A009539D6 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290262FE23FE459A009539D6 /* EntityManager.swift */; };
 		2939849423FC460C00DAF922 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849323FC460C00DAF922 /* Entity.swift */; };
 		2939849623FC4AB400DAF922 /* RevatureTextBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849523FC4AB400DAF922 /* RevatureTextBoxes.swift */; };
 		2939849823FC502D00DAF922 /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849723FC502D00DAF922 /* RevatureTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		290262FC23FDCA79009539D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trainer.storyboard; sourceTree = "<group>"; };
+		290262FE23FE459A009539D6 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		2939849323FC460C00DAF922 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		2939849523FC4AB400DAF922 /* RevatureTextBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevatureTextBoxes.swift; sourceTree = "<group>"; };
 		2939849723FC502D00DAF922 /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				84CF80A523FC4D2600AF0578 /* UserInfoBusinessService.swift */,
+				290262FE23FE459A009539D6 /* EntityManager.swift */,
 			);
 			path = BusinessServices;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				2939849623FC4AB400DAF922 /* RevatureTextBoxes.swift in Sources */,
 				293984AA23FC5D9500DAF922 /* RevatureSkillCell.swift in Sources */,
 				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
+				290262FF23FE459A009539D6 /* EntityManager.swift in Sources */,
 				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
 				2939849423FC460C00DAF922 /* Entity.swift in Sources */,
 				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
