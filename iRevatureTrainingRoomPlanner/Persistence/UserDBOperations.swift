@@ -28,7 +28,21 @@ extension DatabaseOperations{
             
         }
         
-        func insertUserRecord(){}
+        func insertUserRecord(table: SQLiteTable){
+            
+            let insertStatement = InsertStatement(table: table, columnValues: "Tester_001", "Tester", "Lester", "tester@revature.com", "testers", "testtoken", true)
+            
+            do {
+               
+                try databse.insertRow(statement: insertStatement)
+                
+            } catch {
+                
+                debugPrint("Insert did not work!")
+                
+            }
+            
+        }
         
         
         

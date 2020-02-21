@@ -34,7 +34,7 @@ struct iRevatureTables {
         
         userTable.addColumn(columnName: "last_name", dataType: .CHAR, constraints: .NOTNULL)
         
-        userTable.addColumn(columnName: "email", dataType: .CHAR, constraints: .NOTNULL)
+        userTable.addColumn(columnName: "email", dataType: .CHAR, constraints: .NOTNULL, .UNIQUE)
             
         userTable.addColumn(columnName: "user_role", dataType: .CHAR, constraints: .NOTNULL)
         
