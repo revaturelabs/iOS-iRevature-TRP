@@ -258,20 +258,6 @@
 			path = "UI Elements";
 			sourceTree = "<group>";
 		};
-		840DD1C323F639F800D090CA /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		840DD1C423F63A2000D090CA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		840DD1C523F63A2800D090CA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,8 +363,6 @@
 			isa = PBXGroup;
 			children = (
 				840DD1C523F63A2800D090CA /* Utilities */,
-				840DD1C423F63A2000D090CA /* Extensions */,
-				840DD1C323F639F800D090CA /* Constants */,
 				840DD1C223F639C600D090CA /* UI Elements */,
 			);
 			path = "Global-Common";
