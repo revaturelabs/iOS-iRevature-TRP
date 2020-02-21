@@ -44,6 +44,7 @@
 		29662D0C24003E69004C48F1 /* InsertStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662CFA24003E68004C48F1 /* InsertStatement.swift */; };
 		29662D0D24003E69004C48F1 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662CFB24003E68004C48F1 /* Statement.swift */; };
 		29662D0F24006903004C48F1 /* DatabaseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662D0E24006903004C48F1 /* DatabaseOperations.swift */; };
+		29662D14240072D9004C48F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662D13240072D9004C48F1 /* Constants.swift */; };
 		296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */; };
 		296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */; };
 		840C562024006BA000E10CD3 /* UserDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C561F24006BA000E10CD3 /* UserDBOperations.swift */; };
@@ -109,6 +110,7 @@
 		29662CFA24003E68004C48F1 /* InsertStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertStatement.swift; sourceTree = "<group>"; };
 		29662CFB24003E68004C48F1 /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
 		29662D0E24006903004C48F1 /* DatabaseOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseOperations.swift; sourceTree = "<group>"; };
+		29662D13240072D9004C48F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerWorkflowViewController.swift; sourceTree = "<group>"; };
 		296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusTableViewController.swift; sourceTree = "<group>"; };
 		840C561F24006BA000E10CD3 /* UserDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBOperations.swift; sourceTree = "<group>"; };
@@ -241,6 +243,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		29662D12240072C2004C48F1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				29662D13240072D9004C48F1 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		840DD1C223F639C600D090CA /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +376,7 @@
 		846D091523F352FC007A3BF2 /* Global-Common */ = {
 			isa = PBXGroup;
 			children = (
+				29662D12240072C2004C48F1 /* Constants */,
 				840DD1C523F63A2800D090CA /* Utilities */,
 				840DD1C223F639C600D090CA /* UI Elements */,
 			);
@@ -573,6 +584,7 @@
 				293984AA23FC5D9500DAF922 /* RevatureSkillCell.swift in Sources */,
 				840C562024006BA000E10CD3 /* UserDBOperations.swift in Sources */,
 				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
+				29662D14240072D9004C48F1 /* Constants.swift in Sources */,
 				29662D0C24003E69004C48F1 /* InsertStatement.swift in Sources */,
 				290262FF23FE459A009539D6 /* EntityManager.swift in Sources */,
 				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
