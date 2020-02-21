@@ -8,6 +8,19 @@
 
 import Foundation
 
+class DatabaseOperations{
+    
+    func openDatabse(){
+        
+        let filePath = DatabaseAccess.getDatabaseFilePath(name: "iRevatureTrainer", pathDirectory: .documentDirectory, domainMask: .userDomainMask)
+        
+        //Open Databse
+        let db = DatabaseAccess.openDatabase(path: filePath, createIfDoesNotExist: true)
+        
+    }
+    
+}
+
 struct iRevatureTables {
     
     static var userTable: SQLiteTable {
@@ -55,19 +68,6 @@ struct iRevatureTables {
         userTable.addColumn(columnName: "slack_username", dataType: .CHAR, constraints: nil)
         
         return userTable
-        
-    }
-    
-}
-
-class DatabaseOperations{
-    
-    func openDatabse(){
-        
-        let filePath = DatabaseAccess.getDatabaseFilePath(name: "iRevatureTrainer", pathDirectory: .documentDirectory, domainMask: .userDomainMask)
-        
-        //Open Databse
-        let db = DatabaseAccess.openDatabase(path: filePath, createIfDoesNotExist: true)
         
     }
     

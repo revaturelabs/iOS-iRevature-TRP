@@ -24,11 +24,11 @@ extension DatabaseOperations{
             
         } catch{
             
-            debugPrint("Oops! a problem occurred with: \(userTable)")
+            debugPrint("Oops! a problem occurred with: usertable")
             
         }
         
-        func insertUserRecord()
+        func insertUserRecord(){}
         
         
         
