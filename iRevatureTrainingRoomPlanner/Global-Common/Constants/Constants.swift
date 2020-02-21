@@ -6,4 +6,22 @@
 //  Copyright © 2020 admin. All rights reserved.
 //
 
-import Foundation
+
+/// Global API constants for type and stored properties
+enum API
+{
+    enum ENDPOINT
+    {
+        static let login = "https://private-dbd7b7-security14.apiary-mock.com/security/login"
+        static let trainers = "https://private-dbd7b7-security14.apiary-mock.com/coredata/trainers"
+        static let rooms = "https://private-dbd7b7-security14.apiary-mock.com/coredata/room?type=training"
+        static let skills = "https://private-dbd7b7-security14.apiary-mock.com/coredata/skills"
+        static let location = "https://private-dbd7b7-security14.apiary-mock.com/coredata/location?type=training"
+    }
+    
+    enum METHOD
+    {
+        case GET
+        case POST
+    }
+}
