@@ -25,6 +25,24 @@
 		293984AC23FC5DD300DAF922 /* RevatureLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984AB23FC5DD300DAF922 /* RevatureLocationCell.swift */; };
 		29588B2823FF8E4900E2C5BE /* RestAlamoFireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2723FF8E4900E2C5BE /* RestAlamoFireManager.swift */; };
 		29588B2A23FF8E9B00E2C5BE /* LoggerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2923FF8E9B00E2C5BE /* LoggerUtility.swift */; };
+		29588B4123FF8FB900E2C5BE /* DatabaseAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2B23FF8FB800E2C5BE /* DatabaseAccess.swift */; };
+		29588B4223FF8FB900E2C5BE /* SQLKeywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2D23FF8FB800E2C5BE /* SQLKeywords.swift */; };
+		29588B4323FF8FB900E2C5BE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2E23FF8FB800E2C5BE /* Protocols.swift */; };
+		29588B4423FF8FB900E2C5BE /* SQLMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2F23FF8FB800E2C5BE /* SQLMessages.swift */; };
+		29588B4523FF8FB900E2C5BE /* SelectStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3123FF8FB800E2C5BE /* SelectStatement.swift */; };
+		29588B4623FF8FB900E2C5BE /* JoinStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3223FF8FB800E2C5BE /* JoinStatement.swift */; };
+		29588B4723FF8FB900E2C5BE /* UpdateStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3323FF8FB800E2C5BE /* UpdateStatement.swift */; };
+		29588B4823FF8FB900E2C5BE /* DeleteStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3423FF8FB800E2C5BE /* DeleteStatement.swift */; };
+		29588B4923FF8FB900E2C5BE /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3523FF8FB800E2C5BE /* SQLTable.swift */; };
+		29588B4A23FF8FB900E2C5BE /* WhereStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3623FF8FB800E2C5BE /* WhereStatement.swift */; };
+		29588B4B23FF8FB900E2C5BE /* InsertStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3723FF8FB800E2C5BE /* InsertStatement.swift */; };
+		29588B4C23FF8FB900E2C5BE /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3823FF8FB800E2C5BE /* Statement.swift */; };
+		29588B4D23FF8FB900E2C5BE /* DMLFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3A23FF8FB800E2C5BE /* DMLFunctions.swift */; };
+		29588B4E23FF8FB900E2C5BE /* DDLFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3B23FF8FB800E2C5BE /* DDLFunctions.swift */; };
+		29588B4F23FF8FB900E2C5BE /* DQLFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3C23FF8FB800E2C5BE /* DQLFunctions.swift */; };
+		29588B5023FF8FB900E2C5BE /* PrepareFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3D23FF8FB800E2C5BE /* PrepareFunctions.swift */; };
+		29588B5123FF8FB900E2C5BE /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B3F23FF8FB800E2C5BE /* HelperFunctions.swift */; };
+		29588B5223FF8FB900E2C5BE /* Easy_SQL_Tut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B4023FF8FB800E2C5BE /* Easy_SQL_Tut.swift */; };
 		296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */; };
 		296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
@@ -69,6 +87,24 @@
 		293984AB23FC5DD300DAF922 /* RevatureLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLocationCell.swift; sourceTree = "<group>"; };
 		29588B2723FF8E4900E2C5BE /* RestAlamoFireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAlamoFireManager.swift; sourceTree = "<group>"; };
 		29588B2923FF8E9B00E2C5BE /* LoggerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerUtility.swift; sourceTree = "<group>"; };
+		29588B2B23FF8FB800E2C5BE /* DatabaseAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAccess.swift; sourceTree = "<group>"; };
+		29588B2D23FF8FB800E2C5BE /* SQLKeywords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLKeywords.swift; sourceTree = "<group>"; };
+		29588B2E23FF8FB800E2C5BE /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		29588B2F23FF8FB800E2C5BE /* SQLMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLMessages.swift; sourceTree = "<group>"; };
+		29588B3123FF8FB800E2C5BE /* SelectStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectStatement.swift; sourceTree = "<group>"; };
+		29588B3223FF8FB800E2C5BE /* JoinStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinStatement.swift; sourceTree = "<group>"; };
+		29588B3323FF8FB800E2C5BE /* UpdateStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateStatement.swift; sourceTree = "<group>"; };
+		29588B3423FF8FB800E2C5BE /* DeleteStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteStatement.swift; sourceTree = "<group>"; };
+		29588B3523FF8FB800E2C5BE /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		29588B3623FF8FB800E2C5BE /* WhereStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereStatement.swift; sourceTree = "<group>"; };
+		29588B3723FF8FB800E2C5BE /* InsertStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertStatement.swift; sourceTree = "<group>"; };
+		29588B3823FF8FB800E2C5BE /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		29588B3A23FF8FB800E2C5BE /* DMLFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLFunctions.swift; sourceTree = "<group>"; };
+		29588B3B23FF8FB800E2C5BE /* DDLFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLFunctions.swift; sourceTree = "<group>"; };
+		29588B3C23FF8FB800E2C5BE /* DQLFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQLFunctions.swift; sourceTree = "<group>"; };
+		29588B3D23FF8FB800E2C5BE /* PrepareFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareFunctions.swift; sourceTree = "<group>"; };
+		29588B3F23FF8FB800E2C5BE /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		29588B4023FF8FB800E2C5BE /* Easy_SQL_Tut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easy_SQL_Tut.swift; sourceTree = "<group>"; };
 		296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerWorkflowViewController.swift; sourceTree = "<group>"; };
 		296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusTableViewController.swift; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +176,50 @@
 				293984AB23FC5DD300DAF922 /* RevatureLocationCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		29588B2C23FF8FB800E2C5BE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				29588B2D23FF8FB800E2C5BE /* SQLKeywords.swift */,
+				29588B2E23FF8FB800E2C5BE /* Protocols.swift */,
+				29588B2F23FF8FB800E2C5BE /* SQLMessages.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		29588B3023FF8FB800E2C5BE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				29588B3123FF8FB800E2C5BE /* SelectStatement.swift */,
+				29588B3223FF8FB800E2C5BE /* JoinStatement.swift */,
+				29588B3323FF8FB800E2C5BE /* UpdateStatement.swift */,
+				29588B3423FF8FB800E2C5BE /* DeleteStatement.swift */,
+				29588B3523FF8FB800E2C5BE /* SQLTable.swift */,
+				29588B3623FF8FB800E2C5BE /* WhereStatement.swift */,
+				29588B3723FF8FB800E2C5BE /* InsertStatement.swift */,
+				29588B3823FF8FB800E2C5BE /* Statement.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		29588B3923FF8FB800E2C5BE /* SQLFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				29588B3A23FF8FB800E2C5BE /* DMLFunctions.swift */,
+				29588B3B23FF8FB800E2C5BE /* DDLFunctions.swift */,
+				29588B3C23FF8FB800E2C5BE /* DQLFunctions.swift */,
+				29588B3D23FF8FB800E2C5BE /* PrepareFunctions.swift */,
+			);
+			path = SQLFunctions;
+			sourceTree = "<group>";
+		};
+		29588B3E23FF8FB800E2C5BE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				29588B3F23FF8FB800E2C5BE /* HelperFunctions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		840DD1C223F639C600D090CA /* UI Elements */ = {
@@ -300,6 +380,12 @@
 		846D091723F3530C007A3BF2 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				29588B2C23FF8FB800E2C5BE /* Common */,
+				29588B2B23FF8FB800E2C5BE /* DatabaseAccess.swift */,
+				29588B4023FF8FB800E2C5BE /* Easy_SQL_Tut.swift */,
+				29588B3023FF8FB800E2C5BE /* Entities */,
+				29588B3923FF8FB800E2C5BE /* SQLFunctions */,
+				29588B3E23FF8FB800E2C5BE /* Utilities */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -466,23 +552,37 @@
 			files = (
 				840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */,
 				84CA4CF623FA631A00E03F5C /* RevatureActivityIndicator.swift in Sources */,
+				29588B5023FF8FB900E2C5BE /* PrepareFunctions.swift in Sources */,
 				84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */,
+				29588B4D23FF8FB900E2C5BE /* DMLFunctions.swift in Sources */,
+				29588B4523FF8FB900E2C5BE /* SelectStatement.swift in Sources */,
 				84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */,
+				29588B4A23FF8FB900E2C5BE /* WhereStatement.swift in Sources */,
 				84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */,
 				2939849D23FC56DF00DAF922 /* RevatureLocationTableView.swift in Sources */,
 				293984A623FC5CA900DAF922 /* RevatureTrainerCell.swift in Sources */,
 				84CF80A623FC4D2600AF0578 /* UserInfoBusinessService.swift in Sources */,
+				29588B4F23FF8FB900E2C5BE /* DQLFunctions.swift in Sources */,
 				84CF80A323FC4CDE00AF0578 /* UserInfoProtocol.swift in Sources */,
 				84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */,
+				29588B4123FF8FB900E2C5BE /* DatabaseAccess.swift in Sources */,
 				293984A823FC5D6000DAF922 /* RevatureCampusCell.swift in Sources */,
+				29588B4423FF8FB900E2C5BE /* SQLMessages.swift in Sources */,
+				29588B4623FF8FB900E2C5BE /* JoinStatement.swift in Sources */,
+				29588B4923FF8FB900E2C5BE /* SQLTable.swift in Sources */,
 				2939849B23FC569F00DAF922 /* RevatureCampusTableView.swift in Sources */,
 				2939849623FC4AB400DAF922 /* RevatureTextBoxes.swift in Sources */,
 				293984AA23FC5D9500DAF922 /* RevatureSkillCell.swift in Sources */,
+				29588B4323FF8FB900E2C5BE /* Protocols.swift in Sources */,
+				29588B4C23FF8FB900E2C5BE /* Statement.swift in Sources */,
+				29588B4E23FF8FB900E2C5BE /* DDLFunctions.swift in Sources */,
 				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
 				290262FF23FE459A009539D6 /* EntityManager.swift in Sources */,
 				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
 				2939849423FC460C00DAF922 /* Entity.swift in Sources */,
 				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
+				29588B4B23FF8FB900E2C5BE /* InsertStatement.swift in Sources */,
+				29588B4723FF8FB900E2C5BE /* UpdateStatement.swift in Sources */,
 				2939849F23FC56EF00DAF922 /* RevatureSkillsTableView.swift in Sources */,
 				846D090323F35226007A3BF2 /* ViewController.swift in Sources */,
 				846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */,
@@ -492,6 +592,7 @@
 				84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */,
 				84CA4CE223FA5EF200E03F5C /* User.swift in Sources */,
 				846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */,
+				29588B5223FF8FB900E2C5BE /* Easy_SQL_Tut.swift in Sources */,
 				293984AC23FC5DD300DAF922 /* RevatureLocationCell.swift in Sources */,
 				293984A123FC570B00DAF922 /* RevatureTrainerTableView.swift in Sources */,
 				293984A323FC583500DAF922 /* RevatureBaseTableView.swift in Sources */,
@@ -501,6 +602,9 @@
 				296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */,
 				8450168223FDC09800589EDE /* EasySQLTutorial.swift in Sources */,
 				84CA4CF023FA624500E03F5C /* RevatureProfileImage.swift in Sources */,
+				29588B4823FF8FB900E2C5BE /* DeleteStatement.swift in Sources */,
+				29588B4223FF8FB900E2C5BE /* SQLKeywords.swift in Sources */,
+				29588B5123FF8FB900E2C5BE /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
