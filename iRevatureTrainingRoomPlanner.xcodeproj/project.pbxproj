@@ -43,6 +43,7 @@
 		29662D0B24003E69004C48F1 /* WhereStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662CF924003E68004C48F1 /* WhereStatement.swift */; };
 		29662D0C24003E69004C48F1 /* InsertStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662CFA24003E68004C48F1 /* InsertStatement.swift */; };
 		29662D0D24003E69004C48F1 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662CFB24003E68004C48F1 /* Statement.swift */; };
+		29662D0F24006903004C48F1 /* DatabaseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662D0E24006903004C48F1 /* DatabaseOperations.swift */; };
 		296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */; };
 		296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
@@ -105,6 +106,7 @@
 		29662CF924003E68004C48F1 /* WhereStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereStatement.swift; sourceTree = "<group>"; };
 		29662CFA24003E68004C48F1 /* InsertStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertStatement.swift; sourceTree = "<group>"; };
 		29662CFB24003E68004C48F1 /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		29662D0E24006903004C48F1 /* DatabaseOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseOperations.swift; sourceTree = "<group>"; };
 		296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerWorkflowViewController.swift; sourceTree = "<group>"; };
 		296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusTableViewController.swift; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 		846D091723F3530C007A3BF2 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				29662D0E24006903004C48F1 /* DatabaseOperations.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				2939849423FC460C00DAF922 /* Entity.swift in Sources */,
 				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
 				29662D0A24003E69004C48F1 /* SQLTable.swift in Sources */,
+				29662D0F24006903004C48F1 /* DatabaseOperations.swift in Sources */,
 				2939849F23FC56EF00DAF922 /* RevatureSkillsTableView.swift in Sources */,
 				846D090323F35226007A3BF2 /* ViewController.swift in Sources */,
 				846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */,
