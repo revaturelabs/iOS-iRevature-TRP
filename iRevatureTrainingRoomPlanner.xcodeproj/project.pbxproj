@@ -46,6 +46,8 @@
 		29662D0F24006903004C48F1 /* DatabaseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662D0E24006903004C48F1 /* DatabaseOperations.swift */; };
 		296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */; };
 		296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */; };
+		840C562024006BA000E10CD3 /* UserDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C561F24006BA000E10CD3 /* UserDBOperations.swift */; };
+		840C562224006C0800E10CD3 /* TrainerDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C562124006C0800E10CD3 /* TrainerDBOperations.swift */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
 		8450168223FDC09800589EDE /* EasySQLTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450168123FDC09800589EDE /* EasySQLTutorial.swift */; };
 		846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D08FE23F35226007A3BF2 /* AppDelegate.swift */; };
@@ -109,6 +111,8 @@
 		29662D0E24006903004C48F1 /* DatabaseOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseOperations.swift; sourceTree = "<group>"; };
 		296B9A3A23FB5AF5006448B7 /* TrainerWorkflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerWorkflowViewController.swift; sourceTree = "<group>"; };
 		296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusTableViewController.swift; sourceTree = "<group>"; };
+		840C561F24006BA000E10CD3 /* UserDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBOperations.swift; sourceTree = "<group>"; };
+		840C562124006C0800E10CD3 /* TrainerDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDBOperations.swift; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8450168123FDC09800589EDE /* EasySQLTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySQLTutorial.swift; sourceTree = "<group>"; };
 		846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,6 +401,8 @@
 			isa = PBXGroup;
 			children = (
 				29662D0E24006903004C48F1 /* DatabaseOperations.swift */,
+				840C561F24006BA000E10CD3 /* UserDBOperations.swift */,
+				840C562124006C0800E10CD3 /* TrainerDBOperations.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -568,6 +574,7 @@
 				84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */,
 				84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */,
 				29662CFC24003E69004C48F1 /* Easy_SQL_Tut.swift in Sources */,
+				840C562224006C0800E10CD3 /* TrainerDBOperations.swift in Sources */,
 				84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */,
 				2939849D23FC56DF00DAF922 /* RevatureLocationTableView.swift in Sources */,
 				293984A623FC5CA900DAF922 /* RevatureTrainerCell.swift in Sources */,
@@ -580,6 +587,7 @@
 				29662CFD24003E69004C48F1 /* DMLFunctions.swift in Sources */,
 				2939849623FC4AB400DAF922 /* RevatureTextBoxes.swift in Sources */,
 				293984AA23FC5D9500DAF922 /* RevatureSkillCell.swift in Sources */,
+				840C562024006BA000E10CD3 /* UserDBOperations.swift in Sources */,
 				84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */,
 				29662D0C24003E69004C48F1 /* InsertStatement.swift in Sources */,
 				290262FF23FE459A009539D6 /* EntityManager.swift in Sources */,
