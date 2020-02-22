@@ -59,7 +59,8 @@ class LoginViewController: UIViewController{
         //MARK: Hardcoded values need to be replaced with IP call to authenticate user
         if(username == "test@revature.com" && password == "test1"){
             
-            let userInfoData: User = User(firstName: "test", lastName: "", email: username, token: "", keepLoggedIn: userKeepMeSignedIn)
+//            let userInfoData: User = User(firstName: "test", lastName: "", email: username, token: "", keepLoggedIn: userKeepMeSignedIn)
+            let userInfoData: User = User(firstName: "", lastName: "", email: "", token: "", keepLoggedIn: true, currentRole: SystemRole(id: 1, code: "", description: "", name: "") )
             
             userInfoBusinessService.setUserInfo(userObject: userInfoData)
             
