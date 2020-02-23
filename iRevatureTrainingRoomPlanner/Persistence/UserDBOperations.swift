@@ -10,7 +10,7 @@ import Foundation
 
 extension DatabaseOperations{
     
-    func createUserTable(databse: DatabaseAccess){
+    func createUserTable(){
         
         //Grabs a new instance of usertables based on iRevatureTables struct
         if let userTable = iRevatureTables.userTable.makeStatement(){
@@ -28,23 +28,21 @@ extension DatabaseOperations{
             
         }
         
-        func insertUserRecord(table: SQLiteTable){
+    }
+    
+    func insertUserRecord(userID: String, firstName: String, lastName: String, email: String, token: String, userRole: String, keepMeLoggedIn: Bool){
+        
+        let insertStatement = InsertStatement(table: iRevatureTables.userTable, columnValues: userID, firstName, lastName, email, token, userRole, keepMeLoggedIn)
+        
+        do {
+           
+            try databse.insertRow(statement: insertStatement)
             
-            let insertStatement = InsertStatement(table: table, columnValues: "Tester_001", "Tester", "Lester", "tester@revature.com", "testers", "testtoken", true)
+        } catch {
             
-            do {
-               
-                try databse.insertRow(statement: insertStatement)
-                
-            } catch {
-                
-                debugPrint("Insert did not work!")
-                
-            }
+            debugPrint("Insert did not work!")
             
         }
-        
-        
         
     }
     

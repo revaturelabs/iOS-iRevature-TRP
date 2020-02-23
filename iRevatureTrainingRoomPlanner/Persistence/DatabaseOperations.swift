@@ -10,14 +10,17 @@ import Foundation
 
 class DatabaseOperations{
     
-    func openDatabse(){
+    var databse: DatabaseAccess
+    
+    init() {
         
         let filePath = DatabaseAccess.getDatabaseFilePath(name: "iRevatureTrainer", pathDirectory: .documentDirectory, domainMask: .userDomainMask)
         
         //Open Databse
-        let db = DatabaseAccess.openDatabase(path: filePath, createIfDoesNotExist: true)
+        self.databse = DatabaseAccess.openDatabase(path: filePath, createIfDoesNotExist: true)!
         
     }
+    
     
 }
 
@@ -67,7 +70,7 @@ struct iRevatureTables {
         
         trainerTable.addColumn(columnName: "slack_username", dataType: .CHAR, constraints: .none)
         
-        return userTable
+        return trainerTable
         
     }
     
@@ -85,7 +88,7 @@ struct iRevatureTables {
         
         batchTable.addColumn(columnName: "number_of_seats", dataType: .INT, constraints: .NOTNULL)
         
-        return userTable
+        return batchTable
         
     }
     
@@ -99,7 +102,7 @@ struct iRevatureTables {
         
         calendarTable.addColumn(columnName: "start_end", dataType: .CHAR, constraints: .NOTNULL)
         
-        return userTable
+        return calendar
         
     }
     
@@ -112,7 +115,7 @@ struct iRevatureTables {
         skillTable.addColumn(columnName: "skill_name", dataType: .CHAR, constraints: .NOTNULL)
         
         
-        return userTable
+        return skillTable
         
     }
     
@@ -126,7 +129,7 @@ struct iRevatureTables {
         
         batchRoomTable.addColumn(columnName: "room_id", dataType: .CHAR, constraints: .NOTNULL)
         
-        return userTable
+        return batchRoomTable
         
     }
     
@@ -139,7 +142,7 @@ struct iRevatureTables {
         
         batchSkillTable.addColumn(columnName: "skill_id", dataType: .CHAR, constraints: .NOTNULL)
         
-        return userTable
+        return batchSkillTable
         
     }
     
@@ -151,7 +154,7 @@ struct iRevatureTables {
         
         roomAvailabilityTable.addColumn(columnName: "calendar_id", dataType: .CHAR, constraints: .NOTNULL)
         
-        return userTable
+        return roomAvailabilityTable
         
     }
     
@@ -163,7 +166,7 @@ struct iRevatureTables {
         
         trainerSkillTable.addColumn(columnName: "skill_id", dataType: .CHAR, constraints: .NOTNULL)
         
-        return userTable
+        return trainerSkillTable
         
     }
 }
