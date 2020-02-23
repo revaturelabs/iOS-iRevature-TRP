@@ -20,7 +20,7 @@ extension DatabaseOperations{
         //Tries to executes the SQLite3 Prepared Statement
         do{
             
-            try databse.createTable(table: iRevatureTables.userTable.self)
+            try database.createTable(table: iRevatureTables.userTable.self)
             
         } catch{
             
@@ -36,7 +36,7 @@ extension DatabaseOperations{
         
         do {
            
-            try databse.insertRow(statement: insertStatement)
+            try database.insertRow(statement: insertStatement)
             
         } catch {
             
@@ -46,4 +46,65 @@ extension DatabaseOperations{
         
     }
     
+    func selectUserRecord() -> [[String: Any]]{
+        var selectStatement = SelectStatement()
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "first_name", asName: "First_Name")
+        
+        //selectStatement.getAllColumns(fromTable: iRevatureTables.userTable)
+        
+        do{
+            
+            let query = try (database.selectData(statement: selectStatement) ?? [["":""]])
+            
+           return query
+            
+            
+        } catch {
+            
+            debugPrint("Opps! Something went wrong with User Select")
+            
+        }
+        
+        return [["":""]]
+    }
+    
+    func deleteUserRecord(){
+        
+        var deleteStatement = DeleteStatement(table: iRevatureTables.userTable)
+        
+        var whereStatement = WhereStatement()
+        
+        whereStatement.addStatement(table: iRevatureTables.userTable, columnName: "user_id", expression: .EQUALS, columnValue: "RevID_01")
+        
+        deleteStatement.setWhereStatement(statement: whereStatement)
+        
+        do{
+            try database.deleteRow(statement: deleteStatement)
+            debugPrint("Delete Successful")
+        } catch {
+            debugPrint("Opps! Delete not successful")
+        }
+    }
+    
+    func updateUserRecord(){
+        
+        var  updateStatement = UpdateStatement(table: iRevatureTables.userTable)
+        
+        var whereStatement = WhereStatement()
+        whereStatement.addStatement(table: iRevatureTables.userTable, columnName: "user_id", expression: .EQUALS, columnValue: "RevID_01")
+        
+        updateStatement.addValueChange(columnToUpdate: "first_name", updatedValue: "Wes")
+        
+        updateStatement.setWhereStatement(statement: whereStatement)
+        
+        do{
+            
+            try database.updateRow(statement: updateStatement)
+            
+        } catch{
+            
+        }
+        
+    }
 }

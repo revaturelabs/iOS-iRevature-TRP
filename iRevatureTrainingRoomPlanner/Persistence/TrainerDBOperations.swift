@@ -20,7 +20,7 @@ extension DatabaseOperations{
         //Tries to executes the SQLite3 Prepared Statement
         do{
             
-            try databse.createTable(table: iRevatureTables.trainerTable.self)
+            try database.createTable(table: iRevatureTables.trainerTable.self)
             
         } catch{
             
@@ -36,7 +36,7 @@ extension DatabaseOperations{
         
         do {
             
-            try databse.insertRow(statement: insertStatement)
+            try database.insertRow(statement: insertStatement)
             
         } catch {
             

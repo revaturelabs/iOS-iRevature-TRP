@@ -10,14 +10,14 @@ import Foundation
 
 class DatabaseOperations{
     
-    var databse: DatabaseAccess
+    var database: DatabaseAccess
     
     init() {
         
         let filePath = DatabaseAccess.getDatabaseFilePath(name: "iRevatureTrainer", pathDirectory: .documentDirectory, domainMask: .userDomainMask)
         
         //Open Databse
-        self.databse = DatabaseAccess.openDatabase(path: filePath, createIfDoesNotExist: true)!
+        self.database = DatabaseAccess.openDatabase(path: filePath, createIfDoesNotExist: true)!
         
     }
     
