@@ -20,8 +20,6 @@ class DatabaseOperations{
         self.database = DatabaseAccess.openDatabase(path: filePath, createIfDoesNotExist: true)!
         
     }
-    
-    
 }
 
 struct iRevatureTables {
@@ -38,7 +36,7 @@ struct iRevatureTables {
         userTable.addColumn(columnName: "last_name", dataType: .CHAR, constraints: .NOTNULL)
         
         userTable.addColumn(columnName: "email", dataType: .CHAR, constraints: .NOTNULL, .UNIQUE)
-            
+        
         userTable.addColumn(columnName: "user_role", dataType: .CHAR, constraints: .NOTNULL)
         
         userTable.addColumn(columnName: "token", dataType: .CHAR, constraints: nil)
@@ -63,7 +61,7 @@ struct iRevatureTables {
         trainerTable.addColumn(columnName: "last_name", dataType: .CHAR, constraints: .NOTNULL)
         
         trainerTable.addColumn(columnName: "email", dataType: .CHAR, constraints: .NOTNULL)
-                
+        
         trainerTable.addColumn(columnName: "phone_number", dataType: .CHAR, constraints: .NOTNULL)
         
         trainerTable.addColumn(columnName: "base_location", dataType: .CHAR, constraints: .NOTNULL)
@@ -74,7 +72,7 @@ struct iRevatureTables {
         
     }
     
-    static var batch: SQLiteTable {
+    static var batchTable: SQLiteTable {
         
         var batchTable = SQLiteTable(tableName: "batch")
         
@@ -86,13 +84,29 @@ struct iRevatureTables {
         
         batchTable.addColumn(columnName: "skill_id", dataType: .CHAR, constraints: .none)
         
+        batchTable.addColumn(columnName: "number_of_assosiates", dataType: .INT, constraints: .NOTNULL)
+        
+        return batchTable
+        
+    }
+    
+    static var roomTable: SQLiteTable {
+        
+        var batchTable = SQLiteTable(tableName: "room")
+        
+        batchTable.addColumn(columnName: "room_id", dataType: .CHAR, constraints: .PRIMARYKEY, .NOTNULL)
+        
+        batchTable.addColumn(columnName: "batch_id", dataType: .CHAR, constraints: .none)
+        
+        batchTable.addColumn(columnName: "room_name", dataType: .CHAR, constraints: .none)
+        
         batchTable.addColumn(columnName: "number_of_seats", dataType: .INT, constraints: .NOTNULL)
         
         return batchTable
         
     }
     
-    static var calendar: SQLiteTable {
+    static var calendarTable: SQLiteTable {
         
         var calendarTable = SQLiteTable(tableName: "calendar")
         
@@ -102,11 +116,11 @@ struct iRevatureTables {
         
         calendarTable.addColumn(columnName: "start_end", dataType: .CHAR, constraints: .NOTNULL)
         
-        return calendar
+        return calendarTable
         
     }
     
-    static var skill: SQLiteTable {
+    static var skillTable: SQLiteTable {
         
         var skillTable = SQLiteTable(tableName: "skill")
         
@@ -120,7 +134,7 @@ struct iRevatureTables {
     }
     
     
-    static var batchRoom: SQLiteTable {
+    static var batchRoomTable: SQLiteTable {
         
         var batchRoomTable = SQLiteTable(tableName: "batch_room")
         
@@ -133,7 +147,7 @@ struct iRevatureTables {
         
     }
     
-    static var batchSkill: SQLiteTable {
+    static var batchSkillTable: SQLiteTable {
         
         var batchSkillTable = SQLiteTable(tableName: "batch_skill")
         
@@ -146,7 +160,7 @@ struct iRevatureTables {
         
     }
     
-    static var roomAvailability: SQLiteTable {
+    static var roomAvailabilityTable: SQLiteTable {
         
         var roomAvailabilityTable = SQLiteTable(tableName: "room_availability")
         
@@ -158,7 +172,7 @@ struct iRevatureTables {
         
     }
     
-    static var trainerSkill: SQLiteTable {
+    static var trainerSkillTable: SQLiteTable {
         
         var trainerSkillTable = SQLiteTable(tableName: "trainer_Skill")
         
