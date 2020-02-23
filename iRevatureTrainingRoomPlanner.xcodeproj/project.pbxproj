@@ -50,10 +50,10 @@
 		296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */; };
 		840C562024006BA000E10CD3 /* UserDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C561F24006BA000E10CD3 /* UserDBOperations.swift */; };
 		840C562224006C0800E10CD3 /* TrainerDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C562124006C0800E10CD3 /* TrainerDBOperations.swift */; };
-		840C56242403240400E10CD3 /* BatchDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56232403240400E10CD3 /* BatchDBOperations.swift */; };
 		840C56262403249D00E10CD3 /* CalendarDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56252403249D00E10CD3 /* CalendarDBOperations.swift */; };
 		840C5628240324BF00E10CD3 /* RoomDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C5627240324BF00E10CD3 /* RoomDBOperations.swift */; };
 		840C562A240324DF00E10CD3 /* SkillDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C5629240324DF00E10CD3 /* SkillDBOperations.swift */; };
+		840C562C24032DEF00E10CD3 /* BatchDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
 		8450168223FDC09800589EDE /* EasySQLTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450168123FDC09800589EDE /* EasySQLTutorial.swift */; };
 		846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D08FE23F35226007A3BF2 /* AppDelegate.swift */; };
@@ -121,10 +121,10 @@
 		296B9A3F23FB9742006448B7 /* RevatureCampusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusTableViewController.swift; sourceTree = "<group>"; };
 		840C561F24006BA000E10CD3 /* UserDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBOperations.swift; sourceTree = "<group>"; };
 		840C562124006C0800E10CD3 /* TrainerDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDBOperations.swift; sourceTree = "<group>"; };
-		840C56232403240400E10CD3 /* BatchDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchDBOperations.swift; sourceTree = "<group>"; };
 		840C56252403249D00E10CD3 /* CalendarDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDBOperations.swift; sourceTree = "<group>"; };
 		840C5627240324BF00E10CD3 /* RoomDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDBOperations.swift; sourceTree = "<group>"; };
 		840C5629240324DF00E10CD3 /* SkillDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDBOperations.swift; sourceTree = "<group>"; };
+		840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchDBOperations.swift; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8450168123FDC09800589EDE /* EasySQLTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySQLTutorial.swift; sourceTree = "<group>"; };
 		846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,10 +409,10 @@
 				29662D0E24006903004C48F1 /* DatabaseOperations.swift */,
 				840C561F24006BA000E10CD3 /* UserDBOperations.swift */,
 				840C562124006C0800E10CD3 /* TrainerDBOperations.swift */,
-				840C56232403240400E10CD3 /* BatchDBOperations.swift */,
 				840C56252403249D00E10CD3 /* CalendarDBOperations.swift */,
 				840C5627240324BF00E10CD3 /* RoomDBOperations.swift */,
 				840C5629240324DF00E10CD3 /* SkillDBOperations.swift */,
+				840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -603,7 +603,6 @@
 				29662D162400876B004C48F1 /* RevatureAuthorization.swift in Sources */,
 				29662D0C24003E69004C48F1 /* InsertStatement.swift in Sources */,
 				290262FF23FE459A009539D6 /* EntityManager.swift in Sources */,
-				840C56242403240400E10CD3 /* BatchDBOperations.swift in Sources */,
 				840C562A240324DF00E10CD3 /* SkillDBOperations.swift in Sources */,
 				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
 				29662D0624003E69004C48F1 /* SelectStatement.swift in Sources */,
@@ -640,6 +639,7 @@
 				8450168223FDC09800589EDE /* EasySQLTutorial.swift in Sources */,
 				84CA4CF023FA624500E03F5C /* RevatureProfileImage.swift in Sources */,
 				29662D0D24003E69004C48F1 /* Statement.swift in Sources */,
+				840C562C24032DEF00E10CD3 /* BatchDBOperations.swift in Sources */,
 				840C56262403249D00E10CD3 /* CalendarDBOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
