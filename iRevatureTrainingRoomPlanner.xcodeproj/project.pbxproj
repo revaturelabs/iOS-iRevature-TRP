@@ -54,7 +54,9 @@
 		840C5628240324BF00E10CD3 /* RoomDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C5627240324BF00E10CD3 /* RoomDBOperations.swift */; };
 		840C562A240324DF00E10CD3 /* SkillDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C5629240324DF00E10CD3 /* SkillDBOperations.swift */; };
 		840C562C24032DEF00E10CD3 /* BatchDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */; };
+		840C565424044A7B00E10CD3 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840C565224044A7B00E10CD3 /* Room.storyboard */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
+		843A602C2404554C000DEFFE /* RoomWorkFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A602B2404554C000DEFFE /* RoomWorkFlowViewController.swift */; };
 		8450168223FDC09800589EDE /* EasySQLTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450168123FDC09800589EDE /* EasySQLTutorial.swift */; };
 		846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D08FE23F35226007A3BF2 /* AppDelegate.swift */; };
 		846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D090023F35226007A3BF2 /* SceneDelegate.swift */; };
@@ -125,7 +127,9 @@
 		840C5627240324BF00E10CD3 /* RoomDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDBOperations.swift; sourceTree = "<group>"; };
 		840C5629240324DF00E10CD3 /* SkillDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDBOperations.swift; sourceTree = "<group>"; };
 		840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchDBOperations.swift; sourceTree = "<group>"; };
+		840C565324044A7B00E10CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Room.storyboard; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		843A602B2404554C000DEFFE /* RoomWorkFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomWorkFlowViewController.swift; sourceTree = "<group>"; };
 		8450168123FDC09800589EDE /* EasySQLTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySQLTutorial.swift; sourceTree = "<group>"; };
 		846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846D08FE23F35226007A3BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -377,6 +381,7 @@
 		846D091423F352EA007A3BF2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				840C565224044A7B00E10CD3 /* Room.storyboard */,
 				290262FB23FDCA79009539D6 /* Trainer.storyboard */,
 				846D090423F35226007A3BF2 /* Main.storyboard */,
 				846D090923F35228007A3BF2 /* LaunchScreen.storyboard */,
@@ -467,6 +472,7 @@
 				846D090223F35226007A3BF2 /* ViewController.swift */,
 				840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */,
 				8450168123FDC09800589EDE /* EasySQLTutorial.swift */,
+				843A602B2404554C000DEFFE /* RoomWorkFlowViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840C565424044A7B00E10CD3 /* Room.storyboard in Resources */,
 				846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */,
 				846D090823F35228007A3BF2 /* Assets.xcassets in Resources */,
 				290262FD23FDCA79009539D6 /* Trainer.storyboard in Resources */,
@@ -590,6 +597,7 @@
 				293984A623FC5CA900DAF922 /* RevatureTrainerCell.swift in Sources */,
 				84CF80A623FC4D2600AF0578 /* UserInfoBusinessService.swift in Sources */,
 				84CF80A323FC4CDE00AF0578 /* UserInfoProtocol.swift in Sources */,
+				843A602C2404554C000DEFFE /* RoomWorkFlowViewController.swift in Sources */,
 				84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */,
 				29662D0B24003E69004C48F1 /* WhereStatement.swift in Sources */,
 				293984A823FC5D6000DAF922 /* RevatureCampusCell.swift in Sources */,
@@ -653,6 +661,14 @@
 				290262FC23FDCA79009539D6 /* Base */,
 			);
 			name = Trainer.storyboard;
+			sourceTree = "<group>";
+		};
+		840C565224044A7B00E10CD3 /* Room.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840C565324044A7B00E10CD3 /* Base */,
+			);
+			name = Room.storyboard;
 			sourceTree = "<group>";
 		};
 		846D090423F35226007A3BF2 /* Main.storyboard */ = {
