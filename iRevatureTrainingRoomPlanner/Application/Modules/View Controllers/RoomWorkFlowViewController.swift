@@ -11,17 +11,21 @@ import UIKit
 
 class RoomWorkFlowController: UIViewController {
     
-    
+    //Text fields
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
     
+    //Date picker references
     private var startDatePicker: UIDatePicker?
     private var endDatePicker: UIDatePicker?
+    
+    //Tests not necessary
+    var today = Date()
+    var myDate: String = ""
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RoomWorkFlowController.viewTappedToDeffer(gestureRecognier:)))
         
@@ -66,10 +70,16 @@ class RoomWorkFlowController: UIViewController {
         endDateTextField.textColor = UIColor.black
         
         endDateTextField.text = dateFormatter.string(from: datePicker.date)
+        
+        today = datePicker.date
+        
     }
     
+    //Dismisses the DatePicker
     @objc func viewTappedToDeffer(gestureRecognier: UIGestureRecognizer){
+        
         view.endEditing(true)
+        
     }
     
 }

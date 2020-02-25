@@ -46,12 +46,24 @@ extension DatabaseOperations{
         
     }
     
-    func selectUserRecord() -> [[String: Any]]{
+    //Not the best approach, will replace with SQLite Library
+    func selectAllUserRecords() -> [[String: Any]]{
+       
         var selectStatement = SelectStatement()
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "first_name", asName: "First_Name")
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "user_id", asName: "userID")
         
-        //selectStatement.getAllColumns(fromTable: iRevatureTables.userTable)
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "first_name", asName: "first_name")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "last_name", asName: "last_name")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "email", asName: "email")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "user_role", asName: "user_role")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "token", asName: "token")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "keep_logged_in", asName: "keep_logged_in")
         
         do{
             
@@ -69,42 +81,49 @@ extension DatabaseOperations{
         return [["":""]]
     }
     
-    func deleteUserRecord(){
-        
-        var deleteStatement = DeleteStatement(table: iRevatureTables.userTable)
-        
-        var whereStatement = WhereStatement()
-        
-        whereStatement.addStatement(table: iRevatureTables.userTable, columnName: "user_id", expression: .EQUALS, columnValue: "RevID_01")
-        
-        deleteStatement.setWhereStatement(statement: whereStatement)
-        
-        do{
-            try database.deleteRow(statement: deleteStatement)
-            debugPrint("Delete Successful")
-        } catch {
-            debugPrint("Opps! Delete not successful")
-        }
-    }
+//    func deleteUserRecord(whereColumn: String, whereValue: String){
+//
+//        var deleteStatement = DeleteStatement(table: iRevatureTables.userTable)
+//
+//        var whereStatement = WhereStatement()
+//
+//        whereStatement.addStatement(table: iRevatureTables.userTable, columnName: whereValue, expression: .EQUALS, columnValue: whereValue)
+//
+//        deleteStatement.setWhereStatement(statement: whereStatement)
+//
+//        do{
+//
+//            try database.deleteRow(statement: deleteStatement)
+//
+//            debugPrint("Delete Successful")
+//
+//        } catch {
+//
+//            debugPrint("Opps! Delete not successful")
+//
+//        }
+//    }
     
-    func updateUserRecord(){
-        
-        var  updateStatement = UpdateStatement(table: iRevatureTables.userTable)
-        
-        var whereStatement = WhereStatement()
-        whereStatement.addStatement(table: iRevatureTables.userTable, columnName: "user_id", expression: .EQUALS, columnValue: "RevID_01")
-        
-        updateStatement.addValueChange(columnToUpdate: "first_name", updatedValue: "Wes")
-        
-        updateStatement.setWhereStatement(statement: whereStatement)
-        
-        do{
-            
-            try database.updateRow(statement: updateStatement)
-            
-        } catch{
-            
-        }
-        
-    }
+//    func updateUserRecord(column: String, value: String,whereColumn: String, whereValue: String){
+//        
+//        var  updateStatement = UpdateStatement(table: iRevatureTables.userTable)
+//        
+//        var whereStatement = WhereStatement()
+//        
+//        whereStatement.addStatement(table: iRevatureTables.userTable, columnName: whereValue, expression: .EQUALS, columnValue: whereValue)
+//        
+//        updateStatement.addValueChange(columnToUpdate: column, updatedValue: value)
+//        
+//        updateStatement.setWhereStatement(statement: whereStatement)
+//        
+//        do{
+//            
+//            try database.updateRow(statement: updateStatement)
+//            
+//        } catch {
+//            
+//        }
+//        
+//    }
+    
 }

@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // should be doing our database and API calls here (outside of the login authentication)
+        
+        //MARK: Initalizes tables
+        DatabaseOperations().createUserTable()
+        DatabaseOperations().createTrainerTable()
+        DatabaseOperations().createRoomTable()
+        DatabaseOperations().createSkillTable()
+        DatabaseOperations().createCalendarTable()
+        DatabaseOperations().enterDummyData()
+        
+        
         // still not understanding the point of that on the first launch, as the token hasnt been acquired yet, and therefor cant be used to authenticate the API endpoint with credentials to acquire data
         return true
     }

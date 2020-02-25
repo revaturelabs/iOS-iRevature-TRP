@@ -30,6 +30,41 @@ extension DatabaseOperations{
         
     }
     
+    //Not the best approach, will replace with SQLite Library
+    func selectAllTrainerRecords() -> [[String: Any]]{
+        
+        var selectStatement = SelectStatement()
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "trainer_id", asName: "trainer_id")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "first_name", asName: "first_name")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "last_name", asName: "last_name")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "email", asName: "email")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "phone_number", asName: "phone_number")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "base_location", asName: "base_location")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "slack_username", asName: "slack_username")
+        
+        do{
+            
+            let query = try (database.selectData(statement: selectStatement) ?? [["":""]])
+            
+            return query
+            
+            
+        } catch {
+            
+            debugPrint("Opps! Something went wrong with User Select")
+            
+        }
+        
+        return [["":""]]
+    }
+    
     func insertTrainerRecord(trainerID: String, firstName: String, lastName: String, email: String, phoneNumber: String, baseLocation: String, slackUsername: String){
         
         let insertStatement = InsertStatement(table: iRevatureTables.trainerTable, columnValues: trainerID, firstName, lastName, email, phoneNumber, baseLocation, slackUsername)
@@ -44,43 +79,44 @@ extension DatabaseOperations{
             
         }
     }
-    
-    func deleteTrainerRecord(){
-         
-         var deleteStatement = DeleteStatement(table: iRevatureTables.trainerTable)
-         
-         var whereStatement = WhereStatement()
-         
-         whereStatement.addStatement(table: iRevatureTables.trainerTable, columnName: "trainer_id", expression: .EQUALS, columnValue: "Trainer_01")
-         
-         deleteStatement.setWhereStatement(statement: whereStatement)
-         
-         do{
-             try database.deleteRow(statement: deleteStatement)
-             debugPrint("Delete Successful")
-         } catch {
-             debugPrint("Opps! Delete not successful")
-         }
-     }
-     
-     func updateTrainerRecord(){
-         
-         var  updateStatement = UpdateStatement(table: iRevatureTables.trainerTable)
-         
-         var whereStatement = WhereStatement()
-         whereStatement.addStatement(table: iRevatureTables.trainerTable, columnName: "trainer_id", expression: .EQUALS, columnValue: "Trainer_01")
-         
-         updateStatement.addValueChange(columnToUpdate: "first_name", updatedValue: "Wes")
-         
-         updateStatement.setWhereStatement(statement: whereStatement)
-         
-         do{
-             
-             try database.updateRow(statement: updateStatement)
-             
-         } catch{
-             
-         }
-         
-     }
+//
+//    func deleteTrainerRecord(){
+//
+//        var deleteStatement = DeleteStatement(table: iRevatureTables.trainerTable)
+//
+//        var whereStatement = WhereStatement()
+//
+//        whereStatement.addStatement(table: iRevatureTables.trainerTable, columnName: "trainer_id", expression: .EQUALS, columnValue: "Trainer_01")
+//
+//        deleteStatement.setWhereStatement(statement: whereStatement)
+//
+//        do{
+//            try database.deleteRow(statement: deleteStatement)
+//            debugPrint("Delete Successful")
+//        } catch {
+//            debugPrint("Opps! Delete not successful")
+//        }
+//    }
+//
+//    func updateTrainerRecord(column: String, value: String,whereColumn: String, whereValue: String){
+//
+//        var  updateStatement = UpdateStatement(table: iRevatureTables.trainerTable)
+//
+//        var whereStatement = WhereStatement()
+//
+//        whereStatement.addStatement(table: iRevatureTables.trainerTable, columnName: whereValue, expression: .EQUALS, columnValue: whereValue)
+//
+//        updateStatement.addValueChange(columnToUpdate: column, updatedValue: value)
+//
+//        updateStatement.setWhereStatement(statement: whereStatement)
+//
+//        do{
+//
+//            try database.updateRow(statement: updateStatement)
+//
+//        } catch {
+//
+//        }
+//
+//    }
 }

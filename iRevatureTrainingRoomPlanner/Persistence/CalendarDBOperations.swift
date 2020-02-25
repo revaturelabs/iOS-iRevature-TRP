@@ -28,4 +28,47 @@ extension DatabaseOperations{
         }
         
     }
+    
+    func insertCalendarRecord(calendarID: Int, startDate: String, endDate: String){
+        
+        let insertStatement = InsertStatement(table: iRevatureTables.calendarTable, columnValues: calendarID, startDate, endDate)
+        
+        do {
+           
+            try database.insertRow(statement: insertStatement)
+            
+        } catch {
+            
+            debugPrint("Insert did not work!")
+            
+        }
+        
+    }
+    
+    //Not the best approach, will replace with SQLite Library
+    func selectAllCalendarRecords() -> [[String: Any]]{
+       
+        var selectStatement = SelectStatement()
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "calendar_id", asName: "calendar_id")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "start_date", asName: "start_date")
+        
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "end_date", asName: "end_date")
+        
+        do {
+            
+            let query = try (database.selectData(statement: selectStatement) ?? [["":""]])
+            
+           return query
+            
+            
+        } catch {
+            
+            debugPrint("Opps! Something went wrong with User Select")
+            
+        }
+        
+        return [["":""]]
+    }
 }
