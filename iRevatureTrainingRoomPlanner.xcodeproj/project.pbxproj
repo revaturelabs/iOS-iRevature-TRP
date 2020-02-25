@@ -23,7 +23,6 @@
 		293984A823FC5D6000DAF922 /* RevatureCampusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A723FC5D6000DAF922 /* RevatureCampusCell.swift */; };
 		293984AA23FC5D9500DAF922 /* RevatureSkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A923FC5D9500DAF922 /* RevatureSkillCell.swift */; };
 		293984AC23FC5DD300DAF922 /* RevatureLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984AB23FC5DD300DAF922 /* RevatureLocationCell.swift */; };
-		29588B2823FF8E4900E2C5BE /* RestAlamoFireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2723FF8E4900E2C5BE /* RestAlamoFireManager.swift */; };
 		29588B2A23FF8E9B00E2C5BE /* LoggerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29588B2923FF8E9B00E2C5BE /* LoggerUtility.swift */; };
 		29662CFC24003E69004C48F1 /* Easy_SQL_Tut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662CE624003E68004C48F1 /* Easy_SQL_Tut.swift */; };
 		29662CFD24003E69004C48F1 /* DMLFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29662CE824003E68004C48F1 /* DMLFunctions.swift */; };
@@ -63,9 +62,6 @@
 		846D090623F35226007A3BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090423F35226007A3BF2 /* Main.storyboard */; };
 		846D090823F35228007A3BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846D090723F35228007A3BF2 /* Assets.xcassets */; };
 		846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090923F35228007A3BF2 /* LaunchScreen.storyboard */; };
-		84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */; };
-		84CA4CE023FA5ED100E03F5C /* TrainerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */; };
-		84CA4CE223FA5EF200E03F5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE123FA5EF200E03F5C /* User.swift */; };
 		84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */; };
 		84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */; };
 		84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */; };
@@ -95,7 +91,6 @@
 		293984A723FC5D6000DAF922 /* RevatureCampusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusCell.swift; sourceTree = "<group>"; };
 		293984A923FC5D9500DAF922 /* RevatureSkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillCell.swift; sourceTree = "<group>"; };
 		293984AB23FC5DD300DAF922 /* RevatureLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLocationCell.swift; sourceTree = "<group>"; };
-		29588B2723FF8E4900E2C5BE /* RestAlamoFireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAlamoFireManager.swift; sourceTree = "<group>"; };
 		29588B2923FF8E9B00E2C5BE /* LoggerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerUtility.swift; sourceTree = "<group>"; };
 		29662CE624003E68004C48F1 /* Easy_SQL_Tut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easy_SQL_Tut.swift; sourceTree = "<group>"; };
 		29662CE824003E68004C48F1 /* DMLFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLFunctions.swift; sourceTree = "<group>"; };
@@ -138,9 +133,6 @@
 		846D090723F35228007A3BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846D090A23F35228007A3BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846D090C23F35228007A3BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchAPI.swift; sourceTree = "<group>"; };
-		84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerAPI.swift; sourceTree = "<group>"; };
-		84CA4CE123FA5EF200E03F5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteUtility.swift; sourceTree = "<group>"; };
 		84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureButton.swift; sourceTree = "<group>"; };
 		84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLandingPageButton.swift; sourceTree = "<group>"; };
@@ -297,10 +289,6 @@
 		840DD1C623F63A5100D090CA /* API */ = {
 			isa = PBXGroup;
 			children = (
-				29588B2723FF8E4900E2C5BE /* RestAlamoFireManager.swift */,
-				84CA4CDD23FA5EB700E03F5C /* BatchAPI.swift */,
-				84CA4CDF23FA5ED100E03F5C /* TrainerAPI.swift */,
-				84CA4CE123FA5EF200E03F5C /* User.swift */,
 				29662D152400876B004C48F1 /* RevatureAuthorization.swift */,
 			);
 			path = API;
@@ -590,7 +578,6 @@
 				84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */,
 				29662CFC24003E69004C48F1 /* Easy_SQL_Tut.swift in Sources */,
 				840C562224006C0800E10CD3 /* TrainerDBOperations.swift in Sources */,
-				84CA4CDE23FA5EB700E03F5C /* BatchAPI.swift in Sources */,
 				2939849D23FC56DF00DAF922 /* RevatureLocationTableView.swift in Sources */,
 				293984A623FC5CA900DAF922 /* RevatureTrainerCell.swift in Sources */,
 				84CF80A623FC4D2600AF0578 /* UserInfoBusinessService.swift in Sources */,
@@ -620,12 +607,10 @@
 				2939849F23FC56EF00DAF922 /* RevatureSkillsTableView.swift in Sources */,
 				846D090323F35226007A3BF2 /* ViewController.swift in Sources */,
 				846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */,
-				29588B2823FF8E4900E2C5BE /* RestAlamoFireManager.swift in Sources */,
 				296B9A3B23FB5AF5006448B7 /* TrainerWorkflowViewController.swift in Sources */,
 				29662D0824003E69004C48F1 /* UpdateStatement.swift in Sources */,
 				2939849823FC502D00DAF922 /* RevatureTableViewCell.swift in Sources */,
 				84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */,
-				84CA4CE223FA5EF200E03F5C /* User.swift in Sources */,
 				29662D0324003E69004C48F1 /* Protocols.swift in Sources */,
 				846D090123F35226007A3BF2 /* SceneDelegate.swift in Sources */,
 				293984AC23FC5DD300DAF922 /* RevatureLocationCell.swift in Sources */,
@@ -633,7 +618,6 @@
 				29662D0724003E69004C48F1 /* JoinStatement.swift in Sources */,
 				293984A323FC583500DAF922 /* RevatureBaseTableView.swift in Sources */,
 				29662D0124003E69004C48F1 /* HelperFunctions.swift in Sources */,
-				84CA4CE023FA5ED100E03F5C /* TrainerAPI.swift in Sources */,
 				29662CFE24003E69004C48F1 /* DDLFunctions.swift in Sources */,
 				29662D0924003E69004C48F1 /* DeleteStatement.swift in Sources */,
 				29588B2A23FF8E9B00E2C5BE /* LoggerUtility.swift in Sources */,
