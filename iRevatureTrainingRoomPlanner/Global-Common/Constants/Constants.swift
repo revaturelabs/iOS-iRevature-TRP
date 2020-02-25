@@ -16,7 +16,8 @@ enum API
         static let trainers = "https://private-dbd7b7-security14.apiary-mock.com/coredata/trainers"
         static let rooms = "https://private-dbd7b7-security14.apiary-mock.com/coredata/room"
         static let skills = "https://private-dbd7b7-security14.apiary-mock.com/coredata/skills"
-        static let location = "https://private-dbd7b7-security14.apiary-mock.com/coredata/location"
+        static let locations = "https://private-dbd7b7-security14.apiary-mock.com/coredata/location"
+        static let batches = "https://private-dbd7b7-security14.apiary-mock.com/coredata/training/batch"
     }
     
 

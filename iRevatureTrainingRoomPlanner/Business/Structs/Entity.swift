@@ -7,21 +7,11 @@
 //  Copyright © 2020 admin. All rights reserved.
 //
 
-
-/// An Authentication object contains an `email` and `password` field to use for the login endpoint.
-/// The API will also convert the password to a base64 encoded String before sending it out. The password itself is never stored and the `Authentication` object is destroyed after successfully receiving any response (success or failure).
-struct Authentication : Encodable
-{
-    var email : String
-    var password : String
-}
-
-
 /// An object which represents a `Batch` associates, regardless of current, previous, or future assignment.
 /// Each `Batch` has a set of `skills` that they will require and these are associated with the `Trainer` that may have the skills
 /// required to teach/train them. Each `Batch` also has a primary `Location` they will be located at and must be tracked
 /// for the purposes of filtering the appropriate `Location` objects in the UI Layer.
-struct Batch
+struct Batch : Codable
 {
     var name : String
     var size : Int
@@ -43,20 +33,6 @@ struct User : Codable
     var currentRole : SystemRole
 }
 
-/// Lower level authentication object which is returned from the Revature API
-/// Contains all information about whether an authentication was successful and which codes were returned.
-/// The most important aspect is the `loginToken` which is the authentication token that must be stored internally and used
-/// for all further calls during the application lifecycle.
-/// Additionally, Users may opt to "Stay Logged In", in which case the token may eventually be de-authenticated and refreshed.
-struct CurrentUser : Codable
-{
-  let primaryLocation : String
-  let statusCode : Int
-  let description : String
-  let loginToken : String
-  let currentSystemRole : SystemRole
-}
-
 /// Upper level authentication object which contains more broad information about a User's current access level to the application functions.
 /// Operations should be based on the `code` stored in the object. Each `User` object will store their own `SystemRole`
 struct SystemRole : Codable
@@ -71,7 +47,7 @@ struct SystemRole : Codable
 /// Each trainer has a unique ID, a name, an email, a location, and a set of skills.
 /// They may have a picture file stored somewhere on the server. A possible future inclusion would be to add their stored profile picture
 /// to the local cache to use in the trainer workflow, but at this time the functionality is not universally supported within the API/Revature.
-struct Trainer
+struct Trainer : Codable
 {
     var id : Int
     var name : String
@@ -84,7 +60,7 @@ struct Trainer
 /// A `Room` object which is the main focus of the current implementation. `Batch` objects and `Trainer` objects are
 /// associated to specific rooms during the Room Planning/Request cycle for specific date ranges.
 /// For persistence refer to the `Availability` object which will refer the start and end date of each `Room` booking.
-struct Room
+struct Room : Codable
 {
     var id : String
     var room : String
@@ -92,15 +68,14 @@ struct Room
 }
 
 /// A `Skill` object is represented by a unique ID and a name. Skills are referred to by `Batch` objects and `Trainer` objects.
-struct Skill
+struct Skill : Codable
 {
-    var id : Int
     var name : String
 }
 
 /// The `Campus` object is part of the set of objects which represent a part of each overall location. This is different from a `Location` object in that it only refers
 /// to the name of the `Campus` and a unique ID for persistence.
-struct Campus
+struct Campus : Codable
 {
     var id : String
     var campus : String
@@ -111,29 +86,10 @@ struct Location : Codable
 {
     var id : String
     var state : String
-    var campus : String
+    var campus : Campus
     var building : String
 }
 
-
-/*
- "statusCode": 200,
- "description": "Authentication successful",
- "alllocation": [
-   {
-     "id": "LOC001",
-     "state": "FL",
-     "campus": "UTA",
-     "building": "Other"
- */
-
-/// A `Location` object which is relative to a `Campus` object.
-struct APILocationCall : Codable
-{
-    var statusCode : Int
-    var description : String
-    var alllocation : [Location]
-}
 
 /// A `Calendar` object which represents a start and end date for each room booking. This is intrinsicly tied to an `Availability` object as every
 /// single `Calendar` object must be associated with a `Room` that has that date range requested/planned/assigned.
@@ -164,4 +120,118 @@ class RoomCompletion
     var batch : Batch?
     var trainer : Trainer?
     var room : Room?
+}
+
+
+
+//====================================================================================================//
+
+/*
+    
+    API call entity parameter objects from here down.
+    These entities are only used for parasing the data directly out of the JSON objects received/encoded from the
+    Revature API. Each of these should then be converted into their App Entity representations in the service layer.
+    This is particularly useful for checking the status code received from the server as well as the description,
+    which can be used in verifications and notifications on the client side.
+
+ */
+
+/// An Authentication object contains an `email` and `password` field to use for the login endpoint.
+/// The API will also convert the password to a base64 encoded String before sending it out. The password itself is never stored and the `Authentication` object is made `nil` after successfully receiving any response (success or failure).
+struct Authentication : Encodable
+{
+    var email : String
+    var password : String
+}
+
+/// APIUserCall object which contains all information regarding a response from the user endpoint of the RevatureAPI.
+/// `primarylocation` refers to the current user's primary site.
+/// `loginToken` is the access token which needs to be stored in the User Defaults if the User
+///     wishes to stay logged in. (Otherwise, held in the application until such time as it expires and needs
+///     to be re-authenticated - or the app is closed.
+struct APIUserCall : Codable
+{
+  let primaryLocation : String
+  let statusCode : Int
+  let description : String
+  let loginToken : String
+  let currentSystemRole : SystemRole
+}
+
+/// APIUserCall object which contains all information regarding a response from the location endpoint of the RevatureAPI.
+/// `alllocation` is the variable which needs to be parsed for the list of `Location` objects
+struct APILocationCall : Codable
+{
+    var statusCode : Int
+    var description : String
+    var alllocation : [Location]
+}
+
+/// A `Location` object for the API call that does not keep the `Campus` as a campus object, but rather a string.
+/// Once parsed this will need to be  converted to a `Location` object that contains a reference
+/// to a `Campus` object.
+struct APILocation : Codable
+{
+    var id : String
+    var state : String
+    var campus : String
+    var building : String
+}
+
+/// APIUserCall object which contains all information regarding a response from the trainer endpoint of the RevatureAPI.
+/// `trainers` is the variable which needs to be parsed for the list of `Trainer` objects
+struct APITrainerCall : Codable
+{
+    var statusCode : Int
+    var description : String
+    var trainers : [Trainer]
+}
+
+/// APIUserCall object which contains all information regarding a response from the room endpoint of the RevatureAPI.
+/// `allrooms` is the variable which needs to be parsed for the list of `Room` objects
+/// `allcampus` is the variable which needs to be parsed for the list of `Campus` objects
+struct APIRoomCall : Codable
+{
+    var statusCode : Int
+    var description : String
+    var allcampus : [Campus]
+    var allrooms : [Room]
+}
+
+/// APIUserCall object which contains all information regarding a response from the skills endpoint of the RevatureAPI.
+/// `skills` is the variable which needs to be parsed for the list of `APISkill` objects
+#warning("These objets are in contract with previously discussed and developed entity objects for the persistence layer. Possible refactor of entity/persistence mmodel required.")
+struct APISkillCall : Codable
+{
+    var statusCode : Int
+    var description : String
+    var skills : [APISkill]
+}
+
+struct APISkill : Codable
+{
+    var id : String
+    var name : String
+    var score : String
+}
+
+/// APIUserCall object which contains all information regarding a response from the trainer endpoint of the RevatureAPI.
+/// `batchInfo` is the variable which needs to be parsed for the list of `APIBatch` objects
+#warning("These objets are in contract with previously discussed and developed entity objects for the persistence layer. Possible refactor of entity/persistence mmodel required.")
+struct APIBatchCall : Codable
+{
+    var statusCode : Int
+    var description : String
+    var batchInfo : [APIBatch]
+}
+
+struct APIBatch : Codable
+{
+    var id : String
+    var name : String
+    var startDate : String
+    var endDate : String
+    var createdById : String
+    var modifiedById : String
+    var inchargeId : String
 }
