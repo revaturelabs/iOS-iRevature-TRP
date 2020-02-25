@@ -20,12 +20,14 @@ class LoginViewController: UIViewController
     
     var activeUser : User?
     #warning("more to abstract to service layer")
-    var locations = [Location]()
+    var locations = [APILocation]()
     var trainers = [Trainer]()
     var skills = [Skill]()
     var rooms = [Room]()
     
-    let api : AuthorizationAPI = AuthorizationAPI()
+    var api = RevatureAPI()
+    
+    let dataManager = EntityManager()
     
     override func viewDidLoad()
     {
@@ -52,11 +54,18 @@ class LoginViewController: UIViewController
     
     func requestAllAPI()
     {
-        api.requestLocations(finish:
+        // old - changing to service class in business layer
+        self.api.requestLocations(finish:
             {
                 locationCall in
                 
-                self.locations = locationCall.alllocation
+                self.locations = [APILocation]()
+                
+                for location in locationCall.alllocation
+                {
+                    var loc = APILocation(id: location.id, state: location.state, campus: location.campus, building: location.building)
+                    self.locations.append(loc)
+                }
                 
                 for loc in self.locations
                 {
@@ -70,6 +79,14 @@ class LoginViewController: UIViewController
         let username:String = textFieldEmail.text!
         
         let password:String = textFieldPassword.text!
+        
+        
+        self.dataManager.login(email: username, password: password, keepLoggedIn: self.switchKeepMeSignedIn.isOn, finish: {
+            success in
+            
+            // if success = true, perform the segue
+            // otherwise the value returned is false, caused by invalid authentication
+        })
         
         self.api.performLogin(email: username, password: password, finish:
         {

@@ -73,20 +73,13 @@ struct Skill : Codable
     var name : String
 }
 
-/// The `Campus` object is part of the set of objects which represent a part of each overall location. This is different from a `Location` object in that it only refers
-/// to the name of the `Campus` and a unique ID for persistence.
-struct Campus : Codable
-{
-    var id : String
-    var campus : String
-}
 
 /// A `Location` object which is relative to a `Campus` object.
 struct Location : Codable
 {
     var id : String
     var state : String
-    var campus : Campus
+    var campus : String
     var building : String
 }
 
@@ -164,7 +157,7 @@ struct APILocationCall : Codable
 {
     var statusCode : Int
     var description : String
-    var alllocation : [Location]
+    var alllocation : [APILocation]
 }
 
 /// A `Location` object for the API call that does not keep the `Campus` as a campus object, but rather a string.
@@ -177,6 +170,9 @@ struct APILocation : Codable
     var campus : String
     var building : String
 }
+
+
+
 
 /// APIUserCall object which contains all information regarding a response from the trainer endpoint of the RevatureAPI.
 /// `trainers` is the variable which needs to be parsed for the list of `Trainer` objects
@@ -194,8 +190,17 @@ struct APIRoomCall : Codable
 {
     var statusCode : Int
     var description : String
-    var allcampus : [Campus]
+    var allcampus : [APICampus]
     var allrooms : [Room]
+}
+
+/// APIUserCall object which contains all information regarding a response from the room endpoint of the RevatureAPI.
+/// `id` is a vestigial parameter that is necessary for conforming to the Encoded type from the API response, but is otherwise unused.
+/// `campus` is the actual reference String that represents the `Campus` data for the `APIRoomCall`
+struct APICampus : Codable
+{
+    var id : String
+    var campus : String
 }
 
 /// APIUserCall object which contains all information regarding a response from the skills endpoint of the RevatureAPI.
@@ -235,3 +240,6 @@ struct APIBatch : Codable
     var modifiedById : String
     var inchargeId : String
 }
+
+
+

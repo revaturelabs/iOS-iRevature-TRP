@@ -11,7 +11,7 @@ import Alamofire
 
 
 #warning("Will need to update the headers of each of these .get endpoints to check the Bearer authorization - is currently not required in the training API, but will be necessary for the Dev Env API")
-class AuthorizationAPI
+class RevatureAPI
 {
     
     /**
@@ -42,7 +42,7 @@ class AuthorizationAPI
             guard let tempuser = response.value else
             {
                 print("Error with login API call")
-                print(response.error?.errorDescription as Any)
+                print("Error returned as: \(response.error!)")
                 return
             }
             
@@ -69,14 +69,26 @@ class AuthorizationAPI
     */
     func requestLocations(finish: @escaping (_ locationCall: APILocationCall) -> Void)
     {
-        AF.request(API.ENDPOINT.locations, method: .get, parameters: nil).validate().responseDecodable(of: APILocationCall.self)
+        
+        let parameters = ["type" : "training" ]
+        let headers : HTTPHeaders = [
+            "Authorization" : "Bearer 'TOKENFROMLOGIN-APPENDHERE'",
+            "Accept" : "application/json"
+        ]
+        
+        AF.request(API.ENDPOINT.locations,
+                   method: .get,
+                   parameters: parameters,
+                   encoder: URLEncodedFormParameterEncoder.default,
+                   headers: headers)
+            .validate().responseDecodable(of: APILocationCall.self)
         {
             response in
             
             guard let templocs = response.value else
             {
                 print("Error with location API call")
-                print(response.error?.errorDescription as Any)
+                print("Error returned as: \(response.error!)")
                 return
             }
             
@@ -110,7 +122,7 @@ class AuthorizationAPI
             guard let temptrainer = response.value else
             {
                 print("Error with trainer API call")
-                print(response.error?.errorDescription as Any)
+                print("Error returned as: \(response.error!)")
                 return
             }
             
@@ -146,7 +158,7 @@ class AuthorizationAPI
             guard let temprooms = response.value else
             {
                 print("Error with room API call")
-                print(response.error?.errorDescription as Any)
+                print("Error returned as: \(response.error!)")
                 return
             }
             
@@ -181,7 +193,7 @@ class AuthorizationAPI
             guard let tempskills = response.value else
             {
                 print("Error with skill API call")
-                print(response.error?.errorDescription as Any)
+                print("Error returned as: \(response.error!)")
                 return
             }
             
@@ -215,7 +227,7 @@ class AuthorizationAPI
             guard let tempbatches = response.value else
             {
                 print("Error with batch API call")
-                print(response.error?.errorDescription as Any)
+                print("Error returned as: \(response.error!)")
                 return
             }
             
