@@ -121,7 +121,6 @@
 		840C5627240324BF00E10CD3 /* RoomDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDBOperations.swift; sourceTree = "<group>"; };
 		840C5629240324DF00E10CD3 /* SkillDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDBOperations.swift; sourceTree = "<group>"; };
 		840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchDBOperations.swift; sourceTree = "<group>"; };
-		840C565324044A7B00E10CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Room.storyboard; sourceTree = "<group>"; };
 		840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		843A602B2404554C000DEFFE /* RoomWorkFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomWorkFlowViewController.swift; sourceTree = "<group>"; };
 		8450168123FDC09800589EDE /* EasySQLTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySQLTutorial.swift; sourceTree = "<group>"; };
@@ -368,7 +367,6 @@
 		846D091423F352EA007A3BF2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				840C565224044A7B00E10CD3 /* Room.storyboard */,
 				290262FB23FDCA79009539D6 /* Trainer.storyboard */,
 				846D090423F35226007A3BF2 /* Main.storyboard */,
 				846D090923F35228007A3BF2 /* LaunchScreen.storyboard */,
@@ -643,14 +641,6 @@
 				290262FC23FDCA79009539D6 /* Base */,
 			);
 			name = Trainer.storyboard;
-			sourceTree = "<group>";
-		};
-		840C565224044A7B00E10CD3 /* Room.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				840C565324044A7B00E10CD3 /* Base */,
-			);
-			name = Room.storyboard;
 			sourceTree = "<group>";
 		};
 		846D090423F35226007A3BF2 /* Main.storyboard */ = {
