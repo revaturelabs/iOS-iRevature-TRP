@@ -8,6 +8,15 @@
 //
 
 
+/// An Authentication object contains an `email` and `password` field to use for the login endpoint.
+/// The API will also convert the password to a base64 encoded String before sending it out. The password itself is never stored and the `Authentication` object is destroyed after successfully receiving any response (success or failure).
+struct Authentication : Encodable
+{
+    var email : String
+    var password : String
+}
+
+
 /// An object which represents a `Batch` associates, regardless of current, previous, or future assignment.
 /// Each `Batch` has a set of `skills` that they will require and these are associated with the `Trainer` that may have the skills
 /// required to teach/train them. Each `Batch` also has a primary `Location` they will be located at and must be tracked
@@ -25,11 +34,12 @@ struct Batch
 /// the system should aim to update/refresh the token. Application level functions should be limited to the `currentRole`
 struct User : Codable
 {
-    var firstName : String
-    var lastName : String
+    var firstName : String?
+    var lastName : String?
+    var primaryLocation : String
     var email : String
-    var token : String
     var keepLoggedIn : Bool
+    var loginToken : String
     var currentRole : SystemRole
 }
 
@@ -38,7 +48,7 @@ struct User : Codable
 /// The most important aspect is the `loginToken` which is the authentication token that must be stored internally and used
 /// for all further calls during the application lifecycle.
 /// Additionally, Users may opt to "Stay Logged In", in which case the token may eventually be de-authenticated and refreshed.
-struct Authentication : Codable
+struct CurrentUser : Codable
 {
   let primaryLocation : String
   let statusCode : Int
@@ -88,7 +98,6 @@ struct Skill
     var name : String
 }
 
-
 /// The `Campus` object is part of the set of objects which represent a part of each overall location. This is different from a `Location` object in that it only refers
 /// to the name of the `Campus` and a unique ID for persistence.
 struct Campus
@@ -98,12 +107,32 @@ struct Campus
 }
 
 /// A `Location` object which is relative to a `Campus` object.
-struct Location
+struct Location : Codable
 {
-    var id : Int
+    var id : String
     var state : String
-    var campus : Campus
+    var campus : String
     var building : String
+}
+
+
+/*
+ "statusCode": 200,
+ "description": "Authentication successful",
+ "alllocation": [
+   {
+     "id": "LOC001",
+     "state": "FL",
+     "campus": "UTA",
+     "building": "Other"
+ */
+
+/// A `Location` object which is relative to a `Campus` object.
+struct APILocationCall : Codable
+{
+    var statusCode : Int
+    var description : String
+    var alllocation : [Location]
 }
 
 /// A `Calendar` object which represents a start and end date for each room booking. This is intrinsicly tied to an `Availability` object as every

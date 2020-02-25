@@ -54,7 +54,6 @@
 		840C5628240324BF00E10CD3 /* RoomDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C5627240324BF00E10CD3 /* RoomDBOperations.swift */; };
 		840C562A240324DF00E10CD3 /* SkillDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C5629240324DF00E10CD3 /* SkillDBOperations.swift */; };
 		840C562C24032DEF00E10CD3 /* BatchDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */; };
-		840C565424044A7B00E10CD3 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840C565224044A7B00E10CD3 /* Room.storyboard */; };
 		840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD1BE23F5ED8F00D090CA /* LoginViewController.swift */; };
 		843A602C2404554C000DEFFE /* RoomWorkFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A602B2404554C000DEFFE /* RoomWorkFlowViewController.swift */; };
 		8450168223FDC09800589EDE /* EasySQLTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450168123FDC09800589EDE /* EasySQLTutorial.swift */; };
@@ -569,7 +568,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840C565424044A7B00E10CD3 /* Room.storyboard in Resources */,
 				846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */,
 				846D090823F35228007A3BF2 /* Assets.xcassets in Resources */,
 				290262FD23FDCA79009539D6 /* Trainer.storyboard in Resources */,
