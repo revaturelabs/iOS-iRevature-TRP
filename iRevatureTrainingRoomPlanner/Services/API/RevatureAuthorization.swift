@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+
+#warning("Will need to update the headers of each of these .get endpoints to check the Bearer authorization - is currently not required in the training API, but will be necessary for the Dev Env API")
 class AuthorizationAPI
 {
     

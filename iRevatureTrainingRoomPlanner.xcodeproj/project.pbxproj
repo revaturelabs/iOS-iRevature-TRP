@@ -62,7 +62,6 @@
 		846D090623F35226007A3BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090423F35226007A3BF2 /* Main.storyboard */; };
 		846D090823F35228007A3BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846D090723F35228007A3BF2 /* Assets.xcassets */; };
 		846D090B23F35228007A3BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D090923F35228007A3BF2 /* LaunchScreen.storyboard */; };
-		84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */; };
 		84CA4CE623FA5FD300E03F5C /* RevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */; };
 		84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */; };
 		84CA4CEA23FA60F200E03F5C /* RevatureIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */; };
@@ -132,7 +131,6 @@
 		846D090723F35228007A3BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846D090A23F35228007A3BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846D090C23F35228007A3BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteUtility.swift; sourceTree = "<group>"; };
 		84CA4CE523FA5FD300E03F5C /* RevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureButton.swift; sourceTree = "<group>"; };
 		84CA4CE723FA60AE00E03F5C /* RevatureLandingPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLandingPageButton.swift; sourceTree = "<group>"; };
 		84CA4CE923FA60F200E03F5C /* RevatureIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureIconButton.swift; sourceTree = "<group>"; };
@@ -280,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				29588B2923FF8E9B00E2C5BE /* LoggerUtility.swift */,
-				84CA4CE323FA5F0A00E03F5C /* SQLiteUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -581,7 +578,6 @@
 				84CF80A623FC4D2600AF0578 /* UserInfoBusinessService.swift in Sources */,
 				84CF80A323FC4CDE00AF0578 /* UserInfoProtocol.swift in Sources */,
 				843A602C2404554C000DEFFE /* RoomWorkFlowViewController.swift in Sources */,
-				84CA4CE423FA5F0A00E03F5C /* SQLiteUtility.swift in Sources */,
 				29662D0B24003E69004C48F1 /* WhereStatement.swift in Sources */,
 				293984A823FC5D6000DAF922 /* RevatureCampusCell.swift in Sources */,
 				2939849B23FC569F00DAF922 /* RevatureCampusTableView.swift in Sources */,

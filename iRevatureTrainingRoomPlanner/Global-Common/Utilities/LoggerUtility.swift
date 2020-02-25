@@ -9,10 +9,12 @@
 import Foundation
 import os.log
 
-enum LogError: Error{
+#warning("Logging needs implemented")
+
+enum LogError: Error {
     
 }
 
-class LoggerUtility{
+class LoggerUtility {
     
 }
