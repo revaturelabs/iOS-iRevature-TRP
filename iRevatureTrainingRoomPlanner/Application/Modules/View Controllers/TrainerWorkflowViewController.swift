@@ -10,6 +10,10 @@ import UIKit
 
 class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    let dataManagerDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var dataManager : EntityManager?
+    
     // MARK: IBOutlets for UIView References
     
     @IBOutlet weak var campusTableView: RevatureCampusTableView!
@@ -22,75 +26,23 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var labelSkills: UILabel!
     @IBOutlet weak var labelTrainer: UILabel!
     
-    // MARK: number of rows per section functions
-    /// Methods will each return the number of objects within their array list for setting the number of rows for their respective sections.
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        switch(tableView.tag)
-        {
-        case 0:
-            return campusList.count
-        case 1:
-            return locationList.count
-        case 2:
-            return skillList.count
-        case 3:
-            return trainerList.count
-        default:
-            return 0
-        }
-    }
-    
-    // MARK: tableViewCell instantiation extensions
-    /// These are meant to instantiate the type of Revature Table View Cells that match for the Table View type they are meant to show as each cell in each tale view type will be populated by a different collection.
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         
-        switch(tableView.tag)
-        {
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCampusCell", for: indexPath) as! RevatureCampusCell
-            
-            cell.prototypeLabel!.text = campusList[indexPath.row]
-            
-            return cell
-            
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeLocationCell", for: indexPath) as! RevatureLocationCell
-            
-            cell.prototypeLabel!.text = locationList[indexPath.row]
-            
-            return cell
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeSkillCell", for: indexPath) as! RevatureSkillCell
-            
-            cell.prototypeLabel!.text = skillList[indexPath.row]
-            
-            return cell
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeTrainerCell", for: indexPath) as! RevatureTrainerCell
-            
-            cell.prototypeLabel!.text = trainerList[indexPath.row]
-            
-            return cell
-        default:
-            return UITableViewCell()
-        }
-    }
-    
     //MARK: Placeholder containers for data that will be pulled from the API/DB
     
-    var trainerList = ["Trainer Person 1", "Trainer Person 2", "Trainer Person 3", "Trainer Person 4", "Trainer Person 5", "Trainer Person 6", "Trainer Person 7", "Trainer Person 8", "Trainer Person 9", "Trainer Person 10", "Trainer Person 11", "Trainer Person 12" ]
+    var trainerList : [Trainer]?
+    var campusList : [Campus]?
+    var locationList : [Location]?
+    var skillList : [Skill]?
     
-    var campusList = ["Campus Place 1", "Campus Place 2", "Campus Place 3", "Campus Place 4", "Campus Place 5", "Campus Place 6", "Campus Place 7" ]
-    
-    var locationList = ["Location Place 1", "Location Place 2", "Location Place 3", "Location Place 4", "Location Place 5", "Location Place 6", "Location Place 7", "Location Place 8" ]
-    
-    var skillList = ["Skill Thing 1", "Skill Thing 2", "Skill Thing 3", "Skill Thing 4", "Skill Thing 5", "Skill Thing 6", "Skill Thing 7" ]
-    
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        dataManager = dataManagerDelegate.manager
+        
+        trainerList = self.dataManager!.getTrainerList()
+        campusList = self.dataManager!.getCampusList()
+        locationList = self.dataManager!.getLocationList()
+        skillList = self.dataManager!.getSkillList()
         
         campusTableView.delegate = self
         trainerTableView.delegate = self
@@ -117,6 +69,62 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
         skillsTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         self.navigationItem.title = "Trainers"
-
+    }
+    
+    // MARK: number of rows per section functions
+    /// Methods will each return the number of objects within their array list for setting the number of rows for their respective sections.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        switch(tableView.tag)
+        {
+        case 0:
+            return campusList!.count
+        case 1:
+            return locationList!.count
+        case 2:
+            return skillList!.count
+        case 3:
+            return trainerList!.count
+        default:
+            return 0
+        }
+    }
+    
+    // MARK: tableViewCell instantiation extensions
+    /// These are meant to instantiate the type of Revature Table View Cells that match for the Table View type they are meant to show as each cell in each tale view type will be populated by a different collection.
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         
+        switch(tableView.tag)
+        {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCampusCell", for: indexPath) as! RevatureCampusCell
+            
+            cell.prototypeLabel!.text = campusList![indexPath.row].campus
+            
+            return cell
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeLocationCell", for: indexPath) as! RevatureLocationCell
+            
+            cell.prototypeLabel!.text = locationList![indexPath.row].state
+            
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeSkillCell", for: indexPath) as! RevatureSkillCell
+            
+            cell.prototypeLabel!.text = skillList![indexPath.row].name
+            
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeTrainerCell", for: indexPath) as! RevatureTrainerCell
+            
+            cell.prototypeLabel!.text = trainerList![indexPath.row].name
+            
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }

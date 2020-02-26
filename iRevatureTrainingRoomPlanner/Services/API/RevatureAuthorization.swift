@@ -127,6 +127,7 @@ class RevatureAPI
                 return
             }
             
+            
             finish(temptrainer)
         }
     }

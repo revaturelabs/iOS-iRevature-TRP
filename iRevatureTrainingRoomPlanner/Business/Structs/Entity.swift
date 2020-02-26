@@ -49,12 +49,13 @@ struct SystemRole : Codable
 /// to the local cache to use in the trainer workflow, but at this time the functionality is not universally supported within the API/Revature.
 struct Trainer : Codable
 {
-    var id : Int
+    var id : String
     var name : String
-    var email : String
-    var location : Location
-    var picture : String?
-    var skills : [Skill]
+    var emailaddress : String
+    var primarylocation : String
+    var profilepicture : String?
+    var manager_email : String
+    var skills : [String]
 }
 
 /// A `Room` object which is the main focus of the current implementation. `Batch` objects and `Trainer` objects are
@@ -170,9 +171,6 @@ struct APILocation : Codable
     var campus : String
     var building : String
 }
-
-
-
 
 /// APIUserCall object which contains all information regarding a response from the trainer endpoint of the RevatureAPI.
 /// `trainers` is the variable which needs to be parsed for the list of `Trainer` objects
