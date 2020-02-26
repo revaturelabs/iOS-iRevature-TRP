@@ -16,16 +16,7 @@ class LoginViewController: UIViewController
     @IBOutlet weak var labelInvalidUsernamePassword: UILabel!
     @IBOutlet weak var switchKeepMeSignedIn: UISwitch!
     
-    var userInfoBusinessService: UserInfoBusinessService = UserInfoBusinessService()
-    
-    var activeUser : User?
-    #warning("more to abstract to service layer")
-    var locations = [APILocation]()
-    var trainers = [Trainer]()
-    var skills = [Skill]()
-    var rooms = [Room]()
-    
-    var api = RevatureAPI()
+    let dataManagerDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var dataManager : EntityManager?
     
@@ -56,22 +47,12 @@ class LoginViewController: UIViewController
         self.dataManager!.login(email: username, password: password, keepLoggedIn: self.switchKeepMeSignedIn.isOn, finish: {
             success in
             
-            // if success = true, perform the segue
-            // otherwise the value returned is false, caused by invalid authentication
-        })
-        
-        self.api.performLogin(email: username, password: password, finish:
-        {
-            user in
-            
-            #warning("We should abstract this logic out to another business function for clarity (also, some SOLID -> clarified. do it as a service layer")
-            self.activeUser = User(firstName: "", lastName: "", primaryLocation: user.primaryLocation, email: username, keepLoggedIn: self.switchKeepMeSignedIn.isOn, loginToken: user.loginToken, currentRole: user.currentSystemRole)
-
-            if (self.activeUser?.currentRole != nil)
+            if success == false
             {
-                #warning("should change the logic here so we're not calling a bool result when we dont need/use it")
-                self.userInfoBusinessService.setUserInfo(userObject: self.activeUser!)
-                
+                self.labelInvalidUsernamePassword.isHidden = false
+            }
+            else
+            {
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                 
                 let mainNavigationVC = mainStoryboard.instantiateViewController(withIdentifier: "LandingPage") as UIViewController
@@ -79,10 +60,6 @@ class LoginViewController: UIViewController
                 self.navigationController?.pushViewController(mainNavigationVC, animated: true)
                 
                 self.labelInvalidUsernamePassword.isHidden = true
-            }
-            else
-            {
-                self.labelInvalidUsernamePassword.isHidden = false
             }
         })
     }
