@@ -97,6 +97,9 @@ class EntityManager
                     let loc = Location(id: location.id, state: location.state, campus: location.campus, building: location.building)
                     self.locationList.append(loc)
                 }
+                
+                // Used to confirm receipt of data by app delegate
+                print("Received and appended: \(self.locationList.count) items")
         })
         
         // Request rooms - retrieves rooms and campus'
@@ -221,5 +224,4 @@ class EntityManager
     {
         return self.skillList
     }
-    
 }
