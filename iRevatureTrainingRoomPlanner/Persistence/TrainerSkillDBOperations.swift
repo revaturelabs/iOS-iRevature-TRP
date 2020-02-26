@@ -1,26 +1,26 @@
 //
-//  SkillDBOperations.swift
+//  TrainerSkillDBOperations.swift
 //  iRevatureTrainingRoomPlanner
 //
-//  Created by admin on 2/23/20.
+//  Created by admin on 2/25/20.
 //  Copyright © 2020 admin. All rights reserved.
 //
 
-import Foundation
-
 extension DatabaseOperations{
     
-    func createSkillTable(){
+    func createTrainerSkillTable(){
         
-        if let skillTable = iRevatureTables.skillTable.makeStatement(){
-            debugPrint(skillTable)
+        if let trainerSkillTable = iRevatureTables.trainerSkillTable.makeStatement(){
+            
+            debugPrint(trainerSkillTable)
+            
         }
         
         //Tries to executes the SQLite3 Prepared Statement
         
         do{
             
-            try database.createTable(table: iRevatureTables.skillTable)
+            try database.createTable(table: iRevatureTables.trainerSkillTable)
             
         } catch{
             
@@ -30,9 +30,9 @@ extension DatabaseOperations{
         
     }
     
-    func insertSkillRecord(skillID: Int, skillName: String){
+    func insertTrainerSkillRecord(trainerID: Int, skillID: String){
         
-        let insertStatement = InsertStatement(table: iRevatureTables.skillTable, columnValues: skillID, skillName)
+        let insertStatement = InsertStatement(table: iRevatureTables.trainerSkillTable, columnValues: trainerID, skillID)
         
         do {
            
@@ -47,13 +47,13 @@ extension DatabaseOperations{
     }
     
     //Not the best approach, will replace with SQLite Library
-    func selectAllSkillRecords() -> [[String: Any]]{
+    func selectAllTrainerSkillRecords() -> [[String: Any]]{
        
         var selectStatement = SelectStatement()
         
-        selectStatement.specifyColumn(table: iRevatureTables.skillTable, columnName: "skill_id", asName: "skillID")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerSkillTable, columnName: "trainer_id", asName: "trainerID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.skillTable, columnName: "skill_name", asName: "skillName")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerSkillTable, columnName: "skill_id", asName: "skillID")
         
         do {
             

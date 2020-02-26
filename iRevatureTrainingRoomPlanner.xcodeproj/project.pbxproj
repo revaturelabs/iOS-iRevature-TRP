@@ -76,6 +76,7 @@
 		84D5D3722405F5E000E64004 /* RoomAvailabilityDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3712405F5E000E64004 /* RoomAvailabilityDBOperations.swift */; };
 		84D5D3742405F61D00E64004 /* BatchSkillDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3732405F61D00E64004 /* BatchSkillDBOperations.swift */; };
 		84D5D3762405F74600E64004 /* BatchRoomDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3752405F74600E64004 /* BatchRoomDBOperations.swift */; };
+		84D5D3782406060700E64004 /* TrainerSkillDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3772406060700E64004 /* TrainerSkillDBOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +149,7 @@
 		84D5D3712405F5E000E64004 /* RoomAvailabilityDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAvailabilityDBOperations.swift; sourceTree = "<group>"; };
 		84D5D3732405F61D00E64004 /* BatchSkillDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchSkillDBOperations.swift; sourceTree = "<group>"; };
 		84D5D3752405F74600E64004 /* BatchRoomDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchRoomDBOperations.swift; sourceTree = "<group>"; };
+		84D5D3772406060700E64004 /* TrainerSkillDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerSkillDBOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +411,7 @@
 				84D5D3712405F5E000E64004 /* RoomAvailabilityDBOperations.swift */,
 				84D5D3732405F61D00E64004 /* BatchSkillDBOperations.swift */,
 				84D5D3752405F74600E64004 /* BatchRoomDBOperations.swift */,
+				84D5D3772406060700E64004 /* TrainerSkillDBOperations.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				29588B2A23FF8E9B00E2C5BE /* LoggerUtility.swift in Sources */,
 				29662D0024003E69004C48F1 /* PrepareFunctions.swift in Sources */,
 				840C5628240324BF00E10CD3 /* RoomDBOperations.swift in Sources */,
+				84D5D3782406060700E64004 /* TrainerSkillDBOperations.swift in Sources */,
 				84CA4CEE23FA61DB00E03F5C /* RevatureSkillButton.swift in Sources */,
 				29662D0224003E69004C48F1 /* SQLKeywords.swift in Sources */,
 				296B9A4023FB9742006448B7 /* RevatureCampusTableViewController.swift in Sources */,

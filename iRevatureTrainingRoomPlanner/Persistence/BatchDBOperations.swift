@@ -13,7 +13,9 @@ extension DatabaseOperations{
     func createBatchTable(){
         
         if let batchTable = iRevatureTables.batchTable.makeStatement(){
+            
             debugPrint(batchTable)
+            
         }
         
         //Tries to executes the SQLite3 Prepared Statement
@@ -50,13 +52,13 @@ extension DatabaseOperations{
           
            var selectStatement = SelectStatement()
            
-           selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "batch_id", asName: "batch_id")
+           selectStatement.specifyColumn(table: iRevatureTables.batchTable, columnName: "batch_id", asName: "batchID")
            
-           selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "trainer_id", asName: "trainer_id")
+           selectStatement.specifyColumn(table: iRevatureTables.batchTable, columnName: "trainer_id", asName: "trainerID")
            
-           selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "room_id", asName: "room_id")
+           selectStatement.specifyColumn(table: iRevatureTables.batchTable, columnName: "room_id", asName: "roomID")
            
-           selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "number_of_seats", asName: "number_of_seats")
+           selectStatement.specifyColumn(table: iRevatureTables.batchTable, columnName: "number_of_seats", asName: "numberOfSeats")
            
            do{
                

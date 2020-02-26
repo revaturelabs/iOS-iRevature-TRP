@@ -34,11 +34,11 @@ extension DatabaseOperations{
        
         var selectStatement = SelectStatement()
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "room_id", asName: "room_id")
+        selectStatement.specifyColumn(table: iRevatureTables.roomTable, columnName: "room_id", asName: "roomID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "room_name", asName: "room_name")
+        selectStatement.specifyColumn(table: iRevatureTables.roomTable, columnName: "room_name", asName: "roomName")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "number_of_seats", asName: "number_of_seats")
+        selectStatement.specifyColumn(table: iRevatureTables.roomTable, columnName: "number_of_seats", asName: "numberOfSeats")
         
         do{
             
