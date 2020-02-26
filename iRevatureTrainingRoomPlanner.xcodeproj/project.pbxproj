@@ -73,6 +73,9 @@
 		84CA4CFD23FA649B00E03F5C /* RevaturePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */; };
 		84CF80A323FC4CDE00AF0578 /* UserInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF80A223FC4CDE00AF0578 /* UserInfoProtocol.swift */; };
 		84CF80A623FC4D2600AF0578 /* UserInfoBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF80A523FC4D2600AF0578 /* UserInfoBusinessService.swift */; };
+		84D5D3722405F5E000E64004 /* RoomAvailabilityDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3712405F5E000E64004 /* RoomAvailabilityDBOperations.swift */; };
+		84D5D3742405F61D00E64004 /* BatchSkillDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3732405F61D00E64004 /* BatchSkillDBOperations.swift */; };
+		84D5D3762405F74600E64004 /* BatchRoomDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3752405F74600E64004 /* BatchRoomDBOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +145,9 @@
 		84CA4CFC23FA649B00E03F5C /* RevaturePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaturePageControl.swift; sourceTree = "<group>"; };
 		84CF80A223FC4CDE00AF0578 /* UserInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInfoProtocol.swift; path = "iRevatureTrainingRoomPlanner/Global-Common/Utilities/UserInfoProtocol.swift"; sourceTree = SOURCE_ROOT; };
 		84CF80A523FC4D2600AF0578 /* UserInfoBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBusinessService.swift; sourceTree = "<group>"; };
+		84D5D3712405F5E000E64004 /* RoomAvailabilityDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAvailabilityDBOperations.swift; sourceTree = "<group>"; };
+		84D5D3732405F61D00E64004 /* BatchSkillDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchSkillDBOperations.swift; sourceTree = "<group>"; };
+		84D5D3752405F74600E64004 /* BatchRoomDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchRoomDBOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,6 +406,9 @@
 				840C5627240324BF00E10CD3 /* RoomDBOperations.swift */,
 				840C5629240324DF00E10CD3 /* SkillDBOperations.swift */,
 				840C562B24032DEF00E10CD3 /* BatchDBOperations.swift */,
+				84D5D3712405F5E000E64004 /* RoomAvailabilityDBOperations.swift */,
+				84D5D3732405F61D00E64004 /* BatchSkillDBOperations.swift */,
+				84D5D3752405F74600E64004 /* BatchRoomDBOperations.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -567,6 +576,7 @@
 			files = (
 				840DD1BF23F5ED8F00D090CA /* LoginViewController.swift in Sources */,
 				84CA4CF623FA631A00E03F5C /* RevatureActivityIndicator.swift in Sources */,
+				84D5D3742405F61D00E64004 /* BatchSkillDBOperations.swift in Sources */,
 				29662D0424003E69004C48F1 /* SQLMessages.swift in Sources */,
 				29662CFF24003E69004C48F1 /* DQLFunctions.swift in Sources */,
 				84CA4CE823FA60AE00E03F5C /* RevatureLandingPageButton.swift in Sources */,
@@ -590,6 +600,7 @@
 				29662D162400876B004C48F1 /* RevatureAuthorization.swift in Sources */,
 				29662D0C24003E69004C48F1 /* InsertStatement.swift in Sources */,
 				290262FF23FE459A009539D6 /* EntityManager.swift in Sources */,
+				84D5D3722405F5E000E64004 /* RoomAvailabilityDBOperations.swift in Sources */,
 				840C562A240324DF00E10CD3 /* SkillDBOperations.swift in Sources */,
 				84CA4CEC23FA612D00E03F5C /* RevatureCalendar.swift in Sources */,
 				29662D0624003E69004C48F1 /* SelectStatement.swift in Sources */,
@@ -598,6 +609,7 @@
 				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
 				29662D0A24003E69004C48F1 /* SQLTable.swift in Sources */,
 				29662D0F24006903004C48F1 /* DatabaseOperations.swift in Sources */,
+				84D5D3762405F74600E64004 /* BatchRoomDBOperations.swift in Sources */,
 				2939849F23FC56EF00DAF922 /* RevatureSkillsTableView.swift in Sources */,
 				846D090323F35226007A3BF2 /* ViewController.swift in Sources */,
 				846D08FF23F35226007A3BF2 /* AppDelegate.swift in Sources */,
