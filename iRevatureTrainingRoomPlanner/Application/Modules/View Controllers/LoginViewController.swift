@@ -28,9 +28,9 @@ class LoginViewController: UIViewController
         
         if dataManager!.verifyPreviousLogin() == true
         {
-            switchKeepMeSignedIn.isOn = dataManager!.activeUser!.keepLoggedIn
+            switchKeepMeSignedIn.isOn = dataManager!.getActiveUser()!.keepLoggedIn
             
-            textFieldEmail.text = dataManager!.activeUser!.email
+            textFieldEmail.text = dataManager!.getActiveUser()!.email
         }
         else
         {

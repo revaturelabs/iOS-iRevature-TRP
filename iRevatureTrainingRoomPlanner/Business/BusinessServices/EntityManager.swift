@@ -26,12 +26,12 @@ class EntityManager
     
     // MARK: Application Entities/Containers
 
-    var activeUser : User?
-    var trainerList : [Trainer]
-    var roomList : [Room]
-    var locationList : [Location]
-    var campusList : [Campus]
-    var skillList : [APISkill]
+    private var activeUser : User?
+    private var trainerList : [Trainer]
+    private var roomList : [Room]
+    private var locationList : [Location]
+    private var campusList : [Campus]
+    private var skillList : [Skill]
     //var batchList : [Batch]
     
     var userInfoBusinessService : UserInfoBusinessService = UserInfoBusinessService()
@@ -44,7 +44,7 @@ class EntityManager
         roomList = [Room]()
         locationList = [Location]()
         campusList = [Campus]()
-        skillList = [APISkill]()
+        skillList = [Skill]()
         //batchList = [Batch]()
     }
     
@@ -123,7 +123,7 @@ class EntityManager
                 
                 for skill in tempskills.skills
                 {
-                    let skil = APISkill(id: skill.id, name: skill.name, score: skill.score)
+                    let skil = Skill(name: skill.name)
                     self.skillList.append(skil)
                 }
         })
@@ -134,7 +134,7 @@ class EntityManager
                 
                 for trainer in temptrainer.trainers
                 {
-                    let train = Trainer(id: trainer.id, name: trainer.name, email: trainer.email, location: trainer.location, picture: trainer.picture, skills: trainer.skills)
+                    let train = Trainer(id: trainer.id, name: trainer.name, emailaddress: self.getActiveUser()!.email, primarylocation: trainer.primarylocation, profilepicture: trainer.profilepicture, manager_email: trainer.manager_email, skills: trainer.skills)
                     
                     self.trainerList.append(train)
                 }
@@ -160,19 +160,21 @@ class EntityManager
     }
     
     
+    // MARK: Persistence Layer Table Creation Methods and Verification
     
     
-    
-    
+    // create tables
+    //and verification for whether they exist
     
     // MARK: Persistence Layer Methods
     /// Subsection 1: In memory -> SQLite Database
     
-   
+   // insert tables
     
     // MARK: Persistence Layer Methods
-    /// Subsection 2: SQLite Data -> Business Class (Application Layer)
+    /// Subsection 2: SQLite Database -> In-memory
     
+    // select statements
     
 
     // MARK: Data Accessors
@@ -189,4 +191,35 @@ class EntityManager
         
         return false
     }
+    
+    func getActiveUser() -> User?
+    {
+        return self.activeUser
+    }
+    
+    func getTrainerList() -> [Trainer]
+    {
+        return self.trainerList
+    }
+    
+    func getRoomList() -> [Room]
+    {
+        return self.roomList
+    }
+    
+    func getLocationList() -> [Location]
+    {
+        return self.locationList
+    }
+    
+    func getCampusList() -> [Campus]
+    {
+        return self.campusList
+    }
+    
+    func getSkillList() -> [Skill]
+    {
+        return self.skillList
+    }
+    
 }
