@@ -1,26 +1,24 @@
 //
-//  SkillDBOperations.swift
+//  BatchSkillDBOperations.swift
 //  iRevatureTrainingRoomPlanner
 //
-//  Created by admin on 2/23/20.
+//  Created by admin on 2/25/20.
 //  Copyright © 2020 admin. All rights reserved.
 //
 
-import Foundation
-
 extension DatabaseOperations{
     
-    func createSkillTable(){
+    func createBatchSkillTable(){
         
-        if let skillTable = iRevatureTables.skillTable.makeStatement(){
-            debugPrint(skillTable)
+        if let batchSkillTable = iRevatureTables.batchSkillTable.makeStatement(){
+            debugPrint(batchSkillTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement
         
         do{
             
-            try database.createTable(table: iRevatureTables.skillTable)
+            try database.createTable(table: iRevatureTables.batchSkillTable)
             
         } catch{
             
@@ -30,9 +28,9 @@ extension DatabaseOperations{
         
     }
     
-    func insertSkillRecord(skillID: Int, skillName: String){
+    func insertBatchSkillRecord(batchID: Int, skillID: String){
         
-        let insertStatement = InsertStatement(table: iRevatureTables.skillTable, columnValues: skillID, skillName)
+        let insertStatement = InsertStatement(table: iRevatureTables.batchSkillTable, columnValues: batchID, skillID)
         
         do {
            
@@ -47,13 +45,13 @@ extension DatabaseOperations{
     }
     
     //Not the best approach, will replace with SQLite Library
-    func selectAllSkillRecords() -> [[String: Any]]{
+    func selectAllBatchSkillRecords() -> [[String: Any]]{
        
         var selectStatement = SelectStatement()
         
-        selectStatement.specifyColumn(table: iRevatureTables.skillTable, columnName: "skill_id", asName: "skillID")
+        selectStatement.specifyColumn(table: iRevatureTables.batchSkillTable, columnName: "batch_id", asName: "batchID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.skillTable, columnName: "skill_name", asName: "skillName")
+        selectStatement.specifyColumn(table: iRevatureTables.batchSkillTable, columnName: "skill_id", asName: "skillID")
         
         do {
             

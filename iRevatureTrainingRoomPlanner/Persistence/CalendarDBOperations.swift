@@ -50,11 +50,11 @@ extension DatabaseOperations{
        
         var selectStatement = SelectStatement()
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "calendar_id", asName: "calendar_id")
+        selectStatement.specifyColumn(table: iRevatureTables.calendarTable, columnName: "calendar_id", asName: "calendarID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "start_date", asName: "start_date")
+        selectStatement.specifyColumn(table: iRevatureTables.calendarTable, columnName: "start_date", asName: "startDate")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "end_date", asName: "end_date")
+        selectStatement.specifyColumn(table: iRevatureTables.calendarTable, columnName: "end_date", asName: "endDate")
         
         do {
             

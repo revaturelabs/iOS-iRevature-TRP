@@ -35,19 +35,19 @@ extension DatabaseOperations{
         
         var selectStatement = SelectStatement()
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "trainer_id", asName: "trainer_id")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "trainer_id", asName: "trainerID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "first_name", asName: "first_name")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "first_name", asName: "firstName")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "last_name", asName: "last_name")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "last_name", asName: "lastName")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "email", asName: "email")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "email", asName: "email")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "phone_number", asName: "phone_number")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "phone_number", asName: "phoneNumber")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "base_location", asName: "base_location")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "base_location", asName: "baseLocation")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "slack_username", asName: "slack_username")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "slack_username", asName: "slackUsername")
         
         do{
             

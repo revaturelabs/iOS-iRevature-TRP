@@ -32,7 +32,7 @@ extension DatabaseOperations{
     
     func insertUserRecord(userID: String, firstName: String, lastName: String, email: String, token: String, userRole: String, keepMeLoggedIn: Bool){
         
-        let insertStatement = InsertStatement(table: iRevatureTables.userTable, columnValues: userID, firstName, lastName, email, token, userRole, keepMeLoggedIn)
+        let insertStatement = InsertStatement(table: iRevatureTables.userTable, columnValues: userID, firstName, lastName, email, userRole, token, keepMeLoggedIn)
         
         do {
            
@@ -53,17 +53,17 @@ extension DatabaseOperations{
         
         selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "user_id", asName: "userID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "first_name", asName: "first_name")
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "first_name", asName: "firstName")
         
         selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "last_name", asName: "last_name")
         
         selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "email", asName: "email")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "user_role", asName: "user_role")
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "user_role", asName: "userRole")
         
         selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "token", asName: "token")
         
-        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "keep_logged_in", asName: "keep_logged_in")
+        selectStatement.specifyColumn(table: iRevatureTables.userTable, columnName: "keep_logged_in", asName: "keepMeLoggedIn")
         
         do{
             
