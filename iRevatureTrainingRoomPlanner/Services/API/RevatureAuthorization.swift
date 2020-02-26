@@ -11,6 +11,7 @@ import Alamofire
 
 
 #warning("Will need to update the headers of each of these .get endpoints to check the Bearer authorization - is currently not required in the training API, but will be necessary for the Dev Env API")
+#warning("Currently only the requestLocations API call handles the headers and parameters properly out of the get methods.")
 class RevatureAPI
 {
     
@@ -141,6 +142,8 @@ class RevatureAPI
      
      Requires the right endpoint classification and the reference to the Decodable entity type
      that it will parse the data received into.
+     
+     Important to note that the Room API also returns the campus list as part of its response wich should be parsed from the temprooms variable passed through the completion handler
      
      `response.value` is the actual data received from the API.
     

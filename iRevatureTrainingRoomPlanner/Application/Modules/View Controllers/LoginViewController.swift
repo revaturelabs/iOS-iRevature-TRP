@@ -51,7 +51,7 @@ class LoginViewController: UIViewController
             requestAllAPI()
         }
     }
-    
+    // remove this once the entity manager has this functionality
     func requestAllAPI()
     {
         // old - changing to service class in business layer

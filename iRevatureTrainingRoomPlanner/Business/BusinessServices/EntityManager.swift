@@ -28,7 +28,10 @@ class EntityManager
     var trainerList : [Trainer]
     var roomList : [Room]
     var locationList : [Location]
-    var campusList : [APICampus]
+    var campusList : [Campus]
+    var skillList : [APISkill]
+    //var batchList : [Batch]
+    
     
     init()
     {
@@ -36,13 +39,14 @@ class EntityManager
         trainerList = [Trainer]()
         roomList = [Room]()
         locationList = [Location]()
-        campusList = [APICampus]()
+        campusList = [Campus]()
+        skillList = [APISkill]()
+        //batchList = [Batch]()
     }
     
     let API = RevatureAPI()
     
-
-    
+    #warning("finish markup in-line documentation for these methods")
     
     //MARK: API Request Methods
     func login(email: String, password: String, keepLoggedIn: Bool, finish: @escaping (_ success: Bool) -> Void )
@@ -64,33 +68,77 @@ class EntityManager
                 finish(false)
             }
         })
-        
-        #warning("After abstracting this functionality to the business layer - we can no longer rely on this to come through in time for the user to be set before making the segue - I feel we will need to make this a delegate using a login Protocol that returns to tell us whether we can login or not")
-        
     }
-    
-    
     
     
     func requestAllAPI()
     {
+        // Request locations
         self.API.requestLocations(finish:
             {
                 locationCall in
-                
-                self.locationList = [Location]()
                 
                 for location in locationCall.alllocation
                 {
                     let loc = Location(id: location.id, state: location.state, campus: location.campus, building: location.building)
                     self.locationList.append(loc)
                 }
+        })
+        
+        // Request rooms - retrieves rooms and campus'
+        self.API.requestRooms(finish:
+            {
+                temprooms in
                 
-                for loc in self.locationList
+                for room in temprooms.allrooms
                 {
-                    print("loc: \(loc)")
+                    let rom = Room(id: room.id, room: room.room, capacity: room.capacity)
+                    self.roomList.append(rom)
+                }
+                
+                for campus in temprooms.allcampus
+                {
+                    let camp = Campus(id: campus.id, campus: campus.campus)
+                    self.campusList.append(camp)
                 }
         })
+        
+        self.API.requestSkills(finish:
+            {
+                tempskills in
+                
+                for skill in tempskills.skills
+                {
+                    let skil = APISkill(id: skill.id, name: skill.name, score: skill.score)
+                    self.skillList.append(skil)
+                }
+        })
+        
+        self.API.requestTrainers(finish:
+            {
+                temptrainer in
+                
+                for trainer in temptrainer.trainers
+                {
+                    let train = Trainer(id: trainer.id, name: trainer.name, email: trainer.email, location: trainer.location, picture: trainer.picture, skills: trainer.skills)
+                    
+                    self.trainerList.append(train)
+                }
+        })
+        
+        
+        
+        #warning("Need to finish/refactor the API to include the currently missing parameters before finishing this.")
+        
+//        self.API.requestBatches(finish:
+//            {
+//                tempbatches in
+//
+//                for batch in tempbatches.batchInfo
+//                {
+//                    let bat = Batch(name: batch.name, size: 0, skills: [Skill](), location: )
+//                }
+//        })
     }
     
     
@@ -100,27 +148,15 @@ class EntityManager
     
     
     // MARK: Persistence Layer Methods
-    /// Subsection 1: API -> SQLite Database
+    /// Subsection 1: In memory -> SQLite Database
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
     // MARK: Persistence Layer Methods
     /// Subsection 2: SQLite Data -> Business Class (Application Layer)
     
     
-    
 
-    
+    // MARK: Populate UI
+    /// Subsection 3: Retrieve containers stored in this service class to populate UI elements
 }

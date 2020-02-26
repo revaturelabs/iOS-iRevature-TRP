@@ -190,14 +190,16 @@ struct APIRoomCall : Codable
 {
     var statusCode : Int
     var description : String
-    var allcampus : [APICampus]
+    var allcampus : [Campus]
     var allrooms : [Room]
 }
 
-/// APIUserCall object which contains all information regarding a response from the room endpoint of the RevatureAPI.
+/// Object which contains all information regarding a response from the room endpoint of the RevatureAPI.
 /// `id` is a vestigial parameter that is necessary for conforming to the Encoded type from the API response, but is otherwise unused.
+/// Can consider using the id as the primary key for the persistence layer
+/// as they are said to be unique AND are used on the backend of the Revature Database.
 /// `campus` is the actual reference String that represents the `Campus` data for the `APIRoomCall`
-struct APICampus : Codable
+struct Campus : Codable
 {
     var id : String
     var campus : String
