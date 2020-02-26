@@ -11,21 +11,32 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var manager : EntityManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // should be doing our database and API calls here (outside of the login authentication)
         
-        //MARK: Initalizes tables
-        DatabaseOperations().createUserTable()
-        DatabaseOperations().createTrainerTable()
-        DatabaseOperations().createRoomTable()
-        DatabaseOperations().createSkillTable()
-        DatabaseOperations().createCalendarTable()
-        DatabaseOperations().enterDummyData()
+        //MARK: Initializes tables
+//        DatabaseOperations().createUserTable()
+//        DatabaseOperations().createTrainerTable()
+//        DatabaseOperations().createRoomTable()
+//        DatabaseOperations().createSkillTable()
+//        DatabaseOperations().createCalendarTable()
+//        DatabaseOperations().enterDummyData()
         
+        #warning("NEED TO EMPTY OUT THE PREVIOUS USER DEFAULT IF KEEP LOGGED ON BECOMES DISABLED")
+        
+        manager = EntityManager()
+        
+        if manager?.verifyPreviousLogin() == true
+        {
+            manager!.requestAllAPI()
+        }
+        else
+        {
+        }
         
         // still not understanding the point of that on the first launch, as the token hasnt been acquired yet, and therefor cant be used to authenticate the API endpoint with credentials to acquire data
         return true
@@ -44,7 +55,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-

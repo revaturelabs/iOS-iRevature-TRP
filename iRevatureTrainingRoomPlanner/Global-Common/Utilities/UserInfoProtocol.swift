@@ -10,7 +10,7 @@ import Foundation
 
 protocol UserInfoProtocol {
     
-    func getUserInfo() ->User?
-    func setUserInfo(userObject:User) -> Bool
+    func getUserInfo() -> User?
+    func setUserInfo(userObject:User)
     
 }

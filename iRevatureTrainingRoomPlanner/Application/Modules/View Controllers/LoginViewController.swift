@@ -27,61 +27,33 @@ class LoginViewController: UIViewController
     
     var api = RevatureAPI()
     
-    let dataManager = EntityManager()
+    var dataManager : EntityManager?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        if let currentUserInfo: User = userInfoBusinessService.getUserInfo()
+        dataManager = dataManagerDelegate.manager
+        
+        if dataManager!.verifyPreviousLogin() == true
         {
-            switchKeepMeSignedIn.isOn = currentUserInfo.keepLoggedIn
+            switchKeepMeSignedIn.isOn = dataManager!.activeUser!.keepLoggedIn
             
-            if currentUserInfo.keepLoggedIn == true
-            {
-                let email = currentUserInfo.email
-                
-                textFieldEmail.text = email
-            }
-            else
-            {
-                textFieldEmail.text = ""
-            }
-            
-            requestAllAPI()
+            textFieldEmail.text = dataManager!.activeUser!.email
         }
-    }
-    // remove this once the entity manager has this functionality
-    func requestAllAPI()
-    {
-        // old - changing to service class in business layer
-        self.api.requestLocations(finish:
-            {
-                locationCall in
-                
-                self.locations = [APILocation]()
-                
-                for location in locationCall.alllocation
-                {
-                    var loc = APILocation(id: location.id, state: location.state, campus: location.campus, building: location.building)
-                    self.locations.append(loc)
-                }
-                
-                for loc in self.locations
-                {
-                    print("loc: \(loc)")
-                }
-        })
+        else
+        {
+            textFieldEmail.text = ""
+        }
     }
     
     @IBAction func actionLogin(_ sender: Any)
     {
-        let username:String = textFieldEmail.text!
+        let username : String = textFieldEmail.text!
         
-        let password:String = textFieldPassword.text!
+        let password : String = textFieldPassword.text!
         
-        
-        self.dataManager.login(email: username, password: password, keepLoggedIn: self.switchKeepMeSignedIn.isOn, finish: {
+        self.dataManager!.login(email: username, password: password, keepLoggedIn: self.switchKeepMeSignedIn.isOn, finish: {
             success in
             
             // if success = true, perform the segue

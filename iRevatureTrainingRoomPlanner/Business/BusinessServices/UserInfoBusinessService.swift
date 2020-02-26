@@ -3,20 +3,20 @@
 //  iRevatureTrainingRoomPlanner
 //
 //  Created by admin on 2/18/20.
+//  Modified by Jeremy Malisse on 2/26/2020.
 //  Copyright © 2020 admin. All rights reserved.
 //
 import Foundation
 
-class UserInfoBusinessService : UserInfoProtocol{
+class UserInfoBusinessService : UserInfoProtocol
+{
+    let currentUserDefault = UserDefaults.standard
     
-    func getUserInfo() -> User? {
-        
-        let currentUserDefault = UserDefaults.standard
-        
-        if let decodedUserInfo = (currentUserDefault.value(forKey: "UserSharedInfo")){
-            
-            let decodedUser = try? PropertyListDecoder().decode(User.self, from: decodedUserInfo as! Data)
-        
+    func getUserInfo() -> User?
+    {
+        if let decodedUserInfo = (currentUserDefault.value(forKey: "UserSharedInfo") as? Data)
+        {
+            let decodedUser = try? PropertyListDecoder().decode(User.self, from: decodedUserInfo)
             return decodedUser
         
         } else {
@@ -25,23 +25,15 @@ class UserInfoBusinessService : UserInfoProtocol{
         }
     }
     
-    func setUserInfo(userObject: User) -> Bool {
-        
-        let currentUserDefault = UserDefaults.standard
-        
-        do{
-            
-            try? currentUserDefault.set(PropertyListEncoder().encode(userObject), forKey: "UserSharedInfo")
-            
-            return true
-            
-        } catch(_) {
-            
-            return false
-            
+    func setUserInfo(userObject: User)
+    {
+        do
+        {
+            try currentUserDefault.set(PropertyListEncoder().encode(userObject), forKey: "UserSharedInfo")
         }
-        
+        catch (_)
+        {
+
+        }
     }
-    
-    
 }

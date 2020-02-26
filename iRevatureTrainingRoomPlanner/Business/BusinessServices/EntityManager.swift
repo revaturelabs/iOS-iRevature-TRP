@@ -22,6 +22,8 @@ import Foundation
 */
 class EntityManager
 {
+    #warning("Create this as a singleton? Should never instantiate another EM outside the one in the AppDelegate")
+    
     // MARK: Application Entities/Containers
 
     var activeUser : User?
@@ -31,6 +33,8 @@ class EntityManager
     var campusList : [Campus]
     var skillList : [APISkill]
     //var batchList : [Batch]
+    
+    var userInfoBusinessService : UserInfoBusinessService = UserInfoBusinessService()
     
     
     init()
@@ -55,12 +59,21 @@ class EntityManager
             
             login in
             
-            // login data accessed here
-            
+            // Access the login data here and store it in the active User var
             self.activeUser = User(firstName: "", lastName: "", primaryLocation: login.primaryLocation, email: email, keepLoggedIn: keepLoggedIn, loginToken: login.loginToken, currentRole: login.currentSystemRole)
+            
             
             if self.activeUser != nil
             {
+                // If the User has asked to remain logged in
+                // Set the UserDefaults to persist their data
+                if(self.activeUser?.keepLoggedIn == true)
+                {
+                    self.userInfoBusinessService.setUserInfo(userObject: self.activeUser!)
+                }
+                
+            // Either way call the completion handler which determines
+            //  whether there will be a segue or not based on all verification so far
                 finish(true)
             }
             else
@@ -73,6 +86,7 @@ class EntityManager
     
     func requestAllAPI()
     {
+        print("Requesting all APIs....")
         // Request locations
         self.API.requestLocations(finish:
             {
@@ -139,6 +153,10 @@ class EntityManager
 //                    let bat = Batch(name: batch.name, size: 0, skills: [Skill](), location: )
 //                }
 //        })
+        
+        
+        
+        print("End of request call...")
     }
     
     
@@ -157,6 +175,18 @@ class EntityManager
     
     
 
-    // MARK: Populate UI
-    /// Subsection 3: Retrieve containers stored in this service class to populate UI elements
+    // MARK: Data Accessors
+    /// Subsection 3: Retrieve references stored in this service class to populate UI elements/verify entities
+    
+    func verifyPreviousLogin() -> Bool
+    {
+        self.activeUser = self.userInfoBusinessService.getUserInfo()
+        
+        if activeUser != nil
+        {
+            return true
+        }
+        
+        return false
+    }
 }
