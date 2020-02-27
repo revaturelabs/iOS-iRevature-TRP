@@ -127,4 +127,14 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
             return UITableViewCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTrainer = trainerList![indexPath.row]
+        
+        if let viewController = storyboard?.instantiateViewController(identifier: "TrainerDetails") as? RevatureTrainerDetailsViewController
+        {
+            viewController.trainerReference = selectedTrainer
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }

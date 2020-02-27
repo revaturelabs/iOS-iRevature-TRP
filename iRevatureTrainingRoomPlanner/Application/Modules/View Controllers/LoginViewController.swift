@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController
+class LoginViewController: UIViewController, UITextFieldDelegate
 {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -24,6 +24,8 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
         
+        textFieldPassword.delegate = self
+        
         dataManager = dataManagerDelegate.manager
         
         if dataManager!.verifyPreviousLogin() == true
@@ -36,6 +38,18 @@ class LoginViewController: UIViewController
         {
             textFieldEmail.text = ""
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textFieldPassword.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        textFieldPassword.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     @IBAction func actionLogin(_ sender: Any)
