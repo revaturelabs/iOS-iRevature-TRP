@@ -21,6 +21,30 @@ class DatabaseOperations{
         
     }
     
+    func createAllTables(){
+        
+        //        createUserTable()
+        
+        createTrainerTable()
+        
+//        createBatchTable()
+        
+        createCalendarTable()
+        
+//        createBatchRoomTable()
+//
+//        createBatchSkillTable()
+        
+        createTrainerSkillTable()
+        
+//        createRoomAvailabilityTable()
+        
+        createRoomTable()
+        
+        createLocationTable()
+        
+    }
+    
     //Shared with all other entities
     func updateRecord(column: String, value: String,whereColumn: String, whereValue: String, selectedTable: SQLiteTable){
         
@@ -59,7 +83,7 @@ class DatabaseOperations{
             
             try database.deleteRow(statement: deleteStatement)
             
-            debugPrint("Delete Successful")
+            //            debugPrint("Delete Successful")
             
         } catch {
             
@@ -68,24 +92,7 @@ class DatabaseOperations{
         }
     }
     
-    //MARK: FOR TESTING PURPOSES ONLY
-    func enterDummyData(){
-        insertUserRecord(userID: "Test01", firstName: "Test", lastName: "Tester", email: "test@revature.com", token: "testtoken", userRole: "Tester", keepMeLoggedIn: true)
 
-        insertUserRecord(userID: "Test02", firstName: "Test2", lastName: "Tester2", email: "test2@revature.com", token: "testtoken2", userRole: "Tester2", keepMeLoggedIn: false)
-        
-        insertBatchRecord(batchID: "Batch01", trainerID: "Trainer01", roomID: "Room01")
-        
-       insertRoomRecord(roomID: "Room01", roomName: "NEC01", numberOfSeats: 20)
-        
-        insertCalendarRecord(calendarID: 1, startDate: "JAN-22-2020", endDate: "March-22-2020")
-        
-        
-
-        print("***********TEST SELECT*************")
-        print(selectAllUserRecords())
-        print("***********************************")
-    }
 }
 
 struct iRevatureTables {
@@ -122,17 +129,13 @@ struct iRevatureTables {
         //Some contrainsts have been left blank for flexibility
         trainerTable.addColumn(columnName: "trainer_id", dataType: .CHAR, constraints: .PRIMARYKEY)
         
-        trainerTable.addColumn(columnName: "first_name", dataType: .CHAR, constraints: .none)
-        
-        trainerTable.addColumn(columnName: "last_name", dataType: .CHAR, constraints: .none)
+        trainerTable.addColumn(columnName: "full_name", dataType: .CHAR, constraints: .none)
         
         trainerTable.addColumn(columnName: "email", dataType: .CHAR, constraints: .none)
         
-        trainerTable.addColumn(columnName: "phone_number", dataType: .CHAR, constraints: .none)
-        
         trainerTable.addColumn(columnName: "base_location", dataType: .CHAR, constraints: .none)
         
-        trainerTable.addColumn(columnName: "slack_username", dataType: .CHAR, constraints: .none)
+        trainerTable.addColumn(columnName: "profile_picture", dataType: .CHAR, constraints: .none)
         
         return trainerTable
         
@@ -151,6 +154,22 @@ struct iRevatureTables {
         batchTable.addColumn(columnName: "number_of_assosiates", dataType: .INT, constraints: .none)
         
         return batchTable
+        
+    }
+    
+    static var locationTable: SQLiteTable {
+        
+        var locationTable = SQLiteTable(tableName: "location")
+        
+        locationTable.addColumn(columnName: "location_id", dataType: .CHAR, constraints: .PRIMARYKEY)
+        
+        locationTable.addColumn(columnName: "campus", dataType: .CHAR, constraints: .none)
+        
+        locationTable.addColumn(columnName: "building", dataType: .CHAR, constraints: .none)
+        
+        locationTable.addColumn(columnName: "state", dataType: .CHAR, constraints: .none)
+        
+        return locationTable
         
     }
     

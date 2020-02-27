@@ -81,6 +81,7 @@
 		84D5D3782406060700E64004 /* TrainerSkillDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3772406060700E64004 /* TrainerSkillDBOperations.swift */; };
 		84D5D3BA2406EFC500E64004 /* TrainerPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3B92406EFC500E64004 /* TrainerPageViewController.swift */; };
 		84D5D3BC2406F08800E64004 /* TrainerSinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3BB2406F08800E64004 /* TrainerSinglePageViewController.swift */; };
+		84D5D3BE24075FCC00E64004 /* LocationDBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D3BD24075FCC00E64004 /* LocationDBOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,7 @@
 		84D5D3772406060700E64004 /* TrainerSkillDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerSkillDBOperations.swift; sourceTree = "<group>"; };
 		84D5D3B92406EFC500E64004 /* TrainerPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerPageViewController.swift; sourceTree = "<group>"; };
 		84D5D3BB2406F08800E64004 /* TrainerSinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerSinglePageViewController.swift; sourceTree = "<group>"; };
+		84D5D3BD24075FCC00E64004 /* LocationDBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDBOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +433,7 @@
 				84D5D3732405F61D00E64004 /* BatchSkillDBOperations.swift */,
 				84D5D3752405F74600E64004 /* BatchRoomDBOperations.swift */,
 				84D5D3772406060700E64004 /* TrainerSkillDBOperations.swift */,
+				84D5D3BD24075FCC00E64004 /* LocationDBOperations.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				29662D0524003E69004C48F1 /* DatabaseAccess.swift in Sources */,
 				84D5D3BC2406F08800E64004 /* TrainerSinglePageViewController.swift in Sources */,
 				2939849423FC460C00DAF922 /* Entity.swift in Sources */,
+				84D5D3BE24075FCC00E64004 /* LocationDBOperations.swift in Sources */,
 				84CA4CF823FA636800E03F5C /* RevatureSkillLabel.swift in Sources */,
 				29662D0A24003E69004C48F1 /* SQLTable.swift in Sources */,
 				29662D0F24006903004C48F1 /* DatabaseOperations.swift in Sources */,

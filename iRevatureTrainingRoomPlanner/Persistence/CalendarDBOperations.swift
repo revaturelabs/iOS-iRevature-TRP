@@ -13,7 +13,7 @@ extension DatabaseOperations{
     func createCalendarTable(){
         
         if let calendarTable = iRevatureTables.calendarTable.makeStatement(){
-            debugPrint(calendarTable)
+//            debugPrint(calendarTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement

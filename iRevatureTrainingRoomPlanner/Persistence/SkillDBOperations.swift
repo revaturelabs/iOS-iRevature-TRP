@@ -13,7 +13,7 @@ extension DatabaseOperations{
     func createSkillTable(){
         
         if let skillTable = iRevatureTables.skillTable.makeStatement(){
-            debugPrint(skillTable)
+//            debugPrint(skillTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement
@@ -30,9 +30,9 @@ extension DatabaseOperations{
         
     }
     
-    func insertSkillRecord(skillID: Int, skillName: String){
+    func insertSkillRecord(skillName: String){
         
-        let insertStatement = InsertStatement(table: iRevatureTables.skillTable, columnValues: skillID, skillName)
+        let insertStatement = InsertStatement(table: iRevatureTables.skillTable, columnValues: skillName)
         
         do {
            
@@ -40,7 +40,7 @@ extension DatabaseOperations{
             
         } catch {
             
-            debugPrint("Insert did not work!")
+            debugPrint("Skill insert did not work!")
             
         }
         

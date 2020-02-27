@@ -12,7 +12,7 @@ extension DatabaseOperations{
         
         if let trainerSkillTable = iRevatureTables.trainerSkillTable.makeStatement(){
             
-            debugPrint(trainerSkillTable)
+//            debugPrint(trainerSkillTable)
             
         }
         
@@ -30,9 +30,9 @@ extension DatabaseOperations{
         
     }
     
-    func insertTrainerSkillRecord(trainerID: Int, skillID: String){
+    func insertTrainerSkillRecord(trainerID: String, skillName: String){
         
-        let insertStatement = InsertStatement(table: iRevatureTables.trainerSkillTable, columnValues: trainerID, skillID)
+        let insertStatement = InsertStatement(table: iRevatureTables.trainerSkillTable, columnValues: trainerID, skillName)
         
         do {
            
@@ -40,7 +40,7 @@ extension DatabaseOperations{
             
         } catch {
             
-            debugPrint("Insert did not work!")
+            debugPrint("Skill insert did not work!")
             
         }
         
@@ -53,7 +53,7 @@ extension DatabaseOperations{
         
         selectStatement.specifyColumn(table: iRevatureTables.trainerSkillTable, columnName: "trainer_id", asName: "trainerID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.trainerSkillTable, columnName: "skill_id", asName: "skillID")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerSkillTable, columnName: "skill_name", asName: "skillName")
         
         do {
             
