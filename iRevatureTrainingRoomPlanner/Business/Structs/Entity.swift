@@ -76,7 +76,7 @@ struct Skill : Codable
 
 
 /// A `Location` object which is relative to a `Campus` object.
-struct Location : Codable
+struct Location : Codable, Equatable
 {
     var id : String
     var state : String
