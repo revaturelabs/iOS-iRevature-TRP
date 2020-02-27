@@ -10,10 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func buttonTrainerSegue(_ sender: Any) {
-        
-        
-
+    @IBAction func batchesComingSoon()
+    {
+        displayMessage(message: "")
     }
     
     override func viewDidLoad() {
@@ -22,6 +21,15 @@ class ViewController: UIViewController {
 
     }
 
+    func displayMessage(message: String)
+    {
+        let alert = UIAlertController(title: "Coming Soon", message: "This feature is still in development. Thank you for your interest!", preferredStyle: .alert)
+    
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
 
 }
 
