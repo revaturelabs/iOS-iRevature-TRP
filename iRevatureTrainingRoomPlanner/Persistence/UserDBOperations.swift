@@ -14,7 +14,7 @@ extension DatabaseOperations{
         
         //Grabs a new instance of usertables based on iRevatureTables struct
         if let userTable = iRevatureTables.userTable.makeStatement(){
-            debugPrint(userTable)
+//            debugPrint(userTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement

@@ -10,22 +10,22 @@ import Foundation
 
 /**
  Business Layer Service that handles all in-memory entities, API calls, and Persistence actions.
-
+ 
  *Values*
-
-  Documentation needs updating.
-
+ 
+ Documentation needs updating.
+ 
  - Author:
-    Jeremy Malisse
+ Jeremy Malisse
  - Version:
-   0.1
-*/
+ 0.1
+ */
 class EntityManager
 {
     #warning("Create this as a singleton? Should never instantiate another EM outside the one in the AppDelegate")
     
     // MARK: Application Entities/Containers
-
+    
     private var activeUser : User?
     private var trainerList : [Trainer]
     private var roomList : [Room]
@@ -45,6 +45,7 @@ class EntityManager
         locationList = [Location]()
         campusList = [Campus]()
         skillList = [Skill]()
+        initializePersistenceLayer()
         //batchList = [Batch]()
     }
     
@@ -72,8 +73,8 @@ class EntityManager
                     self.userInfoBusinessService.setUserInfo(userObject: self.activeUser!)
                 }
                 
-            // Either way call the completion handler which determines
-            //  whether there will be a segue or not based on all verification so far
+                // Either way call the completion handler which determines
+                //  whether there will be a segue or not based on all verification so far
                 finish(true)
             }
             else
@@ -147,23 +148,27 @@ class EntityManager
         
         #warning("Need to finish/refactor the API to include the currently missing parameters before finishing this.")
         
-//        self.API.requestBatches(finish:
-//            {
-//                tempbatches in
-//
-//                for batch in tempbatches.batchInfo
-//                {
-//                    let bat = Batch(name: batch.name, size: 0, skills: [Skill](), location: )
-//                }
-//        })
-        
-        
+        //        self.API.requestBatches(finish:
+        //            {
+        //                tempbatches in
+        //
+        //                for batch in tempbatches.batchInfo
+        //                {
+        //                    let bat = Batch(name: batch.name, size: 0, skills: [Skill](), location: )
+        //                }
+        //        })
         
         print("End of request call...")
+        
     }
     
     
-    // MARK: Persistence Layer Table Creation Methods and Verification
+    // MARK: Persistence Layer Table Creation Methods :)
+    func  initializePersistenceLayer(){
+        
+        DatabaseOperations.init().createAllTables()
+        
+    }
     
     
     // create tables
@@ -171,15 +176,69 @@ class EntityManager
     
     // MARK: Persistence Layer Methods
     /// Subsection 1: In memory -> SQLite Database
+    func insertTrainerToDatabase(){
+        
+        for trainer in self.trainerList{
+           DatabaseOperations().insertTrainerRecord(trainerID: trainer.id, fullName: trainer.name, email: trainer.emailaddress, baseLocation: trainer.primarylocation, profilePicture: trainer.profilepicture ?? "")
+            
+            for skill in trainer.skills{
+            DatabaseOperations().insertTrainerSkillRecord(trainerID: trainer.id, skillName: skill)
+                
+            }
+            
+        }
+        
+    }
     
-   // insert tables
+    func insertRoomToDatabase(){
+        
+        for room in self.roomList{
+            
+            DatabaseOperations().insertRoomRecord(roomID: room.id, roomName: room.room, numberOfSeats: room.capacity)
+            
+        }
+        
+    }
+    
+    func insertLocationToDatabase(){
+        
+        for location in self.locationList{
+            
+            DatabaseOperations().insertLocationRecord(locationID: location.id, campus: location.campus, building: location.building, state: location.state)
+            
+        }
+        
+    }
+    
+    // insert tables
     
     // MARK: Persistence Layer Methods
     /// Subsection 2: SQLite Database -> In-memory
     
+    func selectRoomFromDatabase() -> [Trainer]{
+        
+        var trainer: Trainer
+        var trainers: [Trainer] = []
+        var trainerDictionaryList = DatabaseOperations().selectAllTrainerRecords()
+        
+        for trainerFromDatabase in trainerDictionaryList{
+            
+            
+            //Skills need to be added as an array
+            trainer = Trainer(id: trainerFromDatabase["trainerID"]!, name: trainerFromDatabase["trainerFirstName"]!, emailaddress: trainerFromDatabase["email"]!, primarylocation: trainerFromDatabase[""]!, profilepicture: trainerFromDatabase[""]!
+                , manager_email: trainerFromDatabase[""]!, skills: [trainerFromDatabase[""]!])
+            
+            trainers.append(trainer)
+        }
+        
+        return trainers
+    }
+    
+    
+    
     // select statements
     
-
+    
     // MARK: Data Accessors
     /// Subsection 3: Retrieve references stored in this service class to populate UI elements/verify entities
     

@@ -11,7 +11,7 @@ extension DatabaseOperations{
     func createBatchRoomTable(){
         
         if let batchRoomTable = iRevatureTables.batchRoomTable.makeStatement(){
-            debugPrint(batchRoomTable)
+//            debugPrint(batchRoomTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement

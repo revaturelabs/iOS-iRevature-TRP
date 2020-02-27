@@ -14,7 +14,7 @@ extension DatabaseOperations{
         
         if let batchTable = iRevatureTables.batchTable.makeStatement(){
             
-            debugPrint(batchTable)
+//            debugPrint(batchTable)
             
         }
         

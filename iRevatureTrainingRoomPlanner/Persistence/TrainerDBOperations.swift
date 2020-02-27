@@ -7,14 +7,14 @@
 //
 
 import Foundation
-
+    
 extension DatabaseOperations{
     
     func createTrainerTable(){
         
         //Grabs a new instance of trainertables based on iRevatureTables struct
         if let trainerTable = iRevatureTables.trainerTable.makeStatement(){
-            debugPrint(trainerTable)
+//            debugPrint(trainerTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement
@@ -31,29 +31,26 @@ extension DatabaseOperations{
     }
     
     //Not the best approach, will replace with SQLite Library
-    func selectAllTrainerRecords() -> [[String: Any]]{
+    func selectAllTrainerRecords() -> [[String: String
+        ]]{
         
         var selectStatement = SelectStatement()
         
         selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "trainer_id", asName: "trainerID")
         
-        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "first_name", asName: "firstName")
-        
-        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "last_name", asName: "lastName")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "full_name", asName: "fullName")
         
         selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "email", asName: "email")
         
-        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "phone_number", asName: "phoneNumber")
-        
         selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "base_location", asName: "baseLocation")
         
-        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "slack_username", asName: "slackUsername")
+        selectStatement.specifyColumn(table: iRevatureTables.trainerTable, columnName: "profile_picture", asName: "profilePicture")
         
         do{
             
             let query = try (database.selectData(statement: selectStatement) ?? [["":""]])
             
-            return query
+            return query as! [[String : String]]
             
             
         } catch {
@@ -65,9 +62,9 @@ extension DatabaseOperations{
         return [["":""]]
     }
     
-    func insertTrainerRecord(trainerID: String, firstName: String, lastName: String, email: String, phoneNumber: String, baseLocation: String, slackUsername: String){
+    func insertTrainerRecord(trainerID: String, fullName: String, email: String, baseLocation: String, profilePicture: String){
         
-        let insertStatement = InsertStatement(table: iRevatureTables.trainerTable, columnValues: trainerID, firstName, lastName, email, phoneNumber, baseLocation, slackUsername)
+        let insertStatement = InsertStatement(table: iRevatureTables.trainerTable, columnValues: trainerID, fullName, email, baseLocation, profilePicture)
         
         do {
             

@@ -11,7 +11,7 @@ extension DatabaseOperations{
     func createRoomAvailabilityTable(){
         
         if let roomAvailabilityTable = iRevatureTables.roomAvailabilityTable.makeStatement(){
-            debugPrint(roomAvailabilityTable)
+//            debugPrint(roomAvailabilityTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement

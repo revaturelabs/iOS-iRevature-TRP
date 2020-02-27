@@ -11,7 +11,7 @@ extension DatabaseOperations{
     func createBatchSkillTable(){
         
         if let batchSkillTable = iRevatureTables.batchSkillTable.makeStatement(){
-            debugPrint(batchSkillTable)
+//            debugPrint(batchSkillTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement

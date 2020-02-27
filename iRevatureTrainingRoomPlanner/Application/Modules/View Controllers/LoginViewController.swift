@@ -60,6 +60,11 @@ class LoginViewController: UIViewController
                 self.navigationController?.pushViewController(mainNavigationVC, animated: true)
                 
                 self.labelInvalidUsernamePassword.isHidden = true
+                
+                //Inserts Date to the persistence layer after the user logs in
+                self.dataManager!.insertTrainerToDatabase()
+                self.dataManager!.insertRoomToDatabase()
+                self.dataManager!.insertLocationToDatabase()
             }
         })
     }

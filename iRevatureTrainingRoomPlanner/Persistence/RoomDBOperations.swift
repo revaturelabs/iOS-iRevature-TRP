@@ -13,7 +13,7 @@ extension DatabaseOperations{
     func createRoomTable(){
         
         if let roomTable = iRevatureTables.roomTable.makeStatement(){
-            debugPrint(roomTable)
+//            debugPrint(roomTable)
         }
         
         //Tries to executes the SQLite3 Prepared Statement
