@@ -27,17 +27,17 @@ class DatabaseOperations{
         
         createTrainerTable()
         
-        createBatchTable()
+//        createBatchTable()
         
         createCalendarTable()
         
-        createBatchRoomTable()
-        
-        createBatchSkillTable()
+//        createBatchRoomTable()
+//
+//        createBatchSkillTable()
         
         createTrainerSkillTable()
         
-        createRoomAvailabilityTable()
+//        createRoomAvailabilityTable()
         
         createRoomTable()
         

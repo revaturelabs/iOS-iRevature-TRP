@@ -11,6 +11,7 @@ import UIKit
 class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -22,6 +23,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
     
     func getViewControllerAtIndex(index: NSInteger) -> TrainerSinglePageViewController
     {
+        
         // Create a new view controller and pass suitable data.
         let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "TrainerSinglePageViewController") as! TrainerSinglePageViewController
         
@@ -29,8 +31,11 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         //        let trainers = nil//Here we pass the trainer data objects
         // pageContentViewController.trainer = trainers?[index]
         pageContentViewController.trainer = nil
+        
         pageContentViewController.pageIndex = index
+        
         return pageContentViewController
+        
     }
     
     /*
@@ -41,20 +46,21 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
+     
      */
     
     //Before Page
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        
         let pageContent: TrainerSinglePageViewController = viewController as! TrainerSinglePageViewController
         
         var index = pageContent.pageIndex
         
-        if ((index == 0) || (index == NSNotFound))
-        {
+        if ((index == 0) || (index == NSNotFound)) {
+            
             //MARK: This needs to be set to our Trainer Collection Count, to be able to return to the last page
             return nil
+            
         }
         
         index-=1;
@@ -70,18 +76,19 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         
         var index = pageContent.pageIndex
         
-        if (index == NSNotFound)
-        {
+        if (index == NSNotFound) {
             return getViewControllerAtIndex(index: 0);
         }
         
         index+=1;
         
         //MARK: This needs to be set to our Trainer Collection Count, to be able to return to the first page
-        if (index == 2)
-        {
+        if (index == 2) {
+            
             return getViewControllerAtIndex(index: 0);
+            
         }
+        
         return getViewControllerAtIndex(index: index)
     }
 }

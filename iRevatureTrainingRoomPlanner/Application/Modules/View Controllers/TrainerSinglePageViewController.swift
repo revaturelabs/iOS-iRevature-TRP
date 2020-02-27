@@ -10,6 +10,7 @@ import UIKit
 
 class TrainerSinglePageViewController: UIViewController {
 
+    //MARK: Needs to be replaced with the view's outlet
     @IBOutlet weak var profilePicture: UIImageView!
     
     @IBOutlet weak var trainerNameLabel: UILabel!
@@ -20,12 +21,14 @@ class TrainerSinglePageViewController: UIViewController {
     
     @IBOutlet weak var skillsLabel: UILabel!
     
-    
+    //Trainer struct we will display
     var trainer: Trainer?
     
+    //Current index in the array
     var pageIndex: Int = 0
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
