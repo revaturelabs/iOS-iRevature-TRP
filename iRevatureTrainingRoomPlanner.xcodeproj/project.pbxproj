@@ -11,6 +11,7 @@
 		290262FF23FE459A009539D6 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290262FE23FE459A009539D6 /* EntityManager.swift */; };
 		2902632823FEE77B009539D6 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2902632723FEE77B009539D6 /* SwiftyJSON */; };
 		2902632B23FEE7AB009539D6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2902632A23FEE7AB009539D6 /* Alamofire */; };
+		292418C524080CB3002126E3 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 292418C424080CB3002126E3 /* KeychainSwift */; };
 		2939849423FC460C00DAF922 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849323FC460C00DAF922 /* Entity.swift */; };
 		2939849623FC4AB400DAF922 /* RevatureTextBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849523FC4AB400DAF922 /* RevatureTextBoxes.swift */; };
 		2939849823FC502D00DAF922 /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849723FC502D00DAF922 /* RevatureTableViewCell.swift */; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		290262FC23FDCA79009539D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Trainer.storyboard; sourceTree = "<group>"; };
 		290262FE23FE459A009539D6 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		292418C224080AEB002126E3 /* iRevatureTrainingRoomPlannerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRevatureTrainingRoomPlannerRelease.entitlements; sourceTree = "<group>"; };
 		2939849323FC460C00DAF922 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		2939849523FC4AB400DAF922 /* RevatureTextBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevatureTextBoxes.swift; sourceTree = "<group>"; };
 		2939849723FC502D00DAF922 /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292418C524080CB3002126E3 /* KeychainSwift in Frameworks */,
 				2902632823FEE77B009539D6 /* SwiftyJSON in Frameworks */,
 				2902632B23FEE7AB009539D6 /* Alamofire in Frameworks */,
 			);
@@ -345,6 +348,7 @@
 		846D08FD23F35226007A3BF2 /* iRevatureTrainingRoomPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				292418C224080AEB002126E3 /* iRevatureTrainingRoomPlannerRelease.entitlements */,
 				29662CE524003E68004C48F1 /* Easy-SQL */,
 				846D091723F3530C007A3BF2 /* Persistence */,
 				846D091923F3531D007A3BF2 /* Application */,
@@ -522,6 +526,7 @@
 			packageProductDependencies = (
 				2902632723FEE77B009539D6 /* SwiftyJSON */,
 				2902632A23FEE7AB009539D6 /* Alamofire */,
+				292418C424080CB3002126E3 /* KeychainSwift */,
 			);
 			productName = iRevatureTrainingRoomPlanner;
 			productReference = 846D08FB23F35226007A3BF2 /* iRevatureTrainingRoomPlanner.app */;
@@ -554,6 +559,7 @@
 			packageReferences = (
 				2902632623FEE77B009539D6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				2902632923FEE7AB009539D6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				292418C324080CB3002126E3 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 846D08FC23F35226007A3BF2 /* Products */;
 			projectDirPath = "";
@@ -817,6 +823,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iRevatureTrainingRoomPlanner/iRevatureTrainingRoomPlannerRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iRevatureTrainingRoomPlanner/Application/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -870,6 +877,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		292418C324080CB3002126E3 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -882,6 +897,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2902632923FEE7AB009539D6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		292418C424080CB3002126E3 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 292418C324080CB3002126E3 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
