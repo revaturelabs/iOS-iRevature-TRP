@@ -41,10 +41,17 @@ class TrainerSinglePageViewController: UIViewController {
     
     override func viewDidLoad() {
         
+         if trainer?.profilepicture != "NO_IMAGE"
+               {
+                   // pull picture URL and update as UIImage
+                   let url = URL(string: trainer!.profilepicture!)
+                   
+                   self.imageTrainerPicture.downloadImage(from: url!)
+               }
         
         labelTrainerName.text = trainer?.name
         labelTrainerLocation.text = trainer?.primarylocation
-        buttonTrainerEmail.titleLabel?.text = trainer?.emailaddress
+//        buttonTrainerEmail.titleLabel?.text = trainer?.emailaddress
         
         buttonTrainerEmail.setTitle(trainer?.emailaddress, for: .normal)
         
