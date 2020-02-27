@@ -138,7 +138,7 @@ class EntityManager
                 
                 for trainer in temptrainer.trainers
                 {
-                    let train = Trainer(id: trainer.id, name: trainer.name, emailaddress: self.getActiveUser()!.email, primarylocation: trainer.primarylocation, profilepicture: trainer.profilepicture, manager_email: trainer.manager_email, skills: trainer.skills)
+                    let train = Trainer(id: trainer.id, name: trainer.name, emailaddress: trainer.emailaddress, primarylocation: trainer.primarylocation, profilepicture: trainer.profilepicture, manager_email: trainer.manager_email, skills: trainer.skills)
                     
                     self.trainerList.append(train)
                 }

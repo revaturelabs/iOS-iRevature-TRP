@@ -32,6 +32,7 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
     var campusList : [Campus]?
     var locationList : [Location]?
     var skillList : [Skill]?
+    var uniqueStates : [String]?
     
     override func viewDidLoad()
     {
@@ -43,6 +44,8 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
         campusList = self.dataManager!.getCampusList()
         locationList = self.dataManager!.getLocationList()
         skillList = self.dataManager!.getSkillList()
+        
+        uniqueStates = uniqueLocations()
         
         campusTableView.delegate = self
         trainerTableView.delegate = self
@@ -71,17 +74,33 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
         self.navigationItem.title = "Trainers"
     }
     
+    func uniqueLocations() -> [String]
+    {
+        var tempList = [String]()
+        
+        for location in locationList!
+        {
+            if tempList.contains(location.state) == false
+            {
+                tempList.append(location.state)
+            }
+        }
+
+        return tempList
+    }
+    
     // MARK: number of rows per section functions
     /// Methods will each return the number of objects within their array list for setting the number of rows for their respective sections.
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         
         switch(tableView.tag)
         {
         case 0:
             return campusList!.count
         case 1:
-            return locationList!.count
+            return uniqueStates!.count
         case 2:
             return skillList!.count
         case 3:
@@ -104,11 +123,10 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
             cell.prototypeLabel!.text = campusList![indexPath.row].campus
             
             return cell
-            
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeLocationCell", for: indexPath) as! RevatureLocationCell
             
-            cell.prototypeLabel!.text = locationList![indexPath.row].state
+            cell.prototypeLabel!.text = uniqueStates![indexPath.row]
             
             return cell
         case 2:
@@ -125,6 +143,16 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
             return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTrainer = trainerList![indexPath.row]
+        
+        if let viewController = storyboard?.instantiateViewController(identifier: "TrainerDetails") as? RevatureTrainerDetailsViewController
+        {
+            viewController.trainerReference = selectedTrainer
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
