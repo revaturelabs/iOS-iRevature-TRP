@@ -31,7 +31,6 @@ class RevatureTrainerDetailsViewController: UIViewController
         buttonTrainerEmail.titleLabel?.text = trainerReference?.emailaddress
         buttonTrainerEmail.setTitle(trainerReference?.emailaddress, for: .normal)
         
-        
         #warning("Calculated value needs to be moved into the Trainer struct as a method")
         var skillsString = ""
         

@@ -90,7 +90,7 @@ class EntityManager
         print("Requesting all APIs....")
         // Request locations
         self.API.requestLocations(finish:
-            {
+        {
                 locationCall in
                 
                 for location in locationCall.alllocation
@@ -98,14 +98,11 @@ class EntityManager
                     let loc = Location(id: location.id, state: location.state, campus: location.campus, building: location.building)
                     self.locationList.append(loc)
                 }
-                
-                // Used to confirm receipt of data by app delegate
-                print("Received and appended: \(self.locationList.count) items")
         })
         
         // Request rooms - retrieves rooms and campus'
         self.API.requestRooms(finish:
-            {
+        {
                 temprooms in
                 
                 for room in temprooms.allrooms
@@ -122,18 +119,19 @@ class EntityManager
         })
         
         self.API.requestSkills(finish:
-            {
+        {
                 tempskills in
                 
                 for skill in tempskills.skills
                 {
                     let skil = Skill(name: skill.name)
+                    
                     self.skillList.append(skil)
                 }
         })
         
         self.API.requestTrainers(finish:
-            {
+        {
                 temptrainer in
                 
                 for trainer in temptrainer.trainers
