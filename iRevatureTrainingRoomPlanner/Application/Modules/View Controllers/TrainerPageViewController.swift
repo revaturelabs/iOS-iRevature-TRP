@@ -10,6 +10,10 @@ import UIKit
 
 class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
+    //GLOBAL VARIABE?
+    public var trainerIndex: Int?
+    public var trainerList:[Trainer]?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -18,7 +22,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         
         self.dataSource = self
         
-        self.setViewControllers([getViewControllerAtIndex(index: 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
+        self.setViewControllers([getViewControllerAtIndex(index: trainerIndex ?? 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
     }
     
     func getViewControllerAtIndex(index: NSInteger) -> TrainerSinglePageViewController
@@ -30,7 +34,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         //This is where the API call should be right now is fed by an array
         //        let trainers = nil//Here we pass the trainer data objects
         // pageContentViewController.trainer = trainers?[index]
-        pageContentViewController.trainer = nil
+        pageContentViewController.trainer = trainerList?[index]
         
         pageContentViewController.pageIndex = index
         
@@ -59,7 +63,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         if ((index == 0) || (index == NSNotFound)) {
             
             //MARK: This needs to be set to our Trainer Collection Count, to be able to return to the last page
-            return nil
+            return getViewControllerAtIndex(index: trainerList!.count)
             
         }
         
@@ -83,7 +87,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         index+=1;
         
         //MARK: This needs to be set to our Trainer Collection Count, to be able to return to the first page
-        if (index == 2) {
+        if (index == trainerList?.count) {
             
             return getViewControllerAtIndex(index: 0);
             

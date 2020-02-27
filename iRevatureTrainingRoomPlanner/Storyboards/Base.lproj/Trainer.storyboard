@@ -23,14 +23,14 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="prototypeCampusCell" id="B6w-Na-jhy" customClass="RevatureCampusCell" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="38.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B6w-Na-jhy" id="68y-C2-TeX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="38.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CampusLabel (Placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSN-6z-WPk">
-                                                    <rect key="frame" x="101" y="12.000000000000002" width="212" height="20.666666666666671"/>
+                                                    <rect key="frame" x="101" y="12" width="212" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,14 +58,14 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="prototypeSkillCell" id="aLo-v6-zAN" customClass="RevatureSkillCell" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="38.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aLo-v6-zAN" id="n0p-ug-MMH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="38.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SkillsLabel (Placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyL-zs-DjN">
-                                                    <rect key="frame" x="113" y="12.000000000000002" width="188" height="20.666666666666671"/>
+                                                    <rect key="frame" x="113" y="12" width="188" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -192,14 +192,14 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="prototypeLocationCell" id="KAO-N6-t7o" customClass="RevatureLocationCell" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="39.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="39.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KAO-N6-t7o" id="wWc-lJ-EYi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LocationLabel (Placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIJ-Dz-u06">
-                                                    <rect key="frame" x="100" y="11.999999999999998" width="214" height="21.333333333333329"/>
+                                                    <rect key="frame" x="100" y="12.000000000000002" width="214" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -297,10 +297,18 @@
             </objects>
             <point key="canvasLocation" x="7040.579710144928" y="1300.271739130435"/>
         </scene>
-        <!--Revature Trainer Details View Controller-->
+        <!--Trainer Page View Controller-->
+        <scene sceneID="n2w-Q3-6IQ">
+            <objects>
+                <pageViewController storyboardIdentifier="TrainerPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="1sg-gh-53M" customClass="TrainerPageViewController" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLi-G0-nhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7786" y="1300"/>
+        </scene>
+        <!--Trainer Single Page View Controller-->
         <scene sceneID="RT2-fQ-wBf">
             <objects>
-                <viewController storyboardIdentifier="TrainerDetails" id="Huh-Ul-Txv" customClass="RevatureTrainerDetailsViewController" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerSinglePageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Huh-Ul-Txv" customClass="TrainerSinglePageViewController" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oYk-yf-0dq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,17 +392,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="5hq-wj-ect"/>
                     <connections>
-                        <outlet property="buttonAssignCurrentTrainer" destination="VPr-DD-Hy0" id="s39-yT-X6w"/>
-                        <outlet property="buttonTrainerEmail" destination="iaL-YN-ACb" id="L5y-4E-Bub"/>
-                        <outlet property="imageTrainerPicture" destination="cPw-XD-ZhC" id="2SB-R5-KJN"/>
-                        <outlet property="labelTrainerLocation" destination="DEj-gM-e30" id="fip-AD-gTm"/>
-                        <outlet property="labelTrainerName" destination="t4Y-BK-ita" id="hYq-qg-H31"/>
-                        <outlet property="labelTrainerSkills" destination="0yH-os-r5a" id="x8f-zH-2Yh"/>
+                        <outlet property="buttonTrainerEmail" destination="iaL-YN-ACb" id="Gwd-B0-X9X"/>
+                        <outlet property="imageTrainerPicture" destination="cPw-XD-ZhC" id="9rZ-VI-SrG"/>
+                        <outlet property="labelTrainerLocation" destination="DEj-gM-e30" id="UlD-we-aRA"/>
+                        <outlet property="labelTrainerName" destination="t4Y-BK-ita" id="L8K-Bj-Mji"/>
+                        <outlet property="labelTrainerSkills" destination="0yH-os-r5a" id="N2h-NI-klH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yV1-ga-Jhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7992.753623188406" y="1299.4565217391305"/>
+            <point key="canvasLocation" x="8549" y="1300"/>
         </scene>
     </scenes>
     <resources>
