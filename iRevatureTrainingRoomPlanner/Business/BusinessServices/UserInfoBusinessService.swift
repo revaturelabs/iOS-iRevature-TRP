@@ -36,4 +36,17 @@ class UserInfoBusinessService : UserInfoProtocol
 
         }
     }
+    
+    func clearUserInfo()
+    {
+        let userDefaults = UserDefaults.standard
+        let dict = userDefaults.dictionaryRepresentation() as NSDictionary
+
+        for _ in dict.allKeys
+        {
+                userDefaults.removeObject(forKey: "UserSharedInfo")
+        }
+
+        userDefaults.synchronize()
+    }
 }

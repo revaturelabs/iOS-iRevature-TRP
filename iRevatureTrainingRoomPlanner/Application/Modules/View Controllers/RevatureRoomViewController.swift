@@ -137,18 +137,16 @@ class RevatureRoomViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     // MARK: tableViewCell click interaction
-    /// This method indicates what to do per cell when a cell is clicked within the tableView. In this instance, we instantiate a RevatureRoomViewController and populate it with the specific room details for the selected room.
+    /// This method indicates what to do per cell when a cell is clicked within the tableView. In this instance, we instantiate a RevatureWorkflowViewController and populate it with the specific room details for the selected room.
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-//    {
-//        let selectedTrainer = trainerList![indexPath.row]
-//
-//        #error("change for room")
-//
-//        if let viewController = storyboard?.instantiateViewController(identifier: "TrainerDetails") as? RevatureTrainerDetailsViewController
-//        {
-//            viewController.trainerReference = selectedTrainer
-//            navigationController?.pushViewController(viewController, animated: true)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let selectedRoom = roomList![indexPath.row]
+
+        if let viewController = storyboard?.instantiateViewController(identifier: "RoomDetailsView") as? RoomWorkFlowController
+        {
+            viewController.selectedRoom = selectedRoom
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }

@@ -169,21 +169,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ub6-26-8SW" userLabel="Revature Location Table View" customClass="RevatureLocationTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="112"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Gwx-cY-EHL"/>
+                                    <constraint firstAttribute="height" constant="112" id="Gwx-cY-EHL"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="prototypeLocationCell" id="Zcs-yh-oLS" customClass="RevatureLocationCell" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="39"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="39.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zcs-yh-oLS" id="kc7-Nq-FCx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LocationLabel (Placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfb-1I-JqB">
-                                                    <rect key="frame" x="100" y="12" width="214" height="21"/>
+                                                    <rect key="frame" x="100" y="11.999999999999998" width="214" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -225,21 +225,21 @@
                                 </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qt2-Gs-KrS" userLabel="Revature Campus Table View" customClass="RevatureCampusTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="224" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="236" width="414" height="112"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="IzF-Ar-K6V"/>
+                                    <constraint firstAttribute="height" constant="112" id="IzF-Ar-K6V"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="prototypeCampusCell" id="eMP-Xv-isk" customClass="RevatureCampusCell" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="39"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="39.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eMP-Xv-isk" id="Brx-IX-ytz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CampusLabel (Placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvM-Z8-y3y">
-                                                    <rect key="frame" x="101" y="12" width="212" height="21"/>
+                                                    <rect key="frame" x="101" y="11.999999999999998" width="212" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -260,7 +260,7 @@
                                 </prototypes>
                             </tableView>
                             <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        Campus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="414" translatesAutoresizingMaskIntoConstraints="NO" id="JA2-Jh-86W">
-                                <rect key="frame" x="0.0" y="184" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Lt2-hY-oQp"/>
                                 </constraints>
@@ -269,7 +269,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1S-0p-NGm">
-                                <rect key="frame" x="362" y="189" width="32" height="29.666666666666671"/>
+                                <rect key="frame" x="362" y="201" width="32" height="29.666666666666671"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="B1S-0p-NGm" secondAttribute="height" multiplier="1:1" id="EPo-dF-8Yt"/>
                                     <constraint firstAttribute="width" constant="32" id="fLs-Bx-Hvl"/>
@@ -283,21 +283,21 @@
                                 </state>
                             </button>
                             <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-WL-YrY" userLabel="Revature Room Table View" customClass="RevatureRoomTableView" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="364" width="414" height="180"/>
+                                <rect key="frame" x="0.0" y="388" width="414" height="241"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="R7l-MB-jgk"/>
+                                    <constraint firstAttribute="height" constant="241" id="R7l-MB-jgk"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="prototypeRoomCell" id="CQr-U1-3ns" customClass="RevatureRoomCell" customModule="iRevatureTrainingRoomPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="39.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="39.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CQr-U1-3ns" id="vSR-QC-UPa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RoomLabel (Placeholder)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nb-5B-rMP">
-                                                    <rect key="frame" x="110.66666666666669" y="11.999999999999998" width="193" height="21.333333333333329"/>
+                                                    <rect key="frame" x="110.66666666666669" y="12.000000000000002" width="193" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -318,7 +318,7 @@
                                 </prototypes>
                             </tableView>
                             <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        Room:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="414" translatesAutoresizingMaskIntoConstraints="NO" id="W0A-R1-JqL">
-                                <rect key="frame" x="0.0" y="324" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="348" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BAD-gd-6jq"/>
                                 </constraints>
@@ -327,7 +327,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWo-0A-i8u">
-                                <rect key="frame" x="362" y="329" width="32" height="29.666666666666686"/>
+                                <rect key="frame" x="362" y="353" width="32" height="29.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OWo-0A-i8u" secondAttribute="height" multiplier="1:1" id="693-5W-074"/>
                                     <constraint firstAttribute="width" constant="32" id="72o-gr-hXG"/>
@@ -341,7 +341,7 @@
                                 </state>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-GM-azV">
-                                <rect key="frame" x="93" y="622" width="228" height="44"/>
+                                <rect key="frame" x="93" y="659" width="228" height="44"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="AWl-ZB-ES0"/>
@@ -357,7 +357,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2qb-Ns-U0X" firstAttribute="bottom" secondItem="wpA-GM-azV" secondAttribute="bottom" constant="70" id="2A3-Gw-W6n"/>
+                            <constraint firstItem="2qb-Ns-U0X" firstAttribute="bottom" secondItem="wpA-GM-azV" secondAttribute="bottom" constant="33" id="2A3-Gw-W6n"/>
                             <constraint firstItem="ebd-tN-82Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2qb-Ns-U0X" secondAttribute="leading" id="2sq-56-lkK"/>
                             <constraint firstItem="gr9-WL-YrY" firstAttribute="leading" secondItem="2qb-Ns-U0X" secondAttribute="leading" id="3Gi-E0-X0V"/>
                             <constraint firstItem="Ub6-26-8SW" firstAttribute="top" secondItem="ebd-tN-82Q" secondAttribute="bottom" id="3Jy-dm-0aJ"/>
@@ -489,7 +489,7 @@
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" title="Assign Trainer"/>
                                 <connections>
-                                    <action selector="actionLogin:" destination="2RX-z7-lVq" eventType="touchUpInside" id="gPy-RE-pe2"/>
+                                    <segue destination="AjO-ky-TrW" kind="show" id="INq-d1-W0z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNt-l4-Unc">
@@ -659,4 +659,7 @@
         <image name="rev-logo" width="180" height="56"/>
         <image name="trainer_profile_icon" width="1667" height="1667"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="INq-d1-W0z"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -68,9 +68,13 @@ class EntityManager
             {
                 // If the User has asked to remain logged in
                 // Set the UserDefaults to persist their data
-                if(self.activeUser?.keepLoggedIn == true)
+                if(keepLoggedIn == true)
                 {
                     self.userInfoBusinessService.setUserInfo(userObject: self.activeUser!)
+                }
+                else
+                {
+                    self.userInfoBusinessService.clearUserInfo()
                 }
                 
                 // Either way call the completion handler which determines
