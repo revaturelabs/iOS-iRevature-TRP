@@ -27,14 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        if manager?.verifyPreviousLogin() == true
-        {
-            manager!.requestAllAPI()
-        }
-        else
-        {
-            
-        }
+        manager!.requestAllAPI()
+
         
         return true
     }
