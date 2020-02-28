@@ -58,28 +58,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate
         
         let password : String = textFieldPassword.text!
         
-        self.dataManager!.login(email: username, password: password, keepLoggedIn: self.switchKeepMeSignedIn.isOn, finish: {
-            success in
-            
-            if success == false
-            {
-                self.labelInvalidUsernamePassword.isHidden = false
-            }
-            else
-            {
-                let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        if(username == "testuser1@revature.com") && (password == "test123")
+        {
+            self.dataManager!.login(email: username, password: password, keepLoggedIn: self.switchKeepMeSignedIn.isOn, finish:
+                {
+                    success in
                 
-                let mainNavigationVC = mainStoryboard.instantiateViewController(withIdentifier: "LandingPage") as UIViewController
-                
-                self.navigationController?.pushViewController(mainNavigationVC, animated: true)
-                
-                self.labelInvalidUsernamePassword.isHidden = true
-                
-                //Inserts Date to the persistence layer after the user logs in
-                self.dataManager!.insertTrainerToDatabase()
-                self.dataManager!.insertRoomToDatabase()
-                self.dataManager!.insertLocationToDatabase()
-            }
-        })
+                    if success == false
+                    {
+                        self.labelInvalidUsernamePassword.isHidden = false
+                    }
+                    else
+                    {
+                        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                        
+                        let mainNavigationVC = mainStoryboard.instantiateViewController(withIdentifier: "LandingPage") as UIViewController
+                        
+                        self.navigationController?.pushViewController(mainNavigationVC, animated: true)
+                        
+                        self.labelInvalidUsernamePassword.isHidden = true
+                        
+                        //Inserts Data to the persistence layer after the user logs in
+                        self.dataManager!.insertTrainerToDatabase()
+                        self.dataManager!.insertRoomToDatabase()
+                        self.dataManager!.insertLocationToDatabase()
+                    }
+                })
+        }
+        else
+        {
+            self.labelInvalidUsernamePassword.isHidden = false
+        }
     }
 }

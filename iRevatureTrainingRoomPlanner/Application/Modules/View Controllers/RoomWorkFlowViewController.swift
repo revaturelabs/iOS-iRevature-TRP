@@ -15,9 +15,18 @@ class RoomWorkFlowController: UIViewController {
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
     
+    @IBOutlet weak var labelRoomName: UILabel!
+    @IBOutlet weak var labelRoomSize: UILabel!
+    
     //Date picker references
     private var startDatePicker: UIDatePicker?
     private var endDatePicker: UIDatePicker?
+    
+    let entityManagerDelete = UIApplication.shared.delegate as! AppDelegate
+    
+    var manager : EntityManager?
+    
+    var selectedRoom : Room?
     
     //Tests not necessary
     var today = Date()
@@ -26,6 +35,11 @@ class RoomWorkFlowController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        manager = entityManagerDelete.manager
+        
+        labelRoomName.text = selectedRoom!.room
+        labelRoomSize.text = String(selectedRoom!.capacity)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RoomWorkFlowController.viewTappedToDeffer(gestureRecognier:)))
         
