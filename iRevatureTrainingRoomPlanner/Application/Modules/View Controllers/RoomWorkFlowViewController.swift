@@ -38,8 +38,8 @@ class RoomWorkFlowController: UIViewController {
         
         manager = entityManagerDelete.manager
         
-        labelRoomName.text = selectedRoom!.room
-        labelRoomSize.text = String(selectedRoom!.capacity)
+        labelRoomName.text = "Room " + selectedRoom!.room
+        labelRoomSize.text = "Capacity: " + String(selectedRoom!.capacity)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RoomWorkFlowController.viewTappedToDeffer(gestureRecognier:)))
         
