@@ -63,7 +63,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         if ((index == 0) || (index == NSNotFound)) {
             
             //MARK: This needs to be set to our Trainer Collection Count, to be able to return to the last page
-            return getViewControllerAtIndex(index: trainerList!.count)
+            return getViewControllerAtIndex(index: trainerList!.count - 1)
             
         }
         
