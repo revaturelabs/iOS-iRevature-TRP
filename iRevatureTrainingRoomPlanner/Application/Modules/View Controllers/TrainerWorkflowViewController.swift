@@ -8,8 +8,10 @@
 
 import UIKit
 
+// View Controller class that manages the Revature Trainer workflow.
 class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    // Set up reference to Appication level EntityManager
     let dataManagerDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var dataManager : EntityManager?
@@ -38,6 +40,7 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
     {
         super.viewDidLoad()
         
+        // MARK: EntityMananger related operations and references
         dataManager = dataManagerDelegate.manager
         
         trainerList = self.dataManager!.getTrainerList()
@@ -57,6 +60,7 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
         locationTableView.dataSource = self
         skillsTableView.dataSource = self
         
+        // MARK: UI element style and information updates
         labelCampus.layer.borderColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
         labelCampus.layer.borderWidth = 1
         labelLocation.layer.borderColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
@@ -155,7 +159,7 @@ class TrainerWorkflowViewController : UIViewController, UITableViewDelegate, UIT
         {
             viewController.trainerIndex = indexPath.row
             viewController.trainerList = trainerList
-//            self.present(viewController, animated: true, completion: nil)
+            //self.present(viewController, animated: true, completion: nil)
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

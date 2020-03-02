@@ -3,7 +3,7 @@
 //  iRevatureTrainingRoomPlanner
 //
 //  Created by Jeremy Malisse on 2/14/20.
-//  Modified by Jeremy Malisse on 2/21/20
+//  Modified by Jeremy Malisse on 3/2/20.
 //  Copyright © 2020 admin. All rights reserved.
 //
 
@@ -205,7 +205,7 @@ struct Campus : Codable
 
 /// APIUserCall object which contains all information regarding a response from the skills endpoint of the RevatureAPI.
 /// `skills` is the variable which needs to be parsed for the list of `APISkill` objects
-#warning("These objets are in contract with previously discussed and developed entity objects for the persistence layer. Possible refactor of entity/persistence mmodel required.")
+#warning("These objects are in contrast with previously discussed and developed entity objects for the persistence layer. Possible refactor of entity/persistence model required.")
 struct APISkillCall : Codable
 {
     var statusCode : Int
@@ -222,7 +222,7 @@ struct APISkill : Codable
 
 /// APIUserCall object which contains all information regarding a response from the trainer endpoint of the RevatureAPI.
 /// `batchInfo` is the variable which needs to be parsed for the list of `APIBatch` objects
-#warning("These objets are in contract with previously discussed and developed entity objects for the persistence layer. Possible refactor of entity/persistence mmodel required.")
+#warning("These objects are in contrast with previously discussed and developed entity objects for the persistence layer. Possible refactor of entity/persistence model required.")
 struct APIBatchCall : Codable
 {
     var statusCode : Int

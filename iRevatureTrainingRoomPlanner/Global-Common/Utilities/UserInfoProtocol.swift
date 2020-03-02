@@ -13,5 +13,5 @@ protocol UserInfoProtocol {
     
     func getUserInfo() -> User?
     func setUserInfo(userObject:User)
-    
+    func clearUserInfo()
 }

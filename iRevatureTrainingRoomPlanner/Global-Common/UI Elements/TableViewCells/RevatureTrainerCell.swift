@@ -8,19 +8,19 @@
 
 import UIKit
 
-class RevatureTrainerCell: UITableViewCell {
-
+class RevatureTrainerCell: UITableViewCell
+{
+    // CocoaTouch Generated class for custom UITableViewCell instantiated from prototype
+    // Has a reference to the UILabel that occupies the prototype cell
     @IBOutlet weak var prototypeLabel: UILabel!
     
-    override func awakeFromNib() {
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool)
+    {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }

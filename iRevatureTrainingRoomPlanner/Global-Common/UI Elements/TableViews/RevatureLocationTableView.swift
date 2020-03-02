@@ -8,14 +8,7 @@
 
 import UIKit
 
-class RevatureLocationTableView: UITableView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+class RevatureLocationTableView: UITableView
+{
+    // CocoaTouch Generated class for custom UITableView instantiated from prototype
 }

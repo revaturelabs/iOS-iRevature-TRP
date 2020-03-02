@@ -23,7 +23,6 @@
 		2939849D23FC56DF00DAF922 /* RevatureLocationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849C23FC56DF00DAF922 /* RevatureLocationTableView.swift */; };
 		2939849F23FC56EF00DAF922 /* RevatureSkillsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939849E23FC56EF00DAF922 /* RevatureSkillsTableView.swift */; };
 		293984A123FC570B00DAF922 /* RevatureTrainerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A023FC570B00DAF922 /* RevatureTrainerTableView.swift */; };
-		293984A323FC583500DAF922 /* RevatureBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A223FC583500DAF922 /* RevatureBaseTableView.swift */; };
 		293984A623FC5CA900DAF922 /* RevatureTrainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A523FC5CA900DAF922 /* RevatureTrainerCell.swift */; };
 		293984A823FC5D6000DAF922 /* RevatureCampusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A723FC5D6000DAF922 /* RevatureCampusCell.swift */; };
 		293984AA23FC5D9500DAF922 /* RevatureSkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293984A923FC5D9500DAF922 /* RevatureSkillCell.swift */; };
@@ -102,7 +101,6 @@
 		2939849C23FC56DF00DAF922 /* RevatureLocationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureLocationTableView.swift; sourceTree = "<group>"; };
 		2939849E23FC56EF00DAF922 /* RevatureSkillsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillsTableView.swift; sourceTree = "<group>"; };
 		293984A023FC570B00DAF922 /* RevatureTrainerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTrainerTableView.swift; sourceTree = "<group>"; };
-		293984A223FC583500DAF922 /* RevatureBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureBaseTableView.swift; sourceTree = "<group>"; };
 		293984A523FC5CA900DAF922 /* RevatureTrainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTrainerCell.swift; sourceTree = "<group>"; };
 		293984A723FC5D6000DAF922 /* RevatureCampusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureCampusCell.swift; sourceTree = "<group>"; };
 		293984A923FC5D9500DAF922 /* RevatureSkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureSkillCell.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				2939849C23FC56DF00DAF922 /* RevatureLocationTableView.swift */,
 				2939849E23FC56EF00DAF922 /* RevatureSkillsTableView.swift */,
 				293984A023FC570B00DAF922 /* RevatureTrainerTableView.swift */,
-				293984A223FC583500DAF922 /* RevatureBaseTableView.swift */,
 				2924190724086D18002126E3 /* RevatureRoomTableView.swift */,
 			);
 			path = TableViews;
@@ -665,7 +662,6 @@
 				293984AC23FC5DD300DAF922 /* RevatureLocationCell.swift in Sources */,
 				293984A123FC570B00DAF922 /* RevatureTrainerTableView.swift in Sources */,
 				29662D0724003E69004C48F1 /* JoinStatement.swift in Sources */,
-				293984A323FC583500DAF922 /* RevatureBaseTableView.swift in Sources */,
 				2924190624086CBD002126E3 /* RevatureRoomCell.swift in Sources */,
 				29662D0124003E69004C48F1 /* HelperFunctions.swift in Sources */,
 				29662CFE24003E69004C48F1 /* DDLFunctions.swift in Sources */,

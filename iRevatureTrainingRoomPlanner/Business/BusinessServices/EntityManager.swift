@@ -3,6 +3,7 @@
 //  iRevatureTrainingRoomPlanner
 //
 //  Created by Jeremy Malisse on 2/19/20.
+//  Modified by Jeremy Malisse on 3/2/2020
 //  Copyright © 2020 admin. All rights reserved.
 //
 
@@ -22,7 +23,7 @@ import Foundation
  */
 class EntityManager
 {
-    #warning("Create this as a singleton? Should never instantiate another EM outside the one in the AppDelegate")
+    /// Can possibly make this class as a singleton pattern. There should only ever be one and nothing should ever create it other than the reference in the App Delegate.
     
     // MARK: Application Entities/Containers
     
@@ -34,9 +35,10 @@ class EntityManager
     private var skillList : [Skill]
     //var batchList : [Batch]
     
+    // MARK: User Defaults accessor class contained within this EM
     var userInfoBusinessService : UserInfoBusinessService = UserInfoBusinessService()
     
-    
+    // Initialization function - All necessary startup logic including populating containers
     init()
     {
         activeUser = nil
@@ -49,9 +51,8 @@ class EntityManager
         //batchList = [Batch]()
     }
     
+    // Sets a class level reference to the Revature Mock API
     let API = RevatureAPI()
-    
-    #warning("finish markup in-line documentation for these methods")
     
     //MARK: API Request Methods
     func login(email: String, password: String, keepLoggedIn: Bool, finish: @escaping (_ success: Bool) -> Void )
@@ -68,6 +69,7 @@ class EntityManager
             {
                 // If the User has asked to remain logged in
                 // Set the UserDefaults to persist their data
+                // Otherwise, clear the reference to any existing data and don't save this data either.
                 if(keepLoggedIn == true)
                 {
                     self.userInfoBusinessService.setUserInfo(userObject: self.activeUser!)
@@ -77,8 +79,7 @@ class EntityManager
                     self.userInfoBusinessService.clearUserInfo()
                 }
                 
-                // Either way call the completion handler which determines
-                //  whether there will be a segue or not based on all verification so far
+                // Either way call the completion handler which determines whether there will be a segue or not based on all verification so far
                 finish(true)
             }
             else
@@ -122,6 +123,7 @@ class EntityManager
                 }
         })
         
+        // Request array of skills
         self.API.requestSkills(finish:
         {
                 tempskills in
@@ -134,6 +136,7 @@ class EntityManager
                 }
         })
         
+        // Request all trainer data
         self.API.requestTrainers(finish:
         {
                 temptrainer in
@@ -146,9 +149,7 @@ class EntityManager
                 }
         })
         
-        
-        
-        #warning("Need to finish/refactor the API to include the currently missing parameters before finishing this.")
+        #warning("Batch API data was changed too close to submission. This struct requires refactoring to match the Entity to the JSON sent from the mock API.")
         
         //        self.API.requestBatches(finish:
         //            {
@@ -244,6 +245,7 @@ class EntityManager
     // MARK: Data Accessors
     /// Subsection 3: Retrieve references stored in this service class to populate UI elements/verify entities
     
+    // Checks whether a previous user has asked to remain logged into the system
     func verifyPreviousLogin() -> Bool
     {
         self.activeUser = self.userInfoBusinessService.getUserInfo()
@@ -256,11 +258,15 @@ class EntityManager
         return false
     }
     
+    // Returns the current saved user in the system, or will return nil if one does not exist
+    /// Consider combining this the verifyPreviousLogin method to either return nil if no user exists or the User if one had been saved.
     func getActiveUser() -> User?
     {
         return self.activeUser
     }
     
+    // MARK: Set of functions to get current in-memory containers of the following lists
+    /// This data should be coming from the current persistence layer, but possibly only coming from the API at the moment
     func getTrainerList() -> [Trainer]
     {
         return self.trainerList

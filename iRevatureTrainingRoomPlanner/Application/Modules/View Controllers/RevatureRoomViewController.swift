@@ -8,9 +8,10 @@
 
 import UIKit
 
+// View Controller class that manages the RevatureRoom workflow.
 class RevatureRoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
-    {
-    
+{
+    // Set up reference to Appication level EntityManager
     let dataManagerDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var dataManager : EntityManager?
@@ -38,6 +39,7 @@ class RevatureRoomViewController: UIViewController, UITableViewDelegate, UITable
     {
         super.viewDidLoad()
         
+        // MARK: EntityMananger related operations and references
         dataManager = dataManagerDelegate.manager
 
         trainerList = self.dataManager!.getTrainerList()
@@ -55,6 +57,7 @@ class RevatureRoomViewController: UIViewController, UITableViewDelegate, UITable
         locationTableView.dataSource = self
         roomTableView.dataSource = self
         
+        // MARK: UI element style and information updates
         labelCampus.layer.borderColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
         labelCampus.layer.borderWidth = 1
         labelLocation.layer.borderColor = #colorLiteral(red: 1, green: 0.3764705882, blue: 0.007843137255, alpha: 1)
@@ -70,6 +73,8 @@ class RevatureRoomViewController: UIViewController, UITableViewDelegate, UITable
         // Do any additional setup after loading the view.
     }
     
+    // Parse the API collected data for onnly the unique locations
+    /// Can be changed to a Set collection, but API changes came at the last minute with this request.
     func uniqueLocations() -> [String]
     {
         var tempList = [String]()
@@ -132,6 +137,7 @@ class RevatureRoomViewController: UIViewController, UITableViewDelegate, UITable
             
             return cell
         default:
+            // Default will never really call if you set the references properly in the Attribute inspector and the Storyboard
             return UITableViewCell()
         }
     }

@@ -9,18 +9,16 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
+    // Optional Entity Manager - Global reference to the EM class that runs for the entirety of this application
     var manager : EntityManager?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        #warning("NEED TO EMPTY OUT THE PREVIOUS USER DEFAULT IF KEEP LOGGED ON BECOMES DISABLED")
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+    {
         manager = EntityManager()
         
-        // verify tables exist, if not make em
+        // MARK: Verify tables exist, and if not make em @Wesley
         
         // if first time run -> api
         // otherwise -> database selects -> into memory
@@ -29,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         manager!.requestAllAPI()
 
-        
         return true
     }
 

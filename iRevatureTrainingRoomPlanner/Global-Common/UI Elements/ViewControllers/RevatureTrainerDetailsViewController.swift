@@ -10,7 +10,7 @@ import UIKit
 
 class RevatureTrainerDetailsViewController: UIViewController
 {
-    // MARK: Outlet references to prototype VC
+    // MARK: Outlet references to prototype ViewController
     
     @IBOutlet weak var labelTrainerName: UILabel!
     @IBOutlet weak var labelTrainerLocation: UILabel!
@@ -20,11 +20,14 @@ class RevatureTrainerDetailsViewController: UIViewController
     
     @IBOutlet weak var buttonAssignCurrentTrainer: UIButton!
     
+    // Optional reference to trainer - This variable is set on instantiation from the method that generated this VC
     var trainerReference : Trainer?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        // MARK: Update visual elements based on the passed trainer reference
         
         labelTrainerName.text = trainerReference?.name
         labelTrainerLocation.text = trainerReference?.primarylocation
@@ -63,26 +66,29 @@ class RevatureTrainerDetailsViewController: UIViewController
 #warning("Add in-line documentation")
 extension UIImageView
 {
+    // Get raw data from the URL used to retrieve the Image File
    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ())
    {
       URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
    }
     
-   func downloadImage(from url: URL)
-   {
-      getData(from: url)
-      {
-         data, response, error in
-        
-         guard let data = data, error == nil else
-         {
-            return
-         }
-        
-         DispatchQueue.main.async()
-         {
-            self.image = UIImage(data: data)
-         }
-      }
-   }
+    // Handle the image data to resolve a UIImage from the URL
+    func downloadImage(from url: URL)
+    {
+        getData(from: url)
+        {
+            data, response, error in
+            
+            guard let data = data, error == nil else
+            {
+                return
+            }
+            
+            // Asynchronous load of image - why you'll notice the image doesn't appear immediately, but the TrainerDetailsVC doesn't hang on waiting for it to load.
+            DispatchQueue.main.async()
+            {
+                self.image = UIImage(data: data)
+            }
+        }
+    }
 }
