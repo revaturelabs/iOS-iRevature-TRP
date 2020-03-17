@@ -81,7 +81,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         var index = pageContent.pageIndex
         
         if (index == NSNotFound) {
-            return getViewControllerAtIndex(index: 0);
+            return getViewControllerAtIndex(index: 0)
         }
         
         index+=1;
@@ -89,7 +89,7 @@ class TrainerPageViewController: UIPageViewController, UIPageViewControllerDataS
         //MARK: This needs to be set to our Trainer Collection Count, to be able to return to the first page
         if (index == trainerList?.count) {
             
-            return getViewControllerAtIndex(index: 0);
+            return getViewControllerAtIndex(index: 0)
             
         }
         
